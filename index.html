@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOLOGIE COHESION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="printable-area">
+        <h1 class="title-center">TECHNOLOGIE COHESION</h1>
+        <h1>Gestion de Stocks et Ventes</h1>
+
+        <div class="button-container">
+            <button id="show-supply-section">Approvisionner</button>
+        </div>
+
+
+        <section id="sales-section" class="form-container">
+            <h2>Ventes et Autres Opérations</h2>
+            <p>Enregistrez ici les ventes et autres types d'opérations.</p>
+            <form id="sales-form">
+                <div class="form-row">
+                    <label for="sale-date">Date:</label>
+                    <input type="date" id="sale-date" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="operation-type">Type d'Opération:</label>
+                    <select id="operation-type">
+                        <option value="Vente">Vente</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div id="vente-details">
+                    <div class="form-row">
+                        <label for="sale-designation">Désignation:</label>
+                        <select id="sale-designation"></select>
+                    </div>
+                    <div class="form-row">
+                        <label for="sale-quantity">Quantité:</label>
+                        <input type="number" id="sale-quantity" min="1">
+                    </div>
+                    <div class="form-row">
+                        <label for="sale-unit-price">Prix unitaire:</label>
+                        <input type="number" id="sale-unit-price" min="0">
+                    </div>
+                </div>
+
+                <div id="autre-details" style="display: none;">
+                    <div class="form-row">
+                        <label for="other-designation">Motif Opération:</label>
+                        <input type="text" id="other-designation">
+                    </div>
+                    <div class="form-row">
+                        <label for="other-quantity">Quantité:</label>
+                        <input type="number" id="other-quantity" min="1">
+                    </div>
+                    <div class="form-row">
+                        <label for="other-amount">Montant:</label>
+                        <input type="number" id="other-amount" min="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit" class="submit-button">Ajouter Opération</button>
+                </div>
+            </form>
+
+            <div class="button-container">
+                <button id="show-sales-details">Afficher Détails Ventes</button>
+                <button id="show-others-details">Afficher Détails Autres</button>
+            </div>
+
+
+            <div id="sales-details" style="display: none;">
+                <div class="button-group">
+                    <button id="print-sales-table">Imprimer</button>
+                    <button id="export-sales-excel">Exporter en Excel</button>
+                    <button id="export-sales-pdf">Exporter en PDF</button>
+                </div>
+                <div class="print-title" style="display: none;">
+                    <h3>Détails des Ventes</h3>
+                </div>
+                <table id="sales-table">
+                    <thead>
+                        <tr>
+                            <th class="date-col">Date</th>
+                            <th class="designation-col">Désignation</th>
+                            <th class="quantity-col">Quantité</th>
+                            <th class="unit-price-col">Prix unitaire</th>
+                            <th class="total-cost-col">Coût total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="others-details" style="display: none;">
+                <div class="button-group">
+                    <button id="print-others-table">Imprimer</button>
+                    <button id="export-others-excel">Exporter en Excel</button>
+                    <button id="export-others-pdf">Exporter en PDF</button>
+                </div>
+                <div class="print-title" style="display: none;">
+                    <h3>Détails des Autres Opérations</h3>
+                </div>
+                <table id="others-table">
+                    <thead>
+                        <tr>
+                            <th class="date-col">Date</th>
+                            <th class="motif-col">Désignation</th>
+                            <th class="designation-col">Quantité</th>
+                            <th class="quantity-col">Montant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="report-section" class="form-container">
+            <h2>Bilans</h2>
+            <p>Consultez les bilans journaliers, mensuels et annuels.</p>
+            <div class="button-container">
+                <button id="daily-report">Bilan Journalier</button>
+                <button id="monthly-report">Bilan Mensuel</button>
+                <button id="yearly-report">Bilan Annuel</button>
+            </div>
+
+            <div id="report-filters" style="display: none;">
+                <div class="form-row" id="daily-filter">
+                    <label for="report-date">Jour:</label>
+                    <input type="date" id="report-date">
+                </div>
+                <div class="form-row" id="monthly-filter" style="display: none;">
+                    <label for="report-month">Mois:</label>
+                    <input type="month" id="report-month">
+                </div>
+                <div class="form-row" id="yearly-filter" style="display: none;">
+                    <label for="report-year">Année:</label>
+                    <input type="number" id="report-year" min="2020" max="2050">
+                </div>
+                <div class="form-row">
+                    <button id="generate-report">Générer Bilan</button>
+                </div>
+            </div>
+
+            <div id="report-table-section" style="display: none;">
+                <div class="button-group">
+                    <button id="export-report-excel">Exporter en Excel</button>
+                    <button id="export-report-pdf">Exporter en PDF</button>
+                </div>
+                <h3>Bilan</h3>
+                <table id="report-table">
+                    <thead>
+                        <tr>
+                            <th class="type-col">Type d'Opération</th>
+                            <th class="designation-col">Désignation</th>
+                            <th class="quantity-col">Quantité</th>
+                            <th class="amount-col">Montant/Coût total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="supply-section" class="form-container" style="display: none;">
+            <h2>Approvisionnements</h2>
+            <p>Enregistrez les nouveaux approvisionnements de produits.</p>
+            <form id="supply-form">
+                <div class="form-row">
+                    <label for="supply-date">Date:</label>
+                    <input type="date" id="supply-date" required>
+                </div>
+                <div class="form-row">
+                    <label for="supply-designation">Désignation:</label>
+                    <input type="text" id="supply-designation" required>
+                </div>
+                <div class="form-row">
+                    <label for="supply-quantity">Quantité:</label>
+                    <input type="number" id="supply-quantity" min="1" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="submit-button">Ajouter Approvisionnement</button>
+                </div>
+            </form>
+            <div class="button-group">
+                <button id="print-supply-table">Imprimer</button>
+                <button id="export-supply-excel">Exporter en Excel</button>
+                <button id="export-supply-pdf">Exporter en PDF</button>
+            </div>
+            <h3>Détails des Approvisionnements et Stocks</h3>
+            <table id="supply-table" style="display: none;">
+                <thead>
+                    <tr class="supply-header-row">
+                        <th class="date-col">Date</th>
+                        <th class="designation-col">Désignation</th>
+                        <th class="supply-col">Quantité approvisionnée</th>
+                        <th class="sold-col">Vendues</th>
+                        <th class="remaining-col">Restantes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9dd62;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+h1.title-center {
+    color: #3498db;
+}
+
+section {
+    margin: 20px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.form-container p {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"],
+input[type="month"],
+select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="month"]:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+
+.form-row {
+    margin-bottom: 20px;
+    display: flex; /* Enable flexbox for form rows */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-row label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+.form-row input,
+.form-row select {
+    width: 100%;
+    max-width: 100%;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button#show-supply-section,
+button#daily-report,
+button#monthly-report,
+button#yearly-report,
+button#show-sales-details,
+button#show-others-details {
+    margin: 5px;
+    margin-top: 20px;
+}
+
+button.submit-button {
+    margin-top: 20px; /* Ensure submit buttons have consistent top margin */
+    align-self: start; /* Align submit buttons to the start */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Adapt column width to content */
+    margin-top: 25px;
+    border-spacing: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+    background-color: #f8f8f8;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+
+#sales-details,
+#others-details,
+#report-table-section,
+#supply-table {
+    margin-top: 30px;
+}
+
+/* Increase column width for supply table */
+#supply-table th,
+#supply-table td {
+    word-break: break-word; /* Prevent content overflow in cells */
+    min-width: 150px; /* Ajuster cette valeur pour augmenter/diminuer la largeur des colonnes */
+    border: 1px solid #000; /* Bordure noire */
+    padding: 8px; /* Espacement interne pour un aspect plus aéré */
+    font-size: 14px; /* Taille de la police, ajuster au besoin */
+}
+
+/* Style spécifique pour la ligne d'en-tête du tableau Supply */
+#supply-table thead tr.supply-header-row th {
+    background-color: #f0f0f0; /* Gris clair pour l'en-tête */
+    font-weight: bold; /* Texte en gras pour l'en-tête */
+    border: 1px solid #000; /* Bordure noire pour les en-têtes */
+    padding: 10px; /* Padding légèrement plus grand pour l'en-tête */
+    text-align: center; /* Centrer le texte de l'en-tête */
+}
+
+
+#supply-table th,
+#supply-table td {
+    word-break: break-word; /* Prevent content overflow in cells */
+}
+
+.form-container {
+    border: 1px solid #d0d0d0;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button,
+    input[type="date"],
+    input[type="number"],
+    input[type="text"],
+    input[type="month"],
+    select {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row label {
+        text-align: left;
+        margin-bottom: 5px;
+        flex-basis: auto;
+        padding-right: 0;
+    }
+
+    .form-row input,
+    .form-row select {
+        width: calc(100% - 0px);
+        max-width: none;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-container button {
+        margin: 5px 0;
+    }
+}
+
+@media print {
+    body {
+        background-color: #fff; /* Fond blanc pour l'impression */
+        color: #000; /* Texte noir pour l'impression */
+    }
+
+    #supply-section, #sales-details, #others-details { /* Apply print styles to all sections */
+        box-shadow: none; /* Pas d'ombre pour l'impression */
+        border: none; /* Pas de bordure de section pour l'impression */
+        background-color: #fff; /* Fond blanc pour la section en impression */
+    }
+
+    #supply-section h2, #supply-section p, #supply-table,
+    #sales-details h3, #sales-details table, /* Styles pour la section Ventes en impression */
+    #others-details h3, #others-details table { /* Styles pour la section Autres en impression */
+        color: #000 !important; /* Assurer que le texte est noir en impression */
+    }
+
+    /* Style du tableau pour l'impression (correspondant à l'image) */
+    #supply-table, #sales-table, #others-table { /* Apply table styles to all tables */
+        border-collapse: collapse; /* Fusionner les bordures pour l'impression */
+        width: 100%; /* Utiliser toute la largeur disponible en impression */
+        margin-top: 20px; /* Marge au-dessus du tableau en impression */
+    }
+
+    #supply-table th, #supply-table td,
+    #sales-table th, #sales-table td, /* Styles pour le tableau Ventes en impression */
+    #others-table th, #others-table td { /* Styles pour le tableau Autres en impression */
+        border: 1px solid #000; /* Bordures noires pour les cellules en impression */
+        padding: 8px; /* Padding des cellules pour l'impression */
+        text-align: left; /* Alignement du texte à gauche (ou ajuster selon l'image) */
+        font-size: 12pt; /* Taille de police pour l'impression */
+        color: #000; /* Couleur du texte en noir pour l'impression */
+    }
+
+    #supply-table thead tr.supply-header-row th,
+    #sales-table thead th, /* Styles pour l'en-tête du tableau Ventes en impression */
+    #others-table thead th { /* Styles pour l'en-tête du tableau Autres en impression */
+        background-color: #f0f0f0 !important; /* Gris clair pour l'en-tête en impression */
+        font-weight: bold; /* En-tête en gras en impression */
+        text-align: center; /* Centrer l'en-tête en impression */
+    }
+
+
+    /* Cacher les boutons et formulaires en impression */
+    .button-group, .button-container, .form-container h2, .form-container p, #supply-form, .form-container > p,
+    #sales-form, #sales-details > .button-container, /* Cacher formulaire et boutons de Ventes */
+    #others-form, #others-details > .button-container, /* Cacher formulaire et boutons d'Autres opérations */
+    #report-section /* Hide report section in print */{
+        display: none !important;
+    }
+
+    h1.title-center, h1, h3 {
+        text-align: center !important; /* Centrer les titres en impression */
+        color: #000 !important; /* Titres en noir en impression */
+    }
+}
