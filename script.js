@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Formulaires et Tableaux
     const salesForm = document.getElementById('sales-form');
     const supplyForm = document.getElementById('supply-form');
     const salesTable = document.getElementById('sales-table').querySelector('tbody');
     const othersTable = document.getElementById('others-table').querySelector('tbody');
     const supplyTable = document.getElementById('supply-table').querySelector('tbody');
-    const showOthersDetailsButton = document.getElementById('show-others-details');
+    const reportTable = document.getElementById('report-table').querySelector('tbody');
+
+    // Sections PRINCIPALES (celles qu'on affiche/masque avec les gros boutons)
+    const salesSection = document.getElementById('sales-section');
+    const supplySection = document.getElementById('supply-section');
+    const reportSection = document.getElementById('report-section');
+
+    // Sections (détails, etc.)
     const salesDetails = document.getElementById('sales-details');
     const othersDetails = document.getElementById('others-details');
-    const exportSalesExcelButton = document.getElementById('export-sales-excel');
-    const exportSalesPdfButton = document.getElementById('export-sales-pdf');
-    const exportOthersExcelButton = document.getElementById('export-others-excel');
-    const exportOthersPdfButton = document.getElementById('export-others-pdf');
+    const venteDetails = document.getElementById('vente-details');
+    const autreDetails = document.getElementById('autre-details');
+    const reportFilters = document.getElementById('report-filters');
+    const reportTableSection = document.getElementById('report-table-section');
+    const supplyTableElement = document.getElementById('supply-table');
+
+    // Champs de formulaire
     const saleDesignationSelect = document.getElementById('sale-designation');
     const saleUnitPriceInput = document.getElementById('sale-unit-price');
     const saleQuantityInput = document.getElementById('sale-quantity');
@@ -18,36 +29,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const otherQuantityInput = document.getElementById('other-quantity');
     const otherAmountInput = document.getElementById('other-amount');
     const operationTypeSelect = document.getElementById('operation-type');
-    const venteDetails = document.getElementById('vente-details');
-    const autreDetails = document.getElementById('autre-details');
-    const showSupplySectionButton = document.getElementById('show-supply-section');
-    const supplySection = document.getElementById('supply-section');
-    const dailyReportButton = document.getElementById('daily-report');
-    const monthlyReportButton = document.getElementById('monthly-report');
-    const yearlyReportButton = document.getElementById('yearly-report');
-    const reportFilters = document.getElementById('report-filters');
-    const dailyFilter = document.getElementById('daily-filter');
-    const monthlyFilter = document.getElementById('monthly-filter');
-    const yearlyFilter = document.getElementById('yearly-filter');
     const reportDateInput = document.getElementById('report-date');
     const reportMonthInput = document.getElementById('report-month');
     const reportYearInput = document.getElementById('report-year');
+    const salesFormKeyInput = document.getElementById('sales-form-key');
+    const supplyFormKeyInput = document.getElementById('supply-form-key');
+    const dailyFilter = document.getElementById('daily-filter');
+    const monthlyFilter = document.getElementById('monthly-filter');
+    const yearlyFilter = document.getElementById('yearly-filter');
+
+    // Boutons
+    const showOthersDetailsButton = document.getElementById('show-others-details');
+    const showSupplySectionButton = document.getElementById('show-supply-section'); // Pour le bouton "Approvisionner"
+    const showSalesSectionButton = document.getElementById('show-sales-section-button'); // Bouton "Ventes"
+    const showReportSectionButton = document.getElementById('show-report-section-button'); // Bouton "Bilan"
     const generateReportButton = document.getElementById('generate-report');
-    const reportSection = document.getElementById('report-section');
-    const reportTableSection = document.getElementById('report-table-section');
-    const reportTable = document.getElementById('report-table').querySelector('tbody');
-    const exportReportExcelButton = document.getElementById('export-report-excel');
-    const exportReportPdfButton = document.getElementById('export-report-pdf');
+    const printSupplyTableButton = document.getElementById('print-supply-table');
+    const printSalesTableButton = document.getElementById('print-sales-table');
+    const printOthersTableButton = document.getElementById('print-others-table');
+    const exportSalesExcelButton = document.getElementById('export-sales-excel');
+    const exportOthersExcelButton = document.getElementById('export-others-excel');
     const exportSupplyExcelButton = document.getElementById('export-supply-excel');
+    const exportReportExcelButton = document.getElementById('export-report-excel');
+    const exportSalesPdfButton = document.getElementById('export-sales-pdf');
+    const exportOthersPdfButton = document.getElementById('export-others-pdf');
     const exportSupplyPdfButton = document.getElementById('export-supply-pdf');
-    const printSupplyTableButton = document.getElementById('print-supply-table'); // Bouton Imprimer pour Approvisionnements
-    const printSalesTableButton = document.getElementById('print-sales-table'); // Bouton Imprimer pour Ventes
-    const printOthersTableButton = document.getElementById('print-others-table'); // Bouton Imprimer pour Autres Opérations
+    const exportReportPdfButton = document.getElementById('export-report-pdf');
+    const backToTopButton = document.getElementById('back-to-top');
+    //Nouveau bouton
+    const showSupplyDetailsButton = document.getElementById('show-supply-details');
 
 
-    // Initialiser Firebase
+    // Initialiser Firebase (votre configuration)
     const firebaseConfig = {
-        apiKey: "AIzaSyBU6VVRgSCh5gcV7xXnnHr6rxIASTcBpLc",
+        apiKey: "AIzaSyBU6VVRgSCh5gcV7xXnnHr6rxIASTcBpLc",  // Remplacez par votre clé API
         authDomain: "tech-cohesion.firebaseapp.com",
         databaseURL: "https://tech-cohesion-default-rtdb.firebaseio.com",
         projectId: "tech-cohesion",
@@ -65,7 +80,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const othersRef = database.ref('others');
     const supplyRef = database.ref('supply');
 
-    // Fonction pour mettre à jour la liste déroulante des désignations de produits
+    // --- Fonctions Utilitaires ---
+
+    // Fonction pour afficher une section principale et masquer les autres
+    function showSection(sectionToShow) {
+        // Masque toutes les sections principales
+        supplySection.style.display = 'none';
+        salesSection.style.display = 'none';
+        reportSection.style.display = 'none';
+
+        // Affiche la section demandée
+        sectionToShow.style.display = 'block';
+
+        // Masque les sous-sections potentiellement ouvertes
+        salesDetails.style.display = 'none';
+        othersDetails.style.display = 'none';
+        reportFilters.style.display = 'none';
+        reportTableSection.style.display = 'none';
+        supplyTableElement.style.display = 'none'; //Masquer le tableau au chargement initial
+    }
+
     function updateProductDesignations() {
         supplyRef.once('value', snapshot => {
             const supplyData = snapshot.val() || {};
@@ -75,139 +109,223 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Mettre à jour les prix et le total lors du changement de désignation ou de quantité
-    saleDesignationSelect.addEventListener('change', calculateTotalCost);
-    saleQuantityInput.addEventListener('input', calculateTotalCost);
-    saleUnitPriceInput.addEventListener('input', calculateTotalCost);
-
-    // Mettre à jour la date du jour dans les champs de date
     function setTodaysDate() {
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('sale-date').value = today;
         document.getElementById('supply-date').value = today;
     }
 
-    function initializeData() {
-        // Mettre à jour la liste des produits
-        updateProductDesignations();
+    // Fonction pour afficher/masquer une section (utilisée pour les détails, etc.)
+    function toggleSection(section) {
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
 
-        // Mettre à jour les tableaux
+    // Fonction pour afficher/masquer les détails
+    function toggleDetails(showDetails, hideDetails) {
+        hideDetails.style.display = 'none';
+        showDetails.style.display = showDetails.style.display === 'none' ? 'block' : 'none';
+    }
+
+      // Afficher/masquer le tableau des approvisionnements
+    function toggleSupplyTable() {
+        supplyTableElement.style.display = supplyTableElement.style.display === 'none' ? 'table' : 'none'; // Use 'table' to properly display a table element
+    }
+
+
+    function initializeData() {
+        updateProductDesignations();
         updateSalesTable();
         updateOthersTable();
         updateSupplyTable();
-
-        // Mettre à jour la date du jour
         setTodaysDate();
     }
 
-    // Mettre à jour le tableau des ventes
-    function updateSalesTable() {
-        salesTable.innerHTML = '';
-        salesRef.on('value', (snapshot) => {
-            const salesData = snapshot.val() || {};
-            for (const key in salesData) {
-                const sale = salesData[key];
-                const row = salesTable.insertRow();
-                row.insertCell().textContent = sale.date;
-                row.insertCell().textContent = sale.designation;
-                row.insertCell().textContent = sale.quantity;
-                row.insertCell().textContent = sale.unitPrice;
-                row.insertCell().textContent = sale.totalCost;
-            }
-            if (Object.keys(salesData).length === 0) {
-                const row = salesTable.insertRow();
-                let cell = row.insertCell();
-                cell.colSpan = 5;
-                cell.textContent = "Aucune vente enregistrée.";
-                cell.style.textAlign = "center";
-            }
+
+    function createActionButtons(key, dataType) {
+        const actionsCell = document.createElement('td');
+
+        const editButton = document.createElement('button');
+        editButton.classList.add('edit-button');
+        editButton.setAttribute('data-key', key);
+        editButton.setAttribute('data-type', dataType);
+        editButton.addEventListener('click', () => handleEdit(key, dataType));
+        actionsCell.appendChild(editButton);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-button');
+        deleteButton.setAttribute('data-key', key);
+        deleteButton.setAttribute('data-type', dataType);
+        deleteButton.addEventListener('click', () => handleDelete(key, dataType));
+        actionsCell.appendChild(deleteButton);
+
+        return actionsCell;
+    }
+    //Fontion pour remonter en haut
+     function scrollToTop() {
+        window.scrollTo({
+            top: 0,          // Position cible (haut de la page)
+            behavior: 'smooth' // Défilement fluide
         });
     }
 
-    // Mettre à jour le tableau des autres opérations
-    function updateOthersTable() {
-        othersTable.innerHTML = '';
-        othersRef.on('value', (snapshot) => {
-            const othersData = snapshot.val() || {};
-            for (const key in othersData) {
-                const other = othersData[key];
-                const row = othersTable.insertRow();
-                row.insertCell().textContent = other.date;
-                row.insertCell().textContent = other.designation;
-                row.insertCell().textContent = other.quantity;
-                row.insertCell().textContent = other.amount;
-            }
-            if (Object.keys(othersData).length === 0) {
-                const row = othersTable.insertRow();
-                let cell = row.insertCell();
-                cell.colSpan = 4;
-                cell.textContent = "Aucune autre opération enregistrée.";
-                cell.style.textAlign = "center";
-            }
-        });
-    }
-
-    // Mettre à jour le tableau des approvisionnements
-    function updateSupplyTable() {
-        supplyTable.innerHTML = '';
-        supplyRef.on('value', (snapshot) => {
-            const supplyData = snapshot.val() || {};
-            salesRef.once('value', (salesSnapshot) => {
-                const salesData = salesSnapshot.val() || {};
-                for (const key in supplyData) {
-                    const supply = supplyData[key];
-                    let soldQuantity = 0;
-                    for (const saleKey in salesData) {
-                        const sale = salesData[saleKey];
-                        if (sale.designation === supply.designation) {
-                            soldQuantity += parseFloat(sale.quantity);
-                        }
-                    }
-                    const remainingQuantity = parseFloat(supply.quantity) - soldQuantity;
-
-                    const row = supplyTable.insertRow();
-                    row.insertCell().textContent = supply.date;
-                    row.insertCell().textContent = supply.designation;
-                    row.insertCell().textContent = supply.quantity;
-                    row.insertCell().textContent = soldQuantity;
-                    row.insertCell().textContent = remainingQuantity;
-                }
-                if (Object.keys(supplyData).length === 0) {
-                    const row = supplyTable.insertRow();
-                    let cell = row.insertCell();
-                    cell.colSpan = 5;
-                    cell.textContent = "Aucun approvisionnement enregistré.";
-                    cell.style.textAlign = "center";
+    function handleEdit(key, dataType) {
+        if (dataType === 'sales') {
+            salesFormKeyInput.value = key;
+            salesRef.child(key).once('value', snapshot => {
+                const saleData = snapshot.val();
+                if (saleData) {
+                    populateSalesForm(saleData);
+                    salesForm.querySelector('.submit-button').textContent = 'Modifier Opération';
+                      scrollToTop(); // Appel à la function
                 }
             });
+        } else if (dataType === 'others') {
+            salesFormKeyInput.value = key;
+            othersRef.child(key).once('value', snapshot => {
+                const otherData = snapshot.val();
+                if (otherData) {
+                    populateOthersForm(otherData);
+                    salesForm.querySelector('.submit-button').textContent = 'Modifier Opération';
+                    scrollToTop();
+                }
+            });
+        } else if (dataType === 'supply') {
+            supplyFormKeyInput.value = key;
+            supplyRef.child(key).once('value', snapshot => {
+                const supplyData = snapshot.val();
+                if (supplyData) {
+                    populateSupplyForm(supplyData);
+                    supplyForm.querySelector('.submit-button').textContent = 'Modifier Approvisionnement';
+                     // Remonter en haut de la page après la modification
+                   scrollToTop(); // Appel à la fonction
+                }
+            });
+        }
+    }
+
+    function populateSalesForm(data) {
+        document.getElementById('sale-date').value = data.date;
+        document.getElementById('operation-type').value = 'Vente';
+        venteDetails.style.display = 'block';
+        autreDetails.style.display = 'none';
+        saleDesignationSelect.value = data.designation;
+        saleQuantityInput.value = data.quantity;
+        saleUnitPriceInput.value = data.unitPrice;
+    }
+
+    function populateOthersForm(data) {
+        document.getElementById('sale-date').value = data.date;
+        document.getElementById('operation-type').value = 'Autre';
+        venteDetails.style.display = 'none';
+        autreDetails.style.display = 'block';
+        otherDesignationInput.value = data.designation;
+        otherQuantityInput.value = data.quantity;
+        otherAmountInput.value = data.amount;
+    }
+
+    function populateSupplyForm(data) {
+        document.getElementById('supply-date').value = data.date;
+        document.getElementById('supply-designation').value = data.designation;
+        document.getElementById('supply-quantity').value = data.quantity;
+    }
+
+    function handleDelete(key, dataType) {
+        if (confirm(`Êtes-vous sûr de vouloir supprimer cette entrée de ${dataType} ?`)) {
+            const ref = dataType === 'sales' ? salesRef : (dataType === 'others' ? othersRef : supplyRef);
+            ref.child(key).remove()
+                .then(() => alert(`${dataType} supprimé avec succès !`))
+                .catch(error => {
+                    console.error(`Erreur lors de la suppression de ${dataType}:`, error);
+                    alert(`Erreur lors de la suppression de ${dataType}.`);
+                });
+        }
+    }
+
+    function updateTable(table, ref, dataType) {
+        table.innerHTML = '';
+        ref.on('value', (snapshot) => {
+            const data = snapshot.val() || {};
+            for (const key in data) {
+                                const item = data[key];
+                const row = table.insertRow();
+
+                if (dataType === 'supply') {
+                    // Traitement spécifique pour les approvisionnements
+                    salesRef.once('value', (salesSnapshot) => {
+                        const salesData = salesSnapshot.val() || {};
+                        let soldQuantity = 0;
+                        for (const saleKey in salesData) {
+                            const sale = salesData[saleKey];
+                            if (sale.designation === item.designation) {
+                                soldQuantity += parseFloat(sale.quantity);
+                            }
+                        }
+                        const remainingQuantity = parseFloat(item.quantity) - soldQuantity;
+
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = soldQuantity;
+                        row.insertCell().textContent = remainingQuantity;
+                        row.appendChild(createActionButtons(key, dataType));
+
+                        if (Object.keys(data).length === 0) {
+                            displayEmptyTableMessage(table, 6, `Aucun ${dataType} enregistré.`);
+                        }
+                    });
+                } else {
+                    // Traitement commun pour ventes et autres opérations
+                    if (dataType === 'sales') {
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.unitPrice;
+                        row.insertCell().textContent = item.totalCost;
+                    } else if (dataType === 'others') {
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.amount;
+                    }
+                    row.appendChild(createActionButtons(key, dataType));
+                }
+            }
+            if (Object.keys(data).length === 0 && dataType !== 'supply') {
+                displayEmptyTableMessage(table, dataType === 'sales' ? 6 : 5, `Aucune ${dataType} enregistrée.`);
+            }
         });
     }
 
 
-    // Fonction pour calculer le coût total (non utilisée directement dans l'affichage, mais pourrait l'être ailleurs)
+    function displayEmptyTableMessage(table, colspan, message) {
+        const row = table.insertRow();
+        const cell = row.insertCell();
+        cell.colSpan = colspan;
+        cell.textContent = message;
+        cell.style.textAlign = "center";
+    }
+
+    function updateSalesTable() {
+        updateTable(salesTable, salesRef, 'sales');
+    }
+
+    function updateOthersTable() {
+        updateTable(othersTable, othersRef, 'others');
+    }
+
+    function updateSupplyTable() {
+        updateTable(supplyTable, supplyRef, 'supply');
+    }
+
     function calculateTotalCost() {
         const quantity = parseFloat(saleQuantityInput.value) || 0;
         const unitPrice = parseFloat(saleUnitPriceInput.value) || 0;
-        const totalCost = quantity * unitPrice;
-        return totalCost; // Retourner le coût total pour une utilisation potentielle
+        return quantity * unitPrice;
     }
 
-
-    // Afficher/masquer les champs en fonction du type d'opération
-    operationTypeSelect.addEventListener('change', function () {
-        if (operationTypeSelect.value === 'Vente') {
-            venteDetails.style.display = 'block';
-            autreDetails.style.display = 'none';
-        } else {
-            venteDetails.style.display = 'none';
-            autreDetails.style.display = 'block';
-        }
-    });
-
-    // Gestion du formulaire de vente et autres opérations
-    salesForm.addEventListener('submit', function (event) {
+    function handleFormSubmit(event, operationType) {
         event.preventDefault();
-        const operationType = operationTypeSelect.value;
+        const formKey = salesFormKeyInput.value;
         let operationData;
         let dbRef;
 
@@ -226,203 +344,163 @@ document.addEventListener('DOMContentLoaded', function () {
                 designation: otherDesignationInput.value,
                 quantity: parseFloat(otherQuantityInput.value),
                 amount: parseFloat(otherAmountInput.value),
-                motif: otherDesignationInput.value // Ajout du motif pour "Autres" opérations
+                motif: otherDesignationInput.value // Note: 'motif' est utilisé ici, mais il pourrait être redondant avec 'designation'.
             };
             dbRef = othersRef;
         }
 
-        dbRef.push(operationData).then(() => {
-            salesForm.reset();
-            setTodaysDate();
-            if (operationType === 'Vente') {
-                updateSalesTable();
-            } else {
-                updateOthersTable();
-            }
-            alert('Opération ajoutée avec succès!');
-        }).catch((error) => {
-            console.error(`Erreur lors de l'ajout de l'opération (${operationType}):`, error);
-            alert('Erreur lors de l\'ajout de l\'opération.');
-        });
-    });
+        const isEditMode = !!formKey;
+        const updateFunction = isEditMode ? dbRef.child(formKey).update(operationData) : dbRef.push(operationData);
 
+        updateFunction
+            .then(() => {
+                alert(`Opération ${isEditMode ? 'modifiée' : 'ajoutée'} avec succès !`);
+                salesForm.reset();
+                setTodaysDate();
+                salesFormKeyInput.value = '';
+                salesForm.querySelector('.submit-button').textContent = 'Ajouter Opération';
+                if (operationType === 'Vente') {
+                    updateSalesTable();
+                } else {
+                    updateOthersTable();
+                }
+            })
+            .catch(error => {
+                console.error(`Erreur lors de l'${isEditMode ? 'modification' : 'ajout'} de l'opération (${operationType}):`, error);
+                alert(`Erreur lors de l'${isEditMode ? 'modification' : 'ajout'} de l'opération.`);
+            });
+    }
 
-    // Gestion du formulaire d'approvisionnement
-    supplyForm.addEventListener('submit', function (event) {
+    function handleSupplyFormSubmit(event) {
         event.preventDefault();
-        const supply = {
+        const formKey = supplyFormKeyInput.value;
+        const supplyData = {
             date: document.getElementById('supply-date').value,
             designation: document.getElementById('supply-designation').value,
             quantity: parseFloat(document.getElementById('supply-quantity').value)
         };
-        supplyRef.push(supply).then(() => {
-            supplyForm.reset();
-            setTodaysDate();
-            updateProductDesignations();
-            updateSupplyTable();
-            alert('Approvisionnement ajouté avec succès!');
-        }).catch((error) => {
-            console.error("Erreur lors de l'ajout de l'approvisionnement:", error);
-            alert('Erreur lors de l\'ajout de l\'approvisionnement.');
-        });
-    });
+        const isEditMode = !!formKey;
 
-    // Affichage des détails des ventes
-    document.getElementById('show-sales-details').addEventListener('click', function () {
-        othersDetails.style.display = 'none';
-        salesDetails.style.display = salesDetails.style.display === 'none' ? 'block' : 'none';
-    });
+        const updateFunction = isEditMode ? supplyRef.child(formKey).update(supplyData) : supplyRef.push(supplyData);
 
-    // Affichage des détails des autres opérations
-    showOthersDetailsButton.addEventListener('click', function () {
-        salesDetails.style.display = 'none';
-        othersDetails.style.display = othersDetails.style.display === 'none' ? 'block' : 'none';
-    });
+        updateFunction
+            .then(() => {
+                alert(`Approvisionnement ${isEditMode ? 'modifié' : 'ajouté'} avec succès !`);
+                supplyForm.reset();
+                setTodaysDate();
+                supplyFormKeyInput.value = '';
+                supplyForm.querySelector('.submit-button').textContent = 'Ajouter Approvisionnement';
+                updateProductDesignations();
+                updateSupplyTable();
+            })
+            .catch(error => {
+                console.error(`Erreur lors de l'${isEditMode ? 'modification' : 'ajout'} de l'approvisionnement:`, error);
+                alert(`Erreur lors de l'${isEditMode ? 'modification' : 'ajout'} de l'approvisionnement.`);
+            });
+    }
 
-    // Imprimer le tableau des ventes
-    printSalesTableButton.addEventListener('click', function () {
-        window.print();
-    });
+    // --- Event Listeners ---
 
-    // Imprimer le tableau des autres opérations
-    printOthersTableButton.addEventListener('click', function () {
-        window.print();
-    });
+    // Mettre à jour le total (ventes)
+    saleDesignationSelect.addEventListener('change', calculateTotalCost);
+    saleQuantityInput.addEventListener('input', calculateTotalCost);
+    saleUnitPriceInput.addEventListener('input', calculateTotalCost);
 
-    // Export Excel pour les ventes
-    exportSalesExcelButton.addEventListener('click', function () {
-        const wb = XLSX.utils.book_new();
-        const ws = XLSX.utils.table_to_sheet(document.getElementById('sales-table'));
-        XLSX.utils.book_append_sheet(wb, ws, "Détails des Ventes");
-        XLSX.writeFile(wb, "Détails des Ventes.xlsx");
-    });
-
-    // Export Excel pour les autres opérations
-    exportOthersExcelButton.addEventListener('click', function () {
-        const wb = XLSX.utils.book_new();
-        const ws = XLSX.utils.table_to_sheet(document.getElementById('others-table'));
-        XLSX.utils.book_append_sheet(wb, ws, "Détails des Autres Opérations");
-        XLSX.writeFile(wb, "Détails des Autres Opérations.xlsx");
-    });
-
-    // Export PDF pour les ventes
-    exportSalesPdfButton.addEventListener('click', function () {
-        window.jsPDF = window.jspdf.jsPDF;
-        const doc = new jsPDF();
-        doc.autoTable({
-            head: [['Date', 'Désignation', 'Quantité', 'Prix unitaire', 'Coût total']],
-            body: Array.from(document.getElementById('sales-table').querySelectorAll('tbody tr')).map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent)),
-            didParseCell: function (data) {
-                if (data.section === 'head') {
-                    data.cell.styles.fontStyle = 'bold';
-                }
-            },
-            title: 'Détails des Ventes', // Titre pour le PDF
-            filename: 'Détails des Ventes.pdf',
-            Lang: 'fr'
-        });
-        doc.save("Détails des Ventes.pdf");
-    });
-
-    // Export PDF pour les autres opérations
-    exportOthersPdfButton.addEventListener('click', function () {
-        window.jsPDF = window.jspdf.jsPDF;
-        const doc = new jsPDF();
-        doc.autoTable({
-            head: [['Date', 'Motif', 'Quantité', 'Montant']],
-            body: Array.from(document.getElementById('others-table').querySelectorAll('tbody tr')).map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent)),
-            didParseCell: function (data) {
-                if (data.section === 'head') {
-                    data.cell.styles.fontStyle = 'bold';
-                }
-            },
-            title: 'Détails des Autres Opérations', // Titre pour le PDF
-            filename: 'Détails des Autres Opérations.pdf',
-            Lang: 'fr'
-        });
-        doc.save("Détails des Autres Opérations.pdf");
-    });
-
-    // Export Excel pour les approvisionnements
-    exportSupplyExcelButton.addEventListener('click', function () {
-        const wb = XLSX.utils.book_new();
-        const ws = XLSX.utils.table_to_sheet(document.getElementById('supply-table'));
-        // Ajouter un titre dans la feuille Excel (première ligne)
-        XLSX.utils.sheet_insert_row(ws, 0, 1); // Insert an empty row at the top
-        XLSX.utils.sheet_add_aoa(ws, [["Détails des Approvisionnements et Stocks"]], { origin: "A1" }); // Add title in A1
-        // Apply style to the title cell (optional, example: bold font)
-        const titleCell = ws['A1'];
-        if (titleCell) {
-            titleCell.s = { font: { bold: true, sz: 14 } };
+    // Afficher/masquer les champs en fonction du type d'opération (ventes/autres)
+    operationTypeSelect.addEventListener('change', function () {
+        if (operationTypeSelect.value === 'Vente') {
+            venteDetails.style.display = 'block';
+            autreDetails.style.display = 'none';
+        } else {
+            venteDetails.style.display = 'none';
+            autreDetails.style.display = 'block';
         }
-        XLSX.utils.book_append_sheet(wb, ws, "Approvisionnements");
-        XLSX.writeFile(wb, "Détails des Approvisionnements.xlsx");
     });
 
+    // Soumission des formulaires
+    salesForm.addEventListener('submit', (event) => handleFormSubmit(event, operationTypeSelect.value));
+    supplyForm.addEventListener('submit', handleSupplyFormSubmit);
 
-    // Export PDF pour les approvisionnements
-    exportSupplyPdfButton.addEventListener('click', function () {
-        window.jsPDF = window.jspdf.jsPDF;
+    // Afficher/masquer les détails des ventes/autres
+    document.getElementById('show-sales-details').addEventListener('click', () => toggleDetails(salesDetails, othersDetails));
+    showOthersDetailsButton.addEventListener('click', () => toggleDetails(othersDetails, salesDetails));
+
+    // Impression et Exportation (fonctions et event listeners)
+     function exportToExcel(tableId, filename) {
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.table_to_sheet(document.getElementById(tableId));
+        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+        XLSX.writeFile(wb, filename + ".xlsx");
+    }
+
+
+    function exportToPdf(tableId, title, filename) {
+         window.jsPDF = window.jspdf.jsPDF;
         const doc = new jsPDF();
+        const headers = Array.from(document.getElementById(tableId).querySelectorAll('thead th')).map(th => th.textContent);
+        const body = Array.from(document.getElementById(tableId).querySelectorAll('tbody tr'))
+            .map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent));
+         // Vérifie si le tableau est vide
+        if (body.length === 0) {
+            alert("Aucune donnée à exporter."); // Affiche une alerte si le tableau est vide
+            return; // Arrête la fonction pour ne pas générer un PDF vide
+        }
         doc.autoTable({
-            head: [['Date', 'Désignation', 'Quantité approvisionnée', 'Vendues', 'Restantes']],
-            body: Array.from(document.getElementById('supply-table').querySelectorAll('tbody tr')).map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent)),
-            didParseCell: function (data) {
-                if (data.section === 'head') {
-                    data.cell.styles.fontStyle = 'bold';
-                }
-            },
-            title: 'Détails des Approvisionnements et Stocks', // Titre pour le PDF
-            filename: 'Détails des Approvisionnements.pdf',
-            Lang: 'fr',
+            head: [headers],
+            body: body,
+            didParseCell: data => { if (data.section === 'head') data.cell.styles.fontStyle = 'bold'; },
+            title: title,
+            filename: filename + '.pdf', //Correction: Ajout de l'extension .pdf
+            Lang: 'fr'
         });
-        doc.save("Détails des Approvisionnements.pdf");
-    });
+         // Vérifie si le document a des pages avant de sauvegarder.
+        if(doc.getNumberOfPages() > 0){
+             doc.save(filename + ".pdf");
+        } else {
+            alert("Erreur lors de la création du PDF : Aucune page générée.")
+        }
 
-    // Imprimer le tableau des approvisionnements
-    printSupplyTableButton.addEventListener('click', function () {
-        window.print();
-    });
+    }
 
-    // Imprimer le tableau des ventes
-    printSalesTableButton.addEventListener('click', function () {
-        window.print();
-    });
+    printSalesTableButton.addEventListener('click', () => window.print());
+    printOthersTableButton.addEventListener('click', () => window.print());
+    printSupplyTableButton.addEventListener('click', () => window.print());
 
-    // Imprimer le tableau des autres opérations
-    printOthersTableButton.addEventListener('click', function () {
-        window.print();
-    });
+    exportSalesExcelButton.addEventListener('click', () => exportToExcel('sales-table', 'Détails des Ventes'));
+    exportOthersExcelButton.addEventListener('click', () => exportToExcel('others-table', 'Détails des Autres Opérations'));
+    exportSupplyExcelButton.addEventListener('click', () => exportToExcel('supply-table', 'Détails des Approvisionnements'));
+
+    exportSalesPdfButton.addEventListener('click', () => exportToPdf('sales-table', 'Détails des Ventes', 'Détails des Ventes'));
+    exportOthersPdfButton.addEventListener('click', () => exportToPdf('others-table', 'Détails des Autres Opérations', 'Détails des Autres Opérations'));
+    exportSupplyPdfButton.addEventListener('click', () => exportToPdf('supply-table', 'Détails des Approvisionnements et Stocks', 'Détails des Approvisionnements'));
+
+    // Boutons section principales (Appro, Ventes, Bilan)
+    showSupplySectionButton.addEventListener('click', () => showSection(supplySection));
+    showSalesSectionButton.addEventListener('click', () => showSection(salesSection));
+    showReportSectionButton.addEventListener('click', () => showSection(reportSection));
+
+    //Bouton pour afficher/masquer le tableau des approvisionnements
+    showSupplyDetailsButton.addEventListener('click', toggleSupplyTable);
 
 
-    // Afficher la section d'approvisionnement
-    showSupplySectionButton.addEventListener('click', function () {
-        supplySection.style.display = 'block';
-        document.getElementById('supply-table').style.display = 'block';
-    });
+    // Bilan (filtres et génération)
+    const reportButtons = {
+        'daily-report': 'daily',
+        'monthly-report': 'monthly',
+        'yearly-report': 'yearly',
+    };
 
-
-    // Gestion des bilans (journalier, mensuel, annuel)
-    dailyReportButton.addEventListener('click', function () {
-        showReportFilters('daily');
-    });
-
-    monthlyReportButton.addEventListener('click', function () {
-        showReportFilters('monthly');
-    });
-
-    yearlyReportButton.addEventListener('click', function () {
-        showReportFilters('yearly');
-    });
+    for (const id in reportButtons) {
+        document.getElementById(id).addEventListener('click', () => showReportFilters(reportButtons[id]));
+    }
 
     function showReportFilters(filterType) {
         reportFilters.style.display = 'block';
         dailyFilter.style.display = filterType === 'daily' ? 'flex' : 'none';
-        monthlyFilter.style.display = filterType === 'monthly' ? 'flex' : 'none';
+                monthlyFilter.style.display = filterType === 'monthly' ? 'flex' : 'none';
         yearlyFilter.style.display = filterType === 'yearly' ? 'flex' : 'none';
         reportTableSection.style.display = 'none';
     }
-
 
     generateReportButton.addEventListener('click', function () {
         const selectedDate = reportDateInput.value;
@@ -431,20 +509,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
         Promise.all([
             salesRef.once('value'),
-            othersRef.once('value')
-        ]).then((snapshots) => {
+            othersRef.once('value'),
+            supplyRef.once('value') // Ajout de supplyRef
+        ]).then(snapshots => {
             const salesData = snapshots[0].val() || {};
             const othersData = snapshots[1].val() || {};
+            const supplyData = snapshots[2].val() || {}; // Récupération des données d'approvisionnement
 
             const filteredSales = filterDataByDate(salesData, selectedDate, selectedMonth, selectedYear);
             const filteredOthers = filterDataByDate(othersData, selectedDate, selectedMonth, selectedYear);
+            const filteredSupply = filterDataByDate(supplyData, selectedDate, selectedMonth, selectedYear); // Filtrage des approvisionnements
 
-            updateReportTable(filteredSales, filteredOthers);
+            updateReportTable(filteredSales, filteredOthers, filteredSupply); // Ajout de filteredSupply
             reportTableSection.style.display = 'block';
         });
     });
-
-
 
     function filterDataByDate(data, date, month, year) {
         const filteredData = {};
@@ -456,7 +535,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (date && itemDate === date) {
                 filteredData[key] = item;
             } else if (month && itemDate.startsWith(month.substring(0, 7))) {
-                filteredData[key] = item;
+                                filteredData[key] = item;
             } else if (year && itemDate.startsWith(year)) {
                 filteredData[key] = item;
             }
@@ -464,11 +543,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return filteredData;
     }
 
-
-    function updateReportTable(sales, others) {
+    function updateReportTable(sales, others, supply) { // Ajout du paramètre supply
         reportTable.innerHTML = '';
         const combinedData = {};
 
+        // Traitement des ventes
         for (const key in sales) {
             const sale = sales[key];
             const combinedKey = sale.designation;
@@ -484,9 +563,10 @@ document.addEventListener('DOMContentLoaded', function () {
             combinedData[combinedKey].amount += parseFloat(sale.totalCost);
         }
 
+        // Traitement des autres opérations
         for (const key in others) {
             const other = others[key];
-            const combinedKey = other.designation;
+            const combinedKey = other.designation;  // Utilisez 'designation' comme clé, car 'motif' peut être différent.
             if (!combinedData[combinedKey]) {
                 combinedData[combinedKey] = {
                     type: 'Autre',
@@ -499,14 +579,34 @@ document.addEventListener('DOMContentLoaded', function () {
             combinedData[combinedKey].amount += parseFloat(other.amount);
         }
 
+        // Traitement des approvisionnements
+        for (const key in supply) {
+            const supplyItem = supply[key];
+            const combinedKey = supplyItem.designation;
+            if (!combinedData[combinedKey]) {
+                combinedData[combinedKey] = {
+                    type: 'Approvisionnement', // Type spécifique pour l'approvisionnement
+                    designation: supplyItem.designation,
+                    quantity: 0,
+                    amount: 0, // Les approvisionnements n'ont pas de montant/coût direct dans ce contexte.  On pourrait ajouter un coût unitaire à l'appro.
+                };
+            }
+            combinedData[combinedKey].quantity += parseFloat(supplyItem.quantity);
+            // Pas d'ajout de 'amount' pour les approvisionnements (sauf si vous ajoutez un champ coût).
+        }
+
+
+        // Affichage des données combinées
         for (const key in combinedData) {
             const data = combinedData[key];
             const row = reportTable.insertRow();
             row.insertCell().textContent = data.type;
             row.insertCell().textContent = data.designation;
             row.insertCell().textContent = data.quantity;
-            row.insertCell().textContent = data.amount.toFixed(2);
+            // Affiche le montant pour les ventes/autres, et une valeur par défaut (0 ou '-') pour les approvisionnements.
+            row.insertCell().textContent = data.type === 'Approvisionnement' ? '-' : data.amount.toFixed(2);
         }
+
         if (Object.keys(combinedData).length === 0) {
             const row = reportTable.insertRow();
             let cell = row.insertCell();
@@ -515,15 +615,12 @@ document.addEventListener('DOMContentLoaded', function () {
             cell.style.textAlign = "center";
         }
     }
-
-
+        // Export Bilan Excel/PDF (fonctions et event listeners)
     exportReportExcelButton.addEventListener('click', function () {
         const wb = XLSX.utils.book_new();
         const ws = XLSX.utils.table_to_sheet(document.getElementById('report-table'));
-        // Ajouter un titre dans la feuille Excel (première ligne)
-        XLSX.utils.sheet_insert_row(ws, 0, 1); // Insert an empty row at the top
-        XLSX.utils.sheet_add_aoa(ws, [["Bilan"]], { origin: "A1" }); // Add title in A1
-        // Apply style to the title cell (optional, example: bold font)
+        XLSX.utils.sheet_insert_row(ws, 0, 1);
+        XLSX.utils.sheet_add_aoa(ws, [["Bilan"]], { origin: "A1" });
         const titleCell = ws['A1'];
         if (titleCell) {
             titleCell.s = { font: { bold: true, sz: 14 } };
@@ -536,20 +633,59 @@ document.addEventListener('DOMContentLoaded', function () {
     exportReportPdfButton.addEventListener('click', function () {
         window.jsPDF = window.jspdf.jsPDF;
         const doc = new jsPDF();
+         // Récupérer les en-têtes du tableau
+        const headers = Array.from(document.getElementById('report-table').querySelectorAll('thead th')).map(th => th.textContent);
+         // Récupérer les données du tableau
+        const body = Array.from(document.getElementById('report-table').querySelectorAll('tbody tr'))
+            .map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent));
+
+        // Vérifie si le tableau est vide
+        if (body.length === 0) {
+            alert("Aucune donnée à exporter."); // Affiche une alerte si le tableau est vide
+            return; // Arrête la fonction pour ne pas générer un PDF vide
+        }
+
         doc.autoTable({
-            head: [['Type d\'Opération', 'Désignation', 'Quantité', 'Montant/Coût total']],
-            body: Array.from(document.getElementById('report-table').querySelectorAll('tbody tr')).map(row => Array.from(row.querySelectorAll('td')).map(td => td.textContent)),
+            head: [headers], // Utiliser les en-têtes récupérés
+            body: body,     // Utiliser les données récupérées
             didParseCell: function (data) {
                 if (data.section === 'head') {
                     data.cell.styles.fontStyle = 'bold';
                 }
             },
-            title: 'Bilan', // Titre pour le PDF
-            filename: 'Bilan.pdf',
+            title: 'Bilan',
+            filename: 'Bilan.pdf', //Correction: ajout de l'extension
             Lang: 'fr'
         });
-        doc.save("Bilan.pdf");
+        // Vérifie si le document a des pages avant de sauvegarder.
+        if(doc.getNumberOfPages() > 0){
+             doc.save("Bilan.pdf");
+        } else {
+             alert("Erreur lors de la création du PDF : Aucune page générée.")
+        }
+
     });
+
+      // Afficher/masquer le bouton "Retour en haut"
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+          } else {
+            backToTopButton.style.display = "none";
+          }
+        }
+
+        // Animer le défilement vers le haut
+        backToTopButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Empêche le comportement par défaut du lien
+            window.scrollTo({
+            top: 0,         // Position cible (haut de la page)
+            behavior: 'smooth' // Défilement fluide
+          });
+
+        });
 
     initializeData();
 });

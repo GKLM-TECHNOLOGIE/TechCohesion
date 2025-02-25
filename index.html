@@ -4,24 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOLOGIE COHESION</title>
+    <title>TECH COHESION</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 5 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <body>
+    <!-- Ancre pour le retour en haut (ajout) -->
+    <a id="top"></a>
     <div id="printable-area">
-        <h1 class="title-center">TECHNOLOGIE COHESION</h1>
+        <h1 class="title-center">
+            <img src="logo.png" alt="Logo de l'entreprise" class="company-logo">
+            TECH COHESION
+        </h1>
         <h1>Gestion de Stocks et Ventes</h1>
 
         <div class="button-container">
             <button id="show-supply-section">Approvisionner</button>
+             <button id="show-sales-section-button">Ventes</button>
+            <button id="show-report-section-button">Bilan</button>
         </div>
 
-
-        <section id="sales-section" class="form-container">
+         <section id="sales-section" class="form-container" style="display: none;">
             <h2>Ventes et Autres Opérations</h2>
             <p>Enregistrez ici les ventes et autres types d'opérations.</p>
             <form id="sales-form">
+                <input type="hidden" id="sales-form-key"> <!-- Champ caché pour la clé lors de la modification -->
                 <div class="form-row">
                     <label for="sale-date">Date:</label>
                     <input type="date" id="sale-date" required>
@@ -93,6 +104,7 @@
                             <th class="quantity-col">Quantité</th>
                             <th class="unit-price-col">Prix unitaire</th>
                             <th class="total-cost-col">Coût total</th>
+                            <th class="actions-col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -116,6 +128,7 @@
                             <th class="motif-col">Désignation</th>
                             <th class="designation-col">Quantité</th>
                             <th class="quantity-col">Montant</th>
+                            <th class="actions-col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -124,7 +137,7 @@
             </div>
         </section>
 
-        <section id="report-section" class="form-container">
+        <section id="report-section" class="form-container"  style="display: none;">
             <h2>Bilans</h2>
             <p>Consultez les bilans journaliers, mensuels et annuels.</p>
             <div class="button-container">
@@ -176,6 +189,7 @@
             <h2>Approvisionnements</h2>
             <p>Enregistrez les nouveaux approvisionnements de produits.</p>
             <form id="supply-form">
+                <input type="hidden" id="supply-form-key">
                 <div class="form-row">
                     <label for="supply-date">Date:</label>
                     <input type="date" id="supply-date" required>
@@ -192,12 +206,17 @@
                     <button type="submit" class="submit-button">Ajouter Approvisionnement</button>
                 </div>
             </form>
-            <div class="button-group">
+            <!-- Bouton pour afficher les détails des approvisionnements (ajout) -->
+            <div class="button-container">
+           <button id="show-supply-details">Afficher Détails Approvisionnements</button>
+            </div>
+
+            <div class="button-group" style="display: none;">
                 <button id="print-supply-table">Imprimer</button>
                 <button id="export-supply-excel">Exporter en Excel</button>
                 <button id="export-supply-pdf">Exporter en PDF</button>
             </div>
-            <h3>Détails des Approvisionnements et Stocks</h3>
+            <h3 id="supply-table-title" >Détails des Approvisionnements et Stocks</h3>
             <table id="supply-table" style="display: none;">
                 <thead>
                     <tr class="supply-header-row">
@@ -206,6 +225,7 @@
                         <th class="supply-col">Quantité approvisionnée</th>
                         <th class="sold-col">Vendues</th>
                         <th class="remaining-col">Restantes</th>
+                        <th class="actions-col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -213,14 +233,19 @@
             </table>
         </section>
     </div>
+
+    <footer>
+        <p>Tech Cohésion : Votre confiance renouveler nous inspire</p>
+    </footer>
+     <!-- Ancre pour le retour en haut -->
+    <a id="back-to-top" href="#" style="display: none;">↑</a>
+
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database-compat.js"></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 </body>
 
 </html>
