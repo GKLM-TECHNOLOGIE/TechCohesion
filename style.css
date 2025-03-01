@@ -1,4 +1,5 @@
 /* style.css */
+/* --- Réglages Généraux --- */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,7 +9,7 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh;  /* Assure que le body prend au moins toute la hauteur de la fenêtre */
 }
 
 h1, h2, h3 {
@@ -24,9 +25,9 @@ h1.title-center {
 }
 
 .company-logo {
-    height: 80px;
+    height: 80px; /* Ajustez si nécessaire, mais gardez une taille raisonnable */
     margin-right: 20px;
-    max-width: 100%;
+    max-width: 100%; /* Assure que le logo ne dépasse pas son conteneur */
 }
 
 section {
@@ -38,10 +39,9 @@ section {
     border: 1px solid #e0e0e0;
 }
 
-/* --- Formulaires --- */
 .form-container h2 {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Utilisation de rem pour la cohérence */
     color: #2a2fce;
     border-bottom: 2px solid #3498db;
     padding-bottom: 0.5rem;
@@ -66,14 +66,14 @@ input[type="text"],
 input[type="month"],
 input[type="password"],
 select {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Réduit légèrement le padding */
     margin-bottom: 1rem;
     border: 1px solid #bdc3c7;
     border-radius: 6px;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 1rem;  /* Taille de police cohérente */
     color: #333;
-    width: 100%;
+    width: 100%; /* Occupe toute la largeur disponible */
 }
 
 input[type="date"]:focus,
@@ -87,28 +87,28 @@ select:focus {
     outline: none;
 }
 
-
+/* --- Formulaires --- */
 .form-row {
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Disposition verticale par défaut */
 }
-
+/*Suppression du doublon form row*/
 .form-row label {
     text-align: left;
     font-weight: bold;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.3rem; /* Réduit l'espace */
 }
 
 .form-row input,
 .form-row select {
-    width: 100%;
+    width: 100%; /* Occupe toute la largeur */
 }
 
 button {
     background-color: #f80c13;
     color: #fefefe;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 1.2rem; /* Ajuste le padding */
     margin-top: 1rem;
     border: none;
     border-radius: 8px;
@@ -117,28 +117,28 @@ button {
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: bold;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    width: 100%; /* Occupe toute la largeur dans le conteneur */
+    max-width: 300px; /* Limite la largeur maximale */
+    margin-left: auto;  /* Centrage horizontal (combiné avec margin-right) */
+    margin-right: auto; /* Centrage horizontal */
+    display: block; /* Important pour le centrage */
 }
 
 button:hover {
     background-color: #2980b9;
 }
-
+/* Suppression du doublon bouton container */
 /* --- Boutons d'Action --- */
 button.edit-button,
 button.delete-button {
-    padding: 0;
-    font-size: 0;
-    margin: 0.2rem;
+    padding: 0; /* Réinitialise le padding */
+    font-size: 0; /* Masque le texte (si présent) */
+    margin: 0.2rem;  /* Espace autour des boutons */
     border-radius: 5px;
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    display: inline-flex;
+    width: 2rem;  /* Taille fixe */
+    height: 2rem; /* Taille fixe */
+    display: inline-flex; /* Pour centrer l'icône */
     align-items: center;
     justify-content: center;
     border: none;
@@ -165,7 +165,7 @@ button.delete-button:hover {
 button.edit-button::before {
     content: "\f044";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    font-weight: 900; /* Utilise le poids "solid" pour Font Awesome 5 */
     font-size: 1rem;
 }
 
@@ -180,7 +180,7 @@ button.delete-button::before {
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: auto; /* Permet aux colonnes de s'ajuster */
     margin-top: 1.5rem;
     border-spacing: 0;
     border: 1px solid #e0e0e0;
@@ -191,7 +191,7 @@ table {
 
 th, td {
     text-align: left;
-    padding: 0.5rem;
+    padding: 0.5rem;  /* Réduit le padding */
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -200,9 +200,9 @@ th {
     color: #555;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Légère réduction */
 }
-
+/* Suppression du doublon tr */
 tbody tr:nth-child(even) {
     background-color: #f4f4f4;
 }
@@ -229,20 +229,21 @@ tbody tr:nth-child(even) {
 #user-table td,
 #report-table th,
 #report-table td {
-    word-break: break-word;
-    min-width: 80px;
+    word-break: break-word; /* Gère les mots longs */
+    min-width: 80px; /* Largeur minimale réduite */
     border: 1px solid #000;
-    padding: 0.4rem;
-    font-size: 0.85rem;
+    padding: 0.4rem; /* Padding réduit */
+    font-size: 0.85rem; /* Taille de police réduite */
 }
 
 #supply-table thead tr.supply-header-row th {
     background-color: #f0f0f0;
     font-weight: bold;
     border: 1px solid #000;
-    padding: 0.6rem;
+    padding: 0.6rem; /* Padding réduit */
     text-align: center;
 }
+
 
 .form-container {
     border: 1px solid #d0d0d0;
@@ -282,125 +283,58 @@ tbody tr:nth-child(even) {
     background-color: #2980b9;
 }
 
-/* --- Bouton Menu Hamburger --- */
-.menu-toggle {
-    display: none; /* Caché par défaut (visible sur petits écrans) */
-    background-color: #f80c13;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute; /* Position absolue pour le placer en haut à gauche */
-    top: 1rem;
-    right: 1rem;
-    z-index: 1001; /* Au-dessus du contenu */
-}
-
-.menu-toggle:hover {
-    background-color: #2980b9;
-}
-
-.menu-toggle i {
-    font-size: 1.5rem; /* Taille de l'icône */
-}
-
-/* --- Menu de Navigation --- */
-.main-nav {
-    /* Styles par défaut (pour grands écrans) */
-    margin-top: 2rem; /* Espace en dessous du titre */
-
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-
-}
-
-
 /* --- Media Queries --- */
 
 /* Smartphones (Portrait) */
 @media (max-width: 480px) {
     .company-logo {
-        height: 60px;
+        height: 60px; /* Réduit la taille du logo */
         margin-bottom: 10px;
     }
 
     h1, h2, h3 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Réduit la taille des titres */
     }
 
-    .button-container {
-        flex-direction: column;
+  .button-container{
+        flex-direction: column; /* Empile les boutons verticalement */
     }
 
     button {
-        margin-bottom: 0.5rem;
-        width: auto;
-        max-width: 100%;
-        margin: 0.5em;
+        margin-bottom: 0.5rem; /* Espace entre les boutons empilés */
+        width: auto;  /*Les boutons prennent leur largeur naturelle*/
+        max-width: 100%; /* S'assure qu'il ne déborde pas */
+        margin: 0.5em;/*Marge entre les bouttons*/
     }
 
-    #back-to-top {
-        width: 30px;
+     #back-to-top {
+        width: 30px; /* Réduit encore plus la taille du bouton */
         height: 30px;
-        font-size: 14px;
+        font-size: 14px; /* Réduit la taille de la flèche */
         line-height: 30px;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    /* Afficher le bouton hamburger, masquer le menu */
-    .menu-toggle {
-        display: block;
-    }
-
-    .main-nav {
-        display: none; /* Caché par défaut sur mobile */
-        width: 100%; /* Occupe toute la largeur */
-        position: absolute; /* Position absolue pour le superposer */
-        top: 60px; /* Positionné sous le header (ajustez si besoin) */
-        left: 0;
-        background-color: #fff; /* Fond pour la visibilité */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
-        z-index: 1000; /* Assure qu'il est au-dessus du reste */
-     }
-
-      /* Afficher le menu quand la classe est présente */
-    .main-nav.menu-open {
-        display: block;
-    }
-      .button-container {
-        flex-direction: column; /* Empile les boutons */
-        align-items: stretch; /* Étire les boutons */
-    }
-    .button-container button{
-      margin: 0.5em;
+        bottom: 10px; /* Rapproche du bord */
+        right: 10px; /* Rapproche du bord */
     }
 }
 
 /* Tablettes (Portrait) et Petits Écrans (Paysage) */
 @media (min-width: 481px) and (max-width: 768px) {
 
-    .button-container {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+  .button-container{
+        flex-direction: row; /* Remet les boutons en ligne */
+        justify-content: center; /* Centre les boutons */
+        flex-wrap: wrap; /* Permet aux boutons de passer à la ligne si besoin */
+        gap: 0.5rem; /* Espace entre les boutons */
     }
 
     button {
-        margin-bottom: 0.5rem;
-        width: auto;
-        max-width: 100%;
-        margin: 0.5em;
+        margin-bottom: 0.5rem; /* Espace entre les boutons empilés */
+        width: auto;  /*Les boutons prennent leur largeur naturelle*/
+        max-width: 100%;/* S'assure qu'il ne déborde pas*/
+        margin: 0.5em;/*Marge entre les bouttons*/
     }
 
-    h1.title-center {
+      h1.title-center {
         flex-direction: column;
     }
 
@@ -409,41 +343,21 @@ tbody tr:nth-child(even) {
         margin-bottom: 10px;
     }
 
-    #back-to-top {
-        width: 35px;
+      #back-to-top {
+        width: 35px; /* Réduit légèrement la taille du bouton */
         height: 35px;
-        font-size: 16px;
+        font-size: 16px; /* Réduit la taille de la flèche */
         line-height: 35px;
     }
-     /* Afficher le bouton hamburger, masquer le menu */
-    .menu-toggle {
-        display: block;
-    }
-    .main-nav {
-        display: none; /* Caché par défaut sur mobile */
-        width: 100%; /* Occupe toute la largeur */
-        position: absolute; /* Position absolue pour le superposer */
-        top: 60px; /* Positionné sous le header (ajustez si besoin) */
-        left: 0;
-        background-color: #fff; /* Fond pour la visibilité */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
-        z-index: 1000; /* Assure qu'il est au-dessus du reste */
-    }
-
-      /* Afficher le menu quand la classe est présente */
-      .main-nav.menu-open {
-        display: block;
-    }
-
 }
+
 
 /* Tablettes (Paysage) et Grands Écrans */
 @media (min-width: 769px) {
-    /* Masquer le bouton hamburger sur les grands écrans */
-    .menu-toggle {
-        display: none;
-    }
+    /* Styles pour les écrans plus grands (si nécessaire) */
+    /* Vous pouvez ajuster les largeurs maximales, les paddings, etc. */
 }
+
 
 /* --- Impression --- */
 @media print {
@@ -474,6 +388,7 @@ tbody tr:nth-child(even) {
     #user-table {
         color: #000 !important;
     }
+
 
     #supply-table,
     #sales-table,
@@ -513,7 +428,7 @@ tbody tr:nth-child(even) {
     }
 
     .button-group,
-    .button-container, /* Cibler aussi le conteneur principal des boutons */
+    .button-container,
     .form-container h2,
     .form-container p,
     #supply-form,
@@ -525,9 +440,7 @@ tbody tr:nth-child(even) {
     #expenses-details>.button-container,
     #user-form,
     #report-section,
-    #back-to-top,
-    #menu-toggle /* Cacher le bouton de menu à l'impression */
-        {
+    #back-to-top {
         display: none !important;
     }
 
@@ -546,7 +459,7 @@ footer {
     background-color: #f0ec1b;
     color: #2a2fce;
     font-weight: bold;
-    margin-top: auto;
+    margin-top: auto;  /* Pousse le footer vers le bas */
     border-top: 1px solid #e0e0e0;
 }
 
@@ -566,78 +479,85 @@ footer {
 
 #login-container {
     background-color: white;
-    padding: 2rem;
+    padding: 2rem; /* Utilisation de rem */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 400px;
+    width: 90%;  /* Largeur adaptative */
+    max-width: 400px; /* Largeur maximale */
     text-align: center;
 }
 
 /* Media query pour la fenêtre de connexion (petits écrans) */
 @media (max-width: 480px) {
     #login-container {
-        width: 95%;
-        padding: 1rem;
+        width: 95%; /* Occupe presque toute la largeur */
+        padding: 1rem; /* Réduit le padding */
     }
 }
 
 /* --- Règles Générales pour la Responsivité --- */
 /* Images responsives */
 img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* L'image ne dépasse jamais la largeur de son conteneur */
+    height: auto;  /* Conserve le ratio d'aspect */
 }
 
 /* Tableaux responsifs (solution plus robuste) */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* S'applique à tous les écrans plus petits que 768px */
     table {
-        display: block;
-        overflow-x: auto;
+        display: block; /* Transforme le tableau en bloc */
+        overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
     }
 
+    /* Cache les en-têtes (optionnel, mais souvent utile) */
     thead {
         display: none;
     }
 
+
+   /* Style pour les cellules se comportant comme des en-têtes */
     td:first-child {
         font-weight: bold;
-        background-color: #f8f8f8;
+        background-color: #f8f8f8; /* Même couleur que les en-têtes */
     }
 
-    td {
-        display: block;
-        text-align: right;
-        border-bottom: 1px solid #ddd;
-        padding-left: 50%;
-        position: relative;
+     td {
+        display: block; /* Chaque cellule sur une nouvelle ligne */
+        text-align: right; /* Aligne le texte à droite */
+        border-bottom: 1px solid #ddd; /* Bordure plus légère */
+        padding-left: 50%;  /*Important: Crée un espace pour le "label" */
+        position: relative; /* Nécessaire pour le positionnement absolu */
     }
 
+    /* Crée des "labels" pour chaque cellule */
     td::before {
-        content: attr(data-label);
+        content: attr(data-label); /* Utilise l'attribut data-label */
         position: absolute;
-        left: 0.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 45%;
+        left: 0.5rem; /* Un peu d'espace à gauche */
+        top: 50%;    /*Centrage vertical du label*/
+        transform: translateY(-50%); /*Centrage vertical précis du label*/
+        width: 45%; /* Largeur du "label" */
         font-weight: bold;
         text-align: left;
     }
 
+     /* Ajuste la largeur minimale pour éviter la coupure des mots */
     th, td {
         min-width: auto;
-        word-break: normal;
+        word-break: normal; /* Désactive le word-break par défaut */
     }
 
-    td.actions-col {
-        text-align: center;
+    /* Styles spécifiques aux cellules d'actions */
+     td.actions-col {
+        text-align: center; /* Centre les boutons d'action */
     }
 
     td.actions-col::before {
-        content: "";
+        content: ""; /*Supprime le label pour la cellule Actions*/
         display: none;
     }
 
+    /*Pour les cellules d'actions: On retire le padding left*/
       td.actions-col{
           padding-left: 0.5rem;
       }
