@@ -13,6 +13,31 @@
 </head>
 
 <body>
+    <!-- Fenêtre de Connexion -->
+    <div id="login-overlay">
+        <div id="login-container">
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <div class="form-row">
+                    <label for="login-username">Nom d'utilisateur:</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-row">
+                    <label for="login-password">Mot de passe:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Se connecter</button>
+                </div>
+                <div id="login-error" style="color: red; display: none;"></div> <!-- Ajout pour les messages d'erreur -->
+            </form>
+        </div>
+    </div>
+    <div id="user-info-bar"
+        style="display: none; background-color: #f0ec1b; padding: 10px; text-align: center; color: #2a2fce; font-weight:bold;">
+        <span id="user-info-username"></span> | <span id="user-info-status"></span> | <button id="logout-button">Déconnexion</button>
+    </div>
+
     <!-- Ancre pour le retour en haut (ajout) -->
     <a id="top"></a>
     <div id="printable-area">
@@ -23,12 +48,13 @@
         <h1>Gestion de Stocks et Ventes</h1>
 
         <div class="button-container">
-            <button id="show-supply-section">Approvisionner</button>
-             <button id="show-sales-section-button">Ventes</button>
+            <button id="show-supply-section-button">Approvisionner</button>
+            <button id="show-sales-section-button">Ventes</button>
             <button id="show-report-section-button">Bilan</button>
+            <button id="show-admin-section-button">Administration</button> <!-- Bouton Administration -->
         </div>
 
-         <section id="sales-section" class="form-container" style="display: none;">
+        <section id="sales-section" class="form-container" style="display: none;">
             <h2>Ventes et Autres Opérations</h2>
             <p>Enregistrez ici les ventes et autres types d'opérations.</p>
             <form id="sales-form">
@@ -42,6 +68,7 @@
                     <label for="operation-type">Type d'Opération:</label>
                     <select id="operation-type">
                         <option value="Vente">Vente</option>
+                        <option value="Dépense">Dépense</option> <!-- Option Dépense ajoutée -->
                         <option value="Autre">Autre</option>
                     </select>
                 </div>
@@ -61,6 +88,7 @@
                     </div>
                 </div>
 
+                <!-- Les détails pour 'Autre' restent inchangés -->
                 <div id="autre-details" style="display: none;">
                     <div class="form-row">
                         <label for="other-designation">Motif Opération:</label>
@@ -76,6 +104,18 @@
                     </div>
                 </div>
 
+                <!-- Section Dépense (similaire à 'Autre', mais avec des labels spécifiques) -->
+                <div id="depense-details" style="display: none;">
+                    <div class="form-row">
+                        <label for="expense-designation">Motif Dépense:</label>
+                        <input type="text" id="expense-designation">
+                    </div>
+                    <div class="form-row">
+                        <label for="expense-amount">Montant:</label>
+                        <input type="number" id="expense-amount" min="0">
+                    </div>
+                </div>
+
                 <div class="form-row">
                     <button type="submit" class="submit-button">Ajouter Opération</button>
                 </div>
@@ -83,6 +123,7 @@
 
             <div class="button-container">
                 <button id="show-sales-details">Afficher Détails Ventes</button>
+                <button id="show-expenses-details">Afficher Détails Dépenses</button> <!-- Bouton Détails Dépenses -->
                 <button id="show-others-details">Afficher Détails Autres</button>
             </div>
 
@@ -104,6 +145,30 @@
                             <th class="quantity-col">Quantité</th>
                             <th class="unit-price-col">Prix unitaire</th>
                             <th class="total-cost-col">Coût total</th>
+                            <th class="actions-col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tableau des Dépenses -->
+            <div id="expenses-details" style="display: none;">
+                <div class="button-group">
+                    <button id="print-expenses-table">Imprimer</button>
+                    <button id="export-expenses-excel">Exporter en Excel</button>
+                    <button id="export-expenses-pdf">Exporter en PDF</button>
+                </div>
+                <div class="print-title" style="display: none;">
+                    <h3>Détails des Dépenses</h3>
+                </div>
+                <table id="expenses-table">
+                    <thead>
+                        <tr>
+                            <th class="date-col">Date</th>
+                            <th class="motif-col">Motif</th>
+                            <th class="amount-col">Montant</th>
                             <th class="actions-col">Actions</th>
                         </tr>
                     </thead>
@@ -137,7 +202,7 @@
             </div>
         </section>
 
-        <section id="report-section" class="form-container"  style="display: none;">
+        <section id="report-section" class="form-container" style="display: none;">
             <h2>Bilans</h2>
             <p>Consultez les bilans journaliers, mensuels et annuels.</p>
             <div class="button-container">
@@ -208,7 +273,7 @@
             </form>
             <!-- Bouton pour afficher les détails des approvisionnements (ajout) -->
             <div class="button-container">
-           <button id="show-supply-details">Afficher Détails Approvisionnements</button>
+                <button id="show-supply-details">Afficher Détails Approvisionnements</button>
             </div>
 
             <div class="button-group" style="display: none;">
@@ -216,7 +281,7 @@
                 <button id="export-supply-excel">Exporter en Excel</button>
                 <button id="export-supply-pdf">Exporter en PDF</button>
             </div>
-            <h3 id="supply-table-title" >Détails des Approvisionnements et Stocks</h3>
+            <h3 id="supply-table-title">Détails des Approvisionnements et Stocks</h3>
             <table id="supply-table" style="display: none;">
                 <thead>
                     <tr class="supply-header-row">
@@ -232,12 +297,54 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- Section Administration -->
+        <section id="admin-section" class="form-container" style="display: none;">
+            <h2>Administration</h2>
+            <p>Gérez les comptes utilisateur.</p>
+
+            <form id="user-form">
+                <input type="hidden" id="user-form-key"> <!-- Ajout du champ caché -->
+                <div class="form-row">
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-row">
+                    <label for="access-level">Niveau d'accès:</label>
+                    <select id="access-level" required>
+                        <option value="Administrateur">Administrateur</option>
+                        <option value="Éditeur">Éditeur</option>
+                        <option value="Lecteur">Lecteur</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="submit-button">Créer Compte</button>
+                </div>
+            </form>
+
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>Nom d'utilisateur</th>
+                        <th>Niveau d'accès</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les données des utilisateurs seront ajoutées ici -->
+                </tbody>
+            </table>
+        </section>
     </div>
 
     <footer>
         <p>Tech Cohésion : Votre confiance renouveler nous inspire</p>
     </footer>
-     <!-- Ancre pour le retour en haut -->
+    <!-- Ancre pour le retour en haut -->
     <a id="back-to-top" href="#" style="display: none;">↑</a>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>

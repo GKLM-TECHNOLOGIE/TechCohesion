@@ -1,3 +1,4 @@
+/* style.css */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,12 +6,17 @@ body {
     padding: 0;
     background-color: #2a2fce;
     color: #333;
-    display: flex;          /* Ajout: Active Flexbox sur le body */
-    flex-direction: column; /* Ajout: Empile les éléments verticalement */
-    min-height: 100vh;      /* Ajout:  Important! Le body prend au moins 100% de la hauteur de la fenêtre */
+    display: flex;
+    /* Ajout: Active Flexbox sur le body */
+    flex-direction: column;
+    /* Ajout: Empile les éléments verticalement */
+    min-height: 100vh;
+    /* Ajout:  Important! Le body prend au moins 100% de la hauteur de la fenêtre */
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #fefefe;
     text-align: center;
 }
@@ -61,6 +67,8 @@ input[type="date"],
 input[type="number"],
 input[type="text"],
 input[type="month"],
+input[type="password"],
+/* Ajout du style pour le type password */
 select {
     padding: 12px;
     margin-bottom: 15px;
@@ -75,6 +83,8 @@ input[type="date"]:focus,
 input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="month"]:focus,
+input[type="password"]:focus,
+/* Ajout du focus pour le type password */
 select:focus {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
@@ -125,16 +135,20 @@ button:hover {
 button.edit-button,
 button.delete-button {
     padding: 8px 12px;
-    font-size: 0; /* Masque le texte */
+    font-size: 0;
+    /* Masque le texte */
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    width: 25px; /* Largeur fixe pour les icônes */
+    width: 25px;
+    /* Largeur fixe pour les icônes */
     height: 25px;
-    display: inline-flex; /* Centre l'icône */
+    display: inline-flex;
+    /* Centre l'icône */
     align-items: center;
     justify-content: center;
-    border: none; /* Supprime la bordure par défaut */
+    border: none;
+    /* Supprime la bordure par défaut */
 }
 
 button.edit-button {
@@ -157,14 +171,19 @@ button.delete-button:hover {
 
 /* Ajout des icônes via pseudo-éléments */
 button.edit-button::before {
-    content: "\f044"; /* Code Unicode pour l'icône d'édition (Font Awesome) */
-    font-family: "Font Awesome 5 Free"; /* Spécifie la police d'icônes */
-    font-weight: 500; /* Pour les icônes solides */
-    font-size: 1rem; /* Taille de l'icône */
+    content: "\f044";
+    /* Code Unicode pour l'icône d'édition (Font Awesome) */
+    font-family: "Font Awesome 5 Free";
+    /* Spécifie la police d'icônes */
+    font-weight: 500;
+    /* Pour les icônes solides */
+    font-size: 1rem;
+    /* Taille de l'icône */
 }
 
 button.delete-button::before {
-    content: "\f2ed"; /* Code Unicode pour l'icône de suppression */
+    content: "\f2ed";
+    /* Code Unicode pour l'icône de suppression */
     font-family: "Font Awesome 5 Free";
     font-weight: 500;
     font-size: 1rem;
@@ -173,7 +192,8 @@ button.delete-button::before {
 /* Centrage des boutons principaux */
 .button-container {
     display: flex;
-    justify-content: center; /* Centrage horizontal */
+    justify-content: center;
+    /* Centrage horizontal */
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -194,7 +214,8 @@ table {
 th,
 td {
     text-align: left;
-    padding: 8px 12px; /* Réduit le padding vertical */
+    padding: 8px 12px;
+    /* Réduit le padding vertical */
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -214,21 +235,40 @@ tbody tr:nth-child(even) {
     background-color: #f4f4f4;
 }
 
+/* Styles spécifiques pour les tableaux (ventes, autres, dépenses, appro, utilisateurs) */
 #sales-details,
 #others-details,
+#expenses-details,
+/* Ajout du style pour expenses-details */
 #report-table-section,
-#supply-table {
+#supply-table,
+#user-table {
+    /* Ajout du style pour user-table */
     margin-top: 30px;
 }
 
+
 #supply-table th,
-#supply-table td {
+#supply-table td,
+#sales-table th,
+#sales-table td,
+#others-table th,
+#others-table td,
+#expenses-table th,
+/* Style pour expenses-table */
+#expenses-table td,
+#user-table th,
+/* Style pour user-table */
+#user-table td,
+#report-table th,
+#report-table td {
     word-break: break-word;
     min-width: 150px;
     border: 1px solid #000;
     padding: 8px;
     font-size: 14px;
 }
+
 
 #supply-table thead tr.supply-header-row th {
     background-color: #f0f0f0;
@@ -238,10 +278,11 @@ tbody tr:nth-child(even) {
     text-align: center;
 }
 
+/*  Pas besoin de ce doublon, il est déjà défini plus haut
 #supply-table th,
 #supply-table td {
     word-break: break-word;
-}
+} */
 
 .form-container {
     border: 1px solid #d0d0d0;
@@ -256,28 +297,38 @@ tbody tr:nth-child(even) {
     text-align: center;
     white-space: nowrap;
 }
+
 /* Style pour le bouton "Retour en haut" */
 #back-to-top {
-  position: fixed; /* Fixe le bouton à l'écran */
-  bottom: 20px;   /* Positionné en bas à droite */
-  right: 30px;
-  background-color: #f80c13; /* Même couleur que les autres boutons */
-  color: white;
-  border: none;
-  border-radius: 50%;  /* Forme circulaire */
-  width: 40px;         /* Taille du bouton */
-  height: 40px;
-  text-align: center;
-  font-size: 20px;     /* Taille de l'icône/flèche */
-  line-height: 40px;  /* Centre le contenu verticalement */
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;        /* S'assure qu'il est au-dessus du reste */
-  text-decoration: none; /* Enlève le soulignement du lien*/
+    position: fixed;
+    /* Fixe le bouton à l'écran */
+    bottom: 20px;
+    /* Positionné en bas à droite */
+    right: 30px;
+    background-color: #f80c13;
+    /* Même couleur que les autres boutons */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* Forme circulaire */
+    width: 40px;
+    /* Taille du bouton */
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    /* Taille de l'icône/flèche */
+    line-height: 40px;
+    /* Centre le contenu verticalement */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    /* S'assure qu'il est au-dessus du reste */
+    text-decoration: none;
+    /* Enlève le soulignement du lien*/
 }
 
 #back-to-top:hover {
-     background-color: #2980b9;
+    background-color: #2980b9;
 }
 
 /* Media queries pour la responsivité */
@@ -288,21 +339,31 @@ tbody tr:nth-child(even) {
         white-space: nowrap;
     }
 
+    /*  On réduit un peu plus la taille de police pour les petits écrans */
     #supply-table th,
     #supply-table td,
     #sales-table th,
     #sales-table td,
     #others-table th,
     #others-table td,
+    #expenses-table th,
+    /* Style pour expenses-table (responsive)*/
+    #expenses-table td,
+    #user-table th,
+    /* style pour user-table (responsive) */
+    #user-table td,
     #report-table th,
     #report-table td {
         min-width: 120px;
-        font-size: 0.85em;
-        padding: 8px;
+        font-size: 0.8em;
+        /* Réduit encore la taille */
+        padding: 6px;
+        /* Réduit le padding */
     }
 
     th {
-        font-size: 0.8em;
+        font-size: 0.75em;
+        /* Réduit la taille des en-têtes */
     }
 
     .form-row {
@@ -317,12 +378,12 @@ tbody tr:nth-child(even) {
     }
 
     .form-row input,
-    .form-row select {
+        .form-row select {
         width: calc(100% - 0px);
         max-width: none;
     }
 
-     h1.title-center {
+    h1.title-center {
         flex-direction: column;
     }
 
@@ -330,14 +391,18 @@ tbody tr:nth-child(even) {
         margin-right: 0;
         margin-bottom: 10px;
     }
-       /* Style pour le bouton retour en haut dans les media queries */
+
+    /* Style pour le bouton retour en haut dans les media queries */
     #back-to-top {
-        width: 30px;         /* Réduit la taille du bouton */
+        width: 30px;
+        /* Réduit la taille du bouton */
         height: 30px;
         font-size: 16px;
         line-height: 30px;
-        bottom: 10px;       /* Réduit l'espacement du bas */
-        right: 15px;        /* Réduit l'espacement de la droite */
+        bottom: 10px;
+        /* Réduit l'espacement du bas */
+        right: 15px;
+        /* Réduit l'espacement de la droite */
     }
 }
 
@@ -350,7 +415,12 @@ tbody tr:nth-child(even) {
 
     #supply-section,
     #sales-details,
-    #others-details {
+    #others-details,
+    #expenses-details,
+    /* Ajout pour expenses-details (impression) */
+    #user-section
+        /* Ajout pour la section utilisateur (impression)*/
+        {
         box-shadow: none;
         border: none;
         background-color: #fff;
@@ -362,13 +432,24 @@ tbody tr:nth-child(even) {
     #sales-details h3,
     #sales-details table,
     #others-details h3,
-    #others-details table {
+    #others-details table,
+    #expenses-details h3,
+    /* Pour expenses-details (impression) */
+    #expenses-details table,
+    #user-table {
+        /* Pour user-table (impression)*/
         color: #000 !important;
     }
 
+
     #supply-table,
     #sales-table,
-    #others-table {
+    #others-table,
+    #expenses-table,
+    /* Ajout pour expenses-table (impression) */
+    #user-table
+        /* Ajout pour user-table (impression) */
+        {
         border-collapse: collapse;
         width: 100%;
         margin-top: 20px;
@@ -379,7 +460,13 @@ tbody tr:nth-child(even) {
     #sales-table th,
     #sales-table td,
     #others-table th,
-    #others-table td {
+    #others-table td,
+    #expenses-table th,
+    /* Pour expenses-table (impression) */
+    #expenses-table td,
+    #user-table th,
+    /*Pour user-table (impression) */
+    #user-table td {
         border: 1px solid #000;
         padding: 8px;
         text-align: left;
@@ -389,7 +476,12 @@ tbody tr:nth-child(even) {
 
     #supply-table thead tr.supply-header-row th,
     #sales-table thead th,
-    #others-table thead th {
+    #others-table thead th,
+    #expenses-table thead th,
+    /* Pour expenses-table (impression) */
+    #user-table thead th
+        /* Pour user-table (impression) */
+        {
         background-color: #f0f0f0 !important;
         font-weight: bold;
         text-align: center;
@@ -405,8 +497,13 @@ tbody tr:nth-child(even) {
     #sales-details>.button-container,
     #others-form,
     #others-details>.button-container,
+    #expenses-details>.button-container,
+    /* Pour expenses-details (impression)*/
+    #user-form,
+    /*Pour user-form (impression)*/
     #report-section,
-    #back-to-top { /* Masquer le bouton retour en haut a l'impression */
+    #back-to-top {
+        /* Masquer le bouton retour en haut a l'impression */
         display: none !important;
     }
 
@@ -422,10 +519,53 @@ tbody tr:nth-child(even) {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f0ec1b; /* Couleur de fond du body */
-    color: #2a2fce;             /* Texte en blanc (ou une autre couleur claire) */
-    font-weight: bold;      /* Texte en gras */
-    margin-top: auto;       /*  pousse le footer vers le bas */
-    border-top: 1px solid #e0e0e0; /*Garder la bordure*/
+    background-color: #f0ec1b;
+    /* Couleur de fond du body */
+    color: #2a2fce;
+    /* Texte en blanc (ou une autre couleur claire) */
+    font-weight: bold;
+    /* Texte en gras */
+    margin-top: auto;
+    /*  pousse le footer vers le bas */
+    border-top: 1px solid #e0e0e0;
+    /*Garder la bordure*/
 
+}
+
+
+/* Styles pour la fenêtre de connexion */
+#login-overlay {
+    position: fixed;
+    /* Couvre toute la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fond semi-transparent */
+    z-index: 9999;
+    /* Assure qu'il est au-dessus de tout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    /* Largeur adaptative */
+    max-width: 400px;
+    /* Largeur maximale fixe */
+    text-align: center;
+}
+
+/* Pour les écrans plus petits, on ajuste la largeur de la fenêtre de connexion */
+@media (max-width: 480px) {
+    #login-container {
+        width: 90%;
+        padding: 20px;
+    }
 }
