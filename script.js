@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutButton = document.getElementById('logout-button');
     let currentUser = null;
 
-    // AJOUT: Éléments pour le menu hamburger
+    //  Éléments pour le menu hamburger
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
@@ -323,12 +323,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
-
-
     function createActionButtons(key, dataType) {
        const actionsCell = document.createElement('td');
-       actionsCell.classList.add('actions-col'); // AJOUT: Ajoute la classe pour le style
+       actionsCell.classList.add('actions-col');
 
         // Bouton Modifier
         const editButton = document.createElement('button');
@@ -494,8 +491,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-
-     function updateTable(table, ref, dataType) {
+    // MODIFICATION: Plus besoin de data-label, donc on simplifie updateTable
+    function updateTable(table, ref, dataType) {
         ref.on('value', (snapshot) => {
             table.innerHTML = '';
             const data = snapshot.val() || {};
@@ -506,20 +503,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 else if (dataType === 'users') colspan = 3;
                 displayEmptyTableMessage(table, colspan, `Aucune ${dataType} enregistrée.`);
                 return;
-            }
-
-             // Récupérer les en-têtes (pour les data-labels)
-            let headers = [];
-            if (dataType === 'sales') {
-                headers = ['Date', 'Désignation', 'Quantité', 'Prix unitaire', 'Coût total', 'Actions'];
-            } else if (dataType === 'others') {
-                headers = ['Date', 'Désignation', 'Quantité', 'Montant', 'Actions'];
-            } else if (dataType === 'expenses') {
-                headers = ['Date', 'Motif', 'Montant', 'Actions'];
-            } else if (dataType === 'supply') {
-                headers = ['Date', 'Désignation', 'Quantité approvisionnée', 'Vendues', 'Restantes', 'Actions'];
-            } else if (dataType === 'users') {
-                headers = ['Nom d\'utilisateur', 'Niveau d\'accès', 'Actions'];
             }
 
             for (const key in data) {
@@ -538,43 +521,40 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                         const remainingQuantity = parseFloat(item.quantity) - soldQuantity;
 
-                        // AJOUT: data-label pour chaque cellule
-                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
-                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
-                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
-                        row.insertCell().textContent = soldQuantity; row.cells[3].setAttribute('data-label', headers[3]);
-                        row.insertCell().textContent = remainingQuantity; row.cells[4].setAttribute('data-label', headers[4]);
-                        row.appendChild(createActionButtons(key, dataType));  row.cells[5].setAttribute('data-label', headers[5]);
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = soldQuantity;
+                        row.insertCell().textContent = remainingQuantity;
+                        row.appendChild(createActionButtons(key, dataType));
                     });
                 } else {
-                     // AJOUT: data-label pour chaque cellule
                     if (dataType === 'sales') {
-                        row.insertCell().textContent = item.date;  row.cells[0].setAttribute('data-label', headers[0]);
-                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
-                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
-                        row.insertCell().textContent = item.unitPrice; row.cells[3].setAttribute('data-label', headers[3]);
-                        row.insertCell().textContent = item.totalCost; row.cells[4].setAttribute('data-label', headers[4]);
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.unitPrice;
+                        row.insertCell().textContent = item.totalCost;
                     } else if (dataType === 'others') {
-                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
-                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
-                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
-                        row.insertCell().textContent = item.amount; row.cells[3].setAttribute('data-label', headers[3]);
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.amount;
                     } else if (dataType === 'expenses') {
-                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
-                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
-                        row.insertCell().textContent = item.amount; row.cells[2].setAttribute('data-label', headers[2]);
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.amount;
                     } else if (dataType === 'users') {
-                        row.insertCell().textContent = item.username; row.cells[0].setAttribute('data-label', headers[0]);
-                        row.insertCell().textContent = item.accessLevel; row.cells[1].setAttribute('data-label', headers[1]);
+                        row.insertCell().textContent = item.username;
+                        row.insertCell().textContent = item.accessLevel;
                     }
-                    const actionsCell = createActionButtons(key, dataType);
-                    row.appendChild(actionsCell);
-                    actionsCell.setAttribute('data-label', headers[headers.length -1]); //Pour la colonne actions
+                    row.appendChild(createActionButtons(key, dataType));
                 }
             }
-              applyUserRestrictions(); //Très important : Appliquer les restrictions APRES avoir créé les boutons
+              applyUserRestrictions();
         });
     }
+
 
     function displayEmptyTableMessage(table, colspan, message) {
         const row = table.insertRow();
@@ -1081,5 +1061,13 @@ document.addEventListener('DOMContentLoaded', function () {
      // AJOUT: Écouteur d'événements pour le bouton de menu
     menuToggle.addEventListener('click', function() {
         mainNav.classList.toggle('menu-open');
+    });
+
+    // AJOUT: Fermer le menu quand on clique sur un bouton du menu
+    const menuButtons = document.querySelectorAll('.main-nav .button-container button');
+    menuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            mainNav.classList.remove('menu-open'); // Ferme le menu
+        });
     });
 });
