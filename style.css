@@ -7,16 +7,11 @@ body {
     background-color: #2a2fce;
     color: #333;
     display: flex;
-    /* Ajout: Active Flexbox sur le body */
     flex-direction: column;
-    /* Ajout: Empile les éléments verticalement */
     min-height: 100vh;
-    /* Ajout:  Important! Le body prend au moins 100% de la hauteur de la fenêtre */
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     color: #fefefe;
     text-align: center;
 }
@@ -31,6 +26,7 @@ h1.title-center {
 .company-logo {
     height: 80px;
     margin-right: 20px;
+    max-width: 100%;
 }
 
 section {
@@ -42,23 +38,24 @@ section {
     border: 1px solid #e0e0e0;
 }
 
+/* --- Formulaires --- */
 .form-container h2 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     color: #2a2fce;
     border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
 }
 
 .form-container p {
     color: #7f8c8d;
     font-style: italic;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     color: #555;
     font-weight: bold;
 }
@@ -68,15 +65,15 @@ input[type="number"],
 input[type="text"],
 input[type="month"],
 input[type="password"],
-/* Ajout du style pour le type password */
 select {
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #bdc3c7;
     border-radius: 6px;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1rem;
     color: #333;
+    width: 100%;
 }
 
 input[type="date"]:focus,
@@ -84,71 +81,67 @@ input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="month"]:focus,
 input[type="password"]:focus,
-/* Ajout du focus pour le type password */
 select:focus {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
     outline: none;
 }
 
+
 .form-row {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-}
-
-.form-row:last-child {
-    margin-bottom: 0;
 }
 
 .form-row label {
     text-align: left;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
 }
 
 .form-row input,
 .form-row select {
     width: 100%;
-    max-width: 100%;
 }
 
 button {
     background-color: #f80c13;
     color: #fefefe;
-    padding: 14px 20px;
-    margin-top: 20px;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 button:hover {
     background-color: #2980b9;
 }
 
-/* Styles pour les boutons d'action avec icônes */
+/* --- Boutons d'Action --- */
 button.edit-button,
 button.delete-button {
-    padding: 8px 12px;
+    padding: 0;
     font-size: 0;
-    /* Masque le texte */
-    margin: 5px;
+    margin: 0.2rem;
     border-radius: 5px;
     cursor: pointer;
-    width: 25px;
-    /* Largeur fixe pour les icônes */
-    height: 25px;
+    width: 2rem;
+    height: 2rem;
     display: inline-flex;
-    /* Centre l'icône */
     align-items: center;
     justify-content: center;
     border: none;
-    /* Supprime la bordure par défaut */
 }
 
 button.edit-button {
@@ -169,40 +162,26 @@ button.delete-button:hover {
     background-color: #c0392b;
 }
 
-/* Ajout des icônes via pseudo-éléments */
 button.edit-button::before {
     content: "\f044";
-    /* Code Unicode pour l'icône d'édition (Font Awesome) */
     font-family: "Font Awesome 5 Free";
-    /* Spécifie la police d'icônes */
-    font-weight: 500;
-    /* Pour les icônes solides */
+    font-weight: 900;
     font-size: 1rem;
-    /* Taille de l'icône */
 }
 
 button.delete-button::before {
     content: "\f2ed";
-    /* Code Unicode pour l'icône de suppression */
     font-family: "Font Awesome 5 Free";
-    font-weight: 500;
+    font-weight: 900;
     font-size: 1rem;
 }
 
-/* Centrage des boutons principaux */
-.button-container {
-    display: flex;
-    justify-content: center;
-    /* Centrage horizontal */
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
+/* --- Tableaux --- */
 table {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
-    margin-top: 25px;
+    margin-top: 1.5rem;
     border-spacing: 0;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -210,12 +189,9 @@ table {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Réduction de la hauteur des lignes */
-th,
-td {
+th, td {
     text-align: left;
-    padding: 8px 12px;
-    /* Réduit le padding vertical */
+    padding: 0.5rem;
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -224,29 +200,22 @@ th {
     color: #555;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-tr:last-child td {
-    border-bottom: none;
+    font-size: 0.9rem;
 }
 
 tbody tr:nth-child(even) {
     background-color: #f4f4f4;
 }
 
-/* Styles spécifiques pour les tableaux (ventes, autres, dépenses, appro, utilisateurs) */
+/* --- Styles Spécifiques Tableaux --- */
 #sales-details,
 #others-details,
 #expenses-details,
-/* Ajout du style pour expenses-details */
 #report-table-section,
 #supply-table,
 #user-table {
-    /* Ajout du style pour user-table */
-    margin-top: 30px;
+    margin-top: 2rem;
 }
-
 
 #supply-table th,
 #supply-table td,
@@ -255,39 +224,30 @@ tbody tr:nth-child(even) {
 #others-table th,
 #others-table td,
 #expenses-table th,
-/* Style pour expenses-table */
 #expenses-table td,
 #user-table th,
-/* Style pour user-table */
 #user-table td,
 #report-table th,
 #report-table td {
     word-break: break-word;
-    min-width: 150px;
+    min-width: 80px;
     border: 1px solid #000;
-    padding: 8px;
-    font-size: 14px;
+    padding: 0.4rem;
+    font-size: 0.85rem;
 }
-
 
 #supply-table thead tr.supply-header-row th {
     background-color: #f0f0f0;
     font-weight: bold;
     border: 1px solid #000;
-    padding: 10px;
+    padding: 0.6rem;
     text-align: center;
 }
 
-/*  Pas besoin de ce doublon, il est déjà défini plus haut
-#supply-table th,
-#supply-table td {
-    word-break: break-word;
-} */
-
 .form-container {
     border: 1px solid #d0d0d0;
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
     border-radius: 8px;
     background-color: #f9f9f9;
 }
@@ -298,89 +258,146 @@ tbody tr:nth-child(even) {
     white-space: nowrap;
 }
 
-/* Style pour le bouton "Retour en haut" */
+/* --- Bouton Retour en Haut --- */
 #back-to-top {
     position: fixed;
-    /* Fixe le bouton à l'écran */
     bottom: 20px;
-    /* Positionné en bas à droite */
     right: 30px;
     background-color: #f80c13;
-    /* Même couleur que les autres boutons */
     color: white;
     border: none;
     border-radius: 50%;
-    /* Forme circulaire */
     width: 40px;
-    /* Taille du bouton */
     height: 40px;
     text-align: center;
     font-size: 20px;
-    /* Taille de l'icône/flèche */
     line-height: 40px;
-    /* Centre le contenu verticalement */
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    /* S'assure qu'il est au-dessus du reste */
     text-decoration: none;
-    /* Enlève le soulignement du lien*/
 }
 
 #back-to-top:hover {
     background-color: #2980b9;
 }
 
-/* Media queries pour la responsivité */
-@media (max-width: 768px) {
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+/* --- Bouton Menu Hamburger --- */
+.menu-toggle {
+    display: none; /* Caché par défaut (visible sur petits écrans) */
+    background-color: #f80c13;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Position absolue pour le placer en haut à gauche */
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001; /* Au-dessus du contenu */
+}
+
+.menu-toggle:hover {
+    background-color: #2980b9;
+}
+
+.menu-toggle i {
+    font-size: 1.5rem; /* Taille de l'icône */
+}
+
+/* --- Menu de Navigation --- */
+.main-nav {
+    /* Styles par défaut (pour grands écrans) */
+    margin-top: 2rem; /* Espace en dessous du titre */
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+
+/* --- Media Queries --- */
+
+/* Smartphones (Portrait) */
+@media (max-width: 480px) {
+    .company-logo {
+        height: 60px;
+        margin-bottom: 10px;
     }
 
-    /*  On réduit un peu plus la taille de police pour les petits écrans */
-    #supply-table th,
-    #supply-table td,
-    #sales-table th,
-    #sales-table td,
-    #others-table th,
-    #others-table td,
-    #expenses-table th,
-    /* Style pour expenses-table (responsive)*/
-    #expenses-table td,
-    #user-table th,
-    /* style pour user-table (responsive) */
-    #user-table td,
-    #report-table th,
-    #report-table td {
-        min-width: 120px;
-        font-size: 0.8em;
-        /* Réduit encore la taille */
-        padding: 6px;
-        /* Réduit le padding */
+    h1, h2, h3 {
+        font-size: 1.2rem;
     }
 
-    th {
-        font-size: 0.75em;
-        /* Réduit la taille des en-têtes */
-    }
-
-    .form-row {
+    .button-container {
         flex-direction: column;
     }
 
-    .form-row label {
-        text-align: left;
-        margin-bottom: 5px;
-        flex-basis: auto;
-        padding-right: 0;
+    button {
+        margin-bottom: 0.5rem;
+        width: auto;
+        max-width: 100%;
+        margin: 0.5em;
     }
 
-    .form-row input,
-        .form-row select {
-        width: calc(100% - 0px);
-        max-width: none;
+    #back-to-top {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    /* Afficher le bouton hamburger, masquer le menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none; /* Caché par défaut sur mobile */
+        width: 100%; /* Occupe toute la largeur */
+        position: absolute; /* Position absolue pour le superposer */
+        top: 60px; /* Positionné sous le header (ajustez si besoin) */
+        left: 0;
+        background-color: #fff; /* Fond pour la visibilité */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
+        z-index: 1000; /* Assure qu'il est au-dessus du reste */
+     }
+
+      /* Afficher le menu quand la classe est présente */
+    .main-nav.menu-open {
+        display: block;
+    }
+      .button-container {
+        flex-direction: column; /* Empile les boutons */
+        align-items: stretch; /* Étire les boutons */
+    }
+    .button-container button{
+      margin: 0.5em;
+    }
+}
+
+/* Tablettes (Portrait) et Petits Écrans (Paysage) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    button {
+        margin-bottom: 0.5rem;
+        width: auto;
+        max-width: 100%;
+        margin: 0.5em;
     }
 
     h1.title-center {
@@ -392,21 +409,43 @@ tbody tr:nth-child(even) {
         margin-bottom: 10px;
     }
 
-    /* Style pour le bouton retour en haut dans les media queries */
     #back-to-top {
-        width: 30px;
-        /* Réduit la taille du bouton */
-        height: 30px;
+        width: 35px;
+        height: 35px;
         font-size: 16px;
-        line-height: 30px;
-        bottom: 10px;
-        /* Réduit l'espacement du bas */
-        right: 15px;
-        /* Réduit l'espacement de la droite */
+        line-height: 35px;
+    }
+     /* Afficher le bouton hamburger, masquer le menu */
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none; /* Caché par défaut sur mobile */
+        width: 100%; /* Occupe toute la largeur */
+        position: absolute; /* Position absolue pour le superposer */
+        top: 60px; /* Positionné sous le header (ajustez si besoin) */
+        left: 0;
+        background-color: #fff; /* Fond pour la visibilité */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre */
+        z-index: 1000; /* Assure qu'il est au-dessus du reste */
+    }
+
+      /* Afficher le menu quand la classe est présente */
+      .main-nav.menu-open {
+        display: block;
+    }
+
+}
+
+/* Tablettes (Paysage) et Grands Écrans */
+@media (min-width: 769px) {
+    /* Masquer le bouton hamburger sur les grands écrans */
+    .menu-toggle {
+        display: none;
     }
 }
 
-/* Styles d'impression */
+/* --- Impression --- */
 @media print {
     body {
         background-color: #fff;
@@ -417,10 +456,7 @@ tbody tr:nth-child(even) {
     #sales-details,
     #others-details,
     #expenses-details,
-    /* Ajout pour expenses-details (impression) */
-    #user-section
-        /* Ajout pour la section utilisateur (impression)*/
-        {
+    #user-section {
         box-shadow: none;
         border: none;
         background-color: #fff;
@@ -434,22 +470,16 @@ tbody tr:nth-child(even) {
     #others-details h3,
     #others-details table,
     #expenses-details h3,
-    /* Pour expenses-details (impression) */
     #expenses-details table,
     #user-table {
-        /* Pour user-table (impression)*/
         color: #000 !important;
     }
-
 
     #supply-table,
     #sales-table,
     #others-table,
     #expenses-table,
-    /* Ajout pour expenses-table (impression) */
-    #user-table
-        /* Ajout pour user-table (impression) */
-        {
+    #user-table {
         border-collapse: collapse;
         width: 100%;
         margin-top: 20px;
@@ -462,10 +492,8 @@ tbody tr:nth-child(even) {
     #others-table th,
     #others-table td,
     #expenses-table th,
-    /* Pour expenses-table (impression) */
     #expenses-table td,
     #user-table th,
-    /*Pour user-table (impression) */
     #user-table td {
         border: 1px solid #000;
         padding: 8px;
@@ -478,17 +506,14 @@ tbody tr:nth-child(even) {
     #sales-table thead th,
     #others-table thead th,
     #expenses-table thead th,
-    /* Pour expenses-table (impression) */
-    #user-table thead th
-        /* Pour user-table (impression) */
-        {
+    #user-table thead th {
         background-color: #f0f0f0 !important;
         font-weight: bold;
         text-align: center;
     }
 
     .button-group,
-    .button-container,
+    .button-container, /* Cibler aussi le conteneur principal des boutons */
     .form-container h2,
     .form-container p,
     #supply-form,
@@ -498,12 +523,11 @@ tbody tr:nth-child(even) {
     #others-form,
     #others-details>.button-container,
     #expenses-details>.button-container,
-    /* Pour expenses-details (impression)*/
     #user-form,
-    /*Pour user-form (impression)*/
     #report-section,
-    #back-to-top {
-        /* Masquer le bouton retour en haut a l'impression */
+    #back-to-top,
+    #menu-toggle /* Cacher le bouton de menu à l'impression */
+        {
         display: none !important;
     }
 
@@ -515,36 +539,26 @@ tbody tr:nth-child(even) {
     }
 }
 
-/* Pied de page */
+/* --- Pied de Page --- */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #f0ec1b;
-    /* Couleur de fond du body */
     color: #2a2fce;
-    /* Texte en blanc (ou une autre couleur claire) */
     font-weight: bold;
-    /* Texte en gras */
     margin-top: auto;
-    /*  pousse le footer vers le bas */
     border-top: 1px solid #e0e0e0;
-    /*Garder la bordure*/
-
 }
 
-
-/* Styles pour la fenêtre de connexion */
+/* --- Fenêtre de Connexion --- */
 #login-overlay {
     position: fixed;
-    /* Couvre toute la fenêtre */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    /* Fond semi-transparent */
     z-index: 9999;
-    /* Assure qu'il est au-dessus de tout */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,20 +566,79 @@ footer {
 
 #login-container {
     background-color: white;
-    padding: 40px;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    /* Largeur adaptative */
+    width: 90%;
     max-width: 400px;
-    /* Largeur maximale fixe */
     text-align: center;
 }
 
-/* Pour les écrans plus petits, on ajuste la largeur de la fenêtre de connexion */
+/* Media query pour la fenêtre de connexion (petits écrans) */
 @media (max-width: 480px) {
     #login-container {
-        width: 90%;
-        padding: 20px;
+        width: 95%;
+        padding: 1rem;
     }
+}
+
+/* --- Règles Générales pour la Responsivité --- */
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tableaux responsifs (solution plus robuste) */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    td:first-child {
+        font-weight: bold;
+        background-color: #f8f8f8;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px solid #ddd;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th, td {
+        min-width: auto;
+        word-break: normal;
+    }
+
+    td.actions-col {
+        text-align: center;
+    }
+
+    td.actions-col::before {
+        content: "";
+        display: none;
+    }
+
+      td.actions-col{
+          padding-left: 0.5rem;
+      }
 }

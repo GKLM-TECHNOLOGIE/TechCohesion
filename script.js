@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // --- Éléments du DOM --- (Pas de changements ici)
+    // --- Éléments du DOM ---
     const salesForm = document.getElementById('sales-form');
     const supplyForm = document.getElementById('supply-form');
     const userForm = document.getElementById('user-form');
@@ -72,7 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutButton = document.getElementById('logout-button');
     let currentUser = null;
 
-    // --- Configuration Firebase --- (Pas de changements ici)
+    // AJOUT: Éléments pour le menu hamburger
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    // --- Configuration Firebase ---
     const firebaseConfig = {
         apiKey: "AIzaSyBU6VVRgSCh5gcV7xXnnHr6rxIASTcBpLc",  // Remplacez par votre clé API
         authDomain: "tech-cohesion.firebaseapp.com",
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
-    // --- Références de la base de données --- (Pas de changements ici)
+    // --- Références de la base de données ---
     const salesRef = database.ref('sales');
     const othersRef = database.ref('others');
     const expensesRef = database.ref('expenses');
@@ -108,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showUserInfo(username, accessLevel) {
         userInfoUsername.textContent = "Utilisateur: " + username;
-        userInfoStatus.textContent = "Connecté"; // Message plus simple
+        userInfoStatus.textContent = "Connecté";
         userInfoBar.style.display = 'block';
     }
 
@@ -161,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resetUserRestrictions(); //Réinitialiser les restrictions
     }
 
-    // --- Fonctions Utilitaires --- (Pas de changements ici, sauf ajout de resetUserRestrictions)
+    // --- Fonctions Utilitaires ---
     function showSection(sectionToShow) {
         if (supplySection) supplySection.style.display = 'none';
         if (salesSection) salesSection.style.display = 'none';
@@ -232,16 +236,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Désactiver les éléments par défaut (pour tous les utilisateurs non-admin)
         disableElements([salesForm, supplyForm, userForm, generateReportButton]);
-        disableButtonsByClass('edit-button');  //Désactiver les boutons de modification pour tous
-        disableButtonsByClass('delete-button');//Désactiver les boutons de suppression pour tous
+        disableButtonsByClass('edit-button');
+        disableButtonsByClass('delete-button');
 
         // Activer les éléments en fonction du niveau d'accès
         if (currentUser.accessLevel === 'Administrateur') {
             enableElements([salesForm, supplyForm, userForm, generateReportButton]);
-            enableButtonsByClass('edit-button'); // Réactiver pour admin
-            enableButtonsByClass('delete-button');//Réactiver pour admin
+            enableButtonsByClass('edit-button');
+            enableButtonsByClass('delete-button');
 
-            //Réactiver les sections (pourraient être désactivées si un autre utilisateur était connecté avant)
+            //Réactiver les sections
             showSupplySectionButton.disabled = false;
             showSalesSectionButton.disabled = false;
             showReportSectionButton.disabled = false;
@@ -324,6 +328,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createActionButtons(key, dataType) {
        const actionsCell = document.createElement('td');
+       actionsCell.classList.add('actions-col'); // AJOUT: Ajoute la classe pour le style
 
         // Bouton Modifier
         const editButton = document.createElement('button');
@@ -490,7 +495,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    function updateTable(table, ref, dataType) {
+     function updateTable(table, ref, dataType) {
         ref.on('value', (snapshot) => {
             table.innerHTML = '';
             const data = snapshot.val() || {};
@@ -501,6 +506,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 else if (dataType === 'users') colspan = 3;
                 displayEmptyTableMessage(table, colspan, `Aucune ${dataType} enregistrée.`);
                 return;
+            }
+
+             // Récupérer les en-têtes (pour les data-labels)
+            let headers = [];
+            if (dataType === 'sales') {
+                headers = ['Date', 'Désignation', 'Quantité', 'Prix unitaire', 'Coût total', 'Actions'];
+            } else if (dataType === 'others') {
+                headers = ['Date', 'Désignation', 'Quantité', 'Montant', 'Actions'];
+            } else if (dataType === 'expenses') {
+                headers = ['Date', 'Motif', 'Montant', 'Actions'];
+            } else if (dataType === 'supply') {
+                headers = ['Date', 'Désignation', 'Quantité approvisionnée', 'Vendues', 'Restantes', 'Actions'];
+            } else if (dataType === 'users') {
+                headers = ['Nom d\'utilisateur', 'Niveau d\'accès', 'Actions'];
             }
 
             for (const key in data) {
@@ -519,34 +538,38 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                         const remainingQuantity = parseFloat(item.quantity) - soldQuantity;
 
-                        row.insertCell().textContent = item.date;
-                        row.insertCell().textContent = item.designation;
-                        row.insertCell().textContent = item.quantity;
-                        row.insertCell().textContent = soldQuantity;
-                        row.insertCell().textContent = remainingQuantity;
-                        row.appendChild(createActionButtons(key, dataType));
+                        // AJOUT: data-label pour chaque cellule
+                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
+                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
+                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
+                        row.insertCell().textContent = soldQuantity; row.cells[3].setAttribute('data-label', headers[3]);
+                        row.insertCell().textContent = remainingQuantity; row.cells[4].setAttribute('data-label', headers[4]);
+                        row.appendChild(createActionButtons(key, dataType));  row.cells[5].setAttribute('data-label', headers[5]);
                     });
                 } else {
+                     // AJOUT: data-label pour chaque cellule
                     if (dataType === 'sales') {
-                        row.insertCell().textContent = item.date;
-                        row.insertCell().textContent = item.designation;
-                        row.insertCell().textContent = item.quantity;
-                        row.insertCell().textContent = item.unitPrice;
-                        row.insertCell().textContent = item.totalCost;
+                        row.insertCell().textContent = item.date;  row.cells[0].setAttribute('data-label', headers[0]);
+                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
+                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
+                        row.insertCell().textContent = item.unitPrice; row.cells[3].setAttribute('data-label', headers[3]);
+                        row.insertCell().textContent = item.totalCost; row.cells[4].setAttribute('data-label', headers[4]);
                     } else if (dataType === 'others') {
-                        row.insertCell().textContent = item.date;
-                        row.insertCell().textContent = item.designation;
-                        row.insertCell().textContent = item.quantity;
-                        row.insertCell().textContent = item.amount;
+                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
+                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
+                        row.insertCell().textContent = item.quantity; row.cells[2].setAttribute('data-label', headers[2]);
+                        row.insertCell().textContent = item.amount; row.cells[3].setAttribute('data-label', headers[3]);
                     } else if (dataType === 'expenses') {
-                        row.insertCell().textContent = item.date;
-                        row.insertCell().textContent = item.designation;
-                        row.insertCell().textContent = item.amount;
+                        row.insertCell().textContent = item.date; row.cells[0].setAttribute('data-label', headers[0]);
+                        row.insertCell().textContent = item.designation; row.cells[1].setAttribute('data-label', headers[1]);
+                        row.insertCell().textContent = item.amount; row.cells[2].setAttribute('data-label', headers[2]);
                     } else if (dataType === 'users') {
-                        row.insertCell().textContent = item.username;
-                        row.insertCell().textContent = item.accessLevel;
+                        row.insertCell().textContent = item.username; row.cells[0].setAttribute('data-label', headers[0]);
+                        row.insertCell().textContent = item.accessLevel; row.cells[1].setAttribute('data-label', headers[1]);
                     }
-                    row.appendChild(createActionButtons(key, dataType));
+                    const actionsCell = createActionButtons(key, dataType);
+                    row.appendChild(actionsCell);
+                    actionsCell.setAttribute('data-label', headers[headers.length -1]); //Pour la colonne actions
                 }
             }
               applyUserRestrictions(); //Très important : Appliquer les restrictions APRES avoir créé les boutons
@@ -678,7 +701,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         function handleError(error) {
-            console.error("Erreur lors de l'opération:", error);
+        console.error("Erreur lors de l'opération:", error);
             alert("Une erreur s'est produite. Veuillez vérifier votre connexion et réessayer.");
         }
     }
@@ -734,7 +757,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // --- Event Listeners --- (Pas de changements ici)
+    // --- Event Listeners ---
     loginForm.addEventListener('submit', handleLogin);
     logoutButton.addEventListener('click', handleLogout);
 
@@ -1053,5 +1076,10 @@ document.addEventListener('DOMContentLoaded', function () {
             top: 0,         // Position cible (haut de la page)
             behavior: 'smooth' // Défilement fluide
         });
+    });
+
+     // AJOUT: Écouteur d'événements pour le bouton de menu
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('menu-open');
     });
 });
