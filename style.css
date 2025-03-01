@@ -293,7 +293,7 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     position: absolute; /* Position absolue pour le placer en haut à gauche */
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     z-index: 1001; /* Au-dessus du contenu */
 }
 
