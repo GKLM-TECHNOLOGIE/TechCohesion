@@ -1051,23 +1051,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Animer le défilement vers le haut
     backToTopButton.addEventListener('click', function (event) {
-        event.preventDefault(); // Empêche le comportement par défaut du lien
+        event.preventDefault();
         window.scrollTo({
-            top: 0,         // Position cible (haut de la page)
-            behavior: 'smooth' // Défilement fluide
+            top: 0,
+            behavior: 'smooth'
         });
     });
 
-     // AJOUT: Écouteur d'événements pour le bouton de menu
+    //  Écouteur d'événements pour le bouton de menu et les boutons de navigation
     menuToggle.addEventListener('click', function() {
         mainNav.classList.toggle('menu-open');
     });
 
-    // AJOUT: Fermer le menu quand on clique sur un bouton du menu
-    const menuButtons = document.querySelectorAll('.main-nav .button-container button');
-    menuButtons.forEach(button => {
+    // Ajout de l'écouteur d'événements pour chaque bouton de navigation
+    document.querySelectorAll('.nav-button').forEach(button => {
         button.addEventListener('click', () => {
-            mainNav.classList.remove('menu-open'); // Ferme le menu
+            // Fermer le menu sur les petits écrans
+            if (window.innerWidth <= 768) {  // Vérifier la largeur de l'écran
+                mainNav.classList.remove('menu-open');
+            }
         });
     });
 });

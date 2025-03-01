@@ -1,6 +1,3 @@
-/* style.css */
-
-/* --- Réglages Généraux --- */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -182,15 +179,13 @@ button.delete-button::before {
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: auto;  /* Important pour la disposition des colonnes */
     margin-top: 1.5rem;
     border-spacing: 0;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden; /* Important pour les bords arrondis et le débordement */
+    overflow: hidden; /* Important pour les bords arrondis */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    display: block;       /*  Important: Permet le défilement */
-    overflow-x: auto;    /*  Important: Ajoute le défilement horizontal */
 }
 
 
@@ -323,7 +318,6 @@ tbody tr:nth-child(even) {
 
 }
 
-
 /* --- Media Queries --- */
 
 /* Smartphones (Portrait) */
@@ -366,8 +360,8 @@ tbody tr:nth-child(even) {
         display: none; /* Caché par défaut sur mobile */
         width: 100%;
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
@@ -383,6 +377,18 @@ tbody tr:nth-child(even) {
     }
     .button-container button{
       margin: 0.5em;
+    }
+     /* Tableaux:  Disposition standard */
+    table {
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
+    }
+    thead {
+        display: table-header-group;
+    }
+    th, td {
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
     }
 }
 
@@ -425,9 +431,9 @@ tbody tr:nth-child(even) {
     .main-nav {
         display: none; /* Caché par défaut sur mobile */
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
+         position: absolute;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
@@ -437,6 +443,19 @@ tbody tr:nth-child(even) {
       .main-nav.menu-open {
         display: block;
     }
+
+  /* Tableaux:  Disposition standard */
+    table {
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
+    }
+    thead {
+        display: table-header-group;
+    }
+    th, td {
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
+    }
 }
 
 /* Tablettes (Paysage) et Grands Écrans */
@@ -444,6 +463,13 @@ tbody tr:nth-child(even) {
     /* Masquer le bouton hamburger sur les grands écrans */
     .menu-toggle {
         display: none;
+    }
+     thead {
+        display: table-header-group; /* Rétablit l'affichage normal du thead */
+    }
+    /* Style du menu pour les grands écrans */
+    .main-nav {
+        display: block !important; /* Assurez-vous que le menu est visible */
     }
 }
 
