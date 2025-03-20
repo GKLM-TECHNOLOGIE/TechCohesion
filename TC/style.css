@@ -1,0 +1,651 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2fce;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: #fefefe;
+    text-align: center;
+}
+
+h1.title-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0ec1b;
+}
+
+.company-logo {
+    height: 80px;
+    margin-right: 20px;
+    max-width: 100%;
+}
+
+section {
+    margin: 20px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* --- Formulaires --- */
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #2a2fce;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.form-container p {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"],
+input[type="month"],
+input[type="password"],
+select {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="month"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+
+.form-row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.form-row input,
+.form-row select {
+    width: 100%;
+}
+
+button {
+    background-color: #f80c13;
+    color: #fefefe;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* --- Boutons d'Action --- */
+button.edit-button,
+button.delete-button {
+    padding: 0;
+    font-size: 0;
+    margin: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+button.edit-button {
+    background-color: #f39c12;
+    color: white;
+}
+
+button.delete-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.edit-button:hover {
+    background-color: #e67e22;
+}
+
+button.delete-button:hover {
+    background-color: #c0392b;
+}
+
+button.edit-button::before {
+    content: "\f044";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+button.delete-button::before {
+    content: "\f2ed";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+/* --- Tableaux --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;  /* Important pour la disposition des colonnes */
+    margin-top: 1.5rem;
+    border-spacing: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Important pour les bords arrondis */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+    background-color: #f8f8f8;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* --- Styles Spécifiques Tableaux --- */
+#sales-details,
+#others-details,
+#expenses-details,
+#report-table-section,
+#supply-table,
+#user-table {
+    margin-top: 2rem;
+}
+
+#supply-table th,
+#supply-table td,
+#sales-table th,
+#sales-table td,
+#others-table th,
+#others-table td,
+#expenses-table th,
+#expenses-table td,
+#user-table th,
+#user-table td,
+#report-table th,
+#report-table td {
+    word-break: break-word;
+    min-width: 100px; /* Augmentation de la largeur minimale */
+    border: 1px solid #000;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+}
+
+#supply-table thead tr.supply-header-row th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    border: 1px solid #000;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.form-container {
+    border: 1px solid #d0d0d0;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.actions-col {
+    width: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* --- Bouton Retour en Haut --- */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #f80c13;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+#back-to-top:hover {
+    background-color: #2980b9;
+}
+
+/* --- Bouton Menu Hamburger --- */
+.menu-toggle {
+    display: none; /* Caché par défaut (visible sur petits écrans) */
+    background-color: #f80c13;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;  /* Positionné à droite */
+    z-index: 1001;
+}
+
+.menu-toggle:hover {
+    background-color: #2980b9;
+}
+
+.menu-toggle i {
+    font-size: 1.5rem;
+}
+
+/* --- Menu de Navigation --- */
+.main-nav {
+    margin-top: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+/* --- Media Queries --- */
+
+/* Smartphones (Portrait) */
+@media (max-width: 480px) {
+    .company-logo {
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        margin-bottom: 0.5rem;
+        width: auto;
+        max-width: 100%;
+        margin: 0.5em;
+    }
+
+    #back-to-top {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    /* Afficher le bouton hamburger, masquer le menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none; /* Caché par défaut sur mobile */
+        width: 100%;
+        position: absolute;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+     }
+
+      /* Afficher le menu quand la classe est présente */
+    .main-nav.menu-open {
+        display: block;
+    }
+      .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .button-container button{
+      margin: 0.5em;
+    }
+     /* Tableaux:  Disposition standard */
+    table {
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
+    }
+    thead {
+        display: table-header-group;
+    }
+    th, td {
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
+    }
+}
+
+/* Tablettes (Portrait) et Petits Écrans (Paysage) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    button {
+        margin-bottom: 0.5rem;
+        width: auto;
+        max-width: 100%;
+        margin: 0.5em;
+    }
+
+    h1.title-center {
+        flex-direction: column;
+    }
+
+    .company-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #back-to-top {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px;
+    }
+     /* Afficher le bouton hamburger, masquer le menu */
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none; /* Caché par défaut sur mobile */
+        width: 100%;
+         position: absolute;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+      /* Afficher le menu quand la classe est présente */
+      .main-nav.menu-open {
+        display: block;
+    }
+
+  /* Tableaux:  Disposition standard */
+    table {
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
+    }
+    thead {
+        display: table-header-group;
+    }
+    th, td {
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
+    }
+}
+
+/* Tablettes (Paysage) et Grands Écrans */
+@media (min-width: 769px) {
+    /* Masquer le bouton hamburger sur les grands écrans */
+    .menu-toggle {
+        display: none;
+    }
+     thead {
+        display: table-header-group; /* Rétablit l'affichage normal du thead */
+    }
+    /* Style du menu pour les grands écrans */
+    .main-nav {
+        display: block !important; /* Assurez-vous que le menu est visible */
+    }
+}
+
+/* --- Impression --- */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    #supply-section,
+    #sales-details,
+    #others-details,
+    #expenses-details,
+    #user-section {
+        box-shadow: none;
+        border: none;
+        background-color: #fff;
+    }
+
+    #supply-section h2,
+    #supply-section p,
+    #supply-table,
+    #sales-details h3,
+    #sales-details table,
+    #others-details h3,
+    #others-details table,
+    #expenses-details h3,
+    #expenses-details table,
+    #user-table {
+        color: #000 !important;
+    }
+
+    #supply-table,
+    #sales-table,
+    #others-table,
+    #expenses-table,
+    #user-table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #supply-table th,
+    #supply-table td,
+    #sales-table th,
+    #sales-table td,
+    #others-table th,
+    #others-table td,
+    #expenses-table th,
+    #expenses-table td,
+    #user-table th,
+    #user-table td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+        font-size: 12pt;
+        color: #000;
+    }
+
+    #supply-table thead tr.supply-header-row th,
+    #sales-table thead th,
+    #others-table thead th,
+    #expenses-table thead th,
+    #user-table thead th {
+        background-color: #f0f0f0 !important;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .button-group,
+    .button-container, /* Cibler aussi le conteneur principal des boutons */
+    .form-container h2,
+    .form-container p,
+    #supply-form,
+    .form-container>p,
+    #sales-form,
+    #sales-details>.button-container,
+    #others-form,
+    #others-details>.button-container,
+    #expenses-details>.button-container,
+    #user-form,
+    #report-section,
+    #back-to-top,
+    #menu-toggle /* Cacher le bouton de menu à l'impression */
+        {
+        display: none !important;
+    }
+
+    h1.title-center,
+    h1,
+    h3 {
+        text-align: center !important;
+        color: #000 !important;
+    }
+}
+
+/* --- Pied de Page --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0ec1b;
+    color: #2a2fce;
+    font-weight: bold;
+    margin-top: auto;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Fenêtre de Connexion --- */
+#login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Media query pour la fenêtre de connexion (petits écrans) */
+@media (max-width: 480px) {
+    #login-container {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+/* --- Règles Générales pour la Responsivité --- */
+/* Images responsives */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Barre de recherche */
+.search-bar {
+    margin-bottom: 1rem;
+    text-align: center; /* Centrer la barre de recherche */
+}
+
+.search-bar label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 70%; /* Largeur de la barre de recherche */
+    max-width: 300px; /* Largeur maximale */
+}
+
+/* Totaux des tableaux */
+tfoot {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+tfoot td {
+    border-top: 2px solid #aaa; /* Bordure plus épaisse pour séparer le total */
+    text-align: right;  /* Alignement à droite par défaut */
+}
+tfoot td:first-child {
+     text-align: left; /* "Total" aligné à gauche */
+}
