@@ -616,3 +616,36 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* Barre de recherche */
+.search-bar {
+    margin-bottom: 1rem;
+    text-align: center; /* Centrer la barre de recherche */
+}
+
+.search-bar label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 70%; /* Largeur de la barre de recherche */
+    max-width: 300px; /* Largeur maximale */
+}
+
+/* Totaux des tableaux */
+tfoot {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+tfoot td {
+    border-top: 2px solid #aaa; /* Bordure plus épaisse pour séparer le total */
+    text-align: right;  /* Alignement à droite par défaut */
+}
+tfoot td:first-child {
+     text-align: left; /* "Total" aligné à gauche */
+}
