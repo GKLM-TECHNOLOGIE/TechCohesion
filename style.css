@@ -554,7 +554,8 @@ tbody tr:nth-child(even) {
     #user-form,
     #report-section,
     #back-to-top,
-    #menu-toggle /* Cacher le bouton de menu à l'impression */
+    #menu-toggle /* Cacher le bouton de menu à l'impression*/,
+     #supply-export-buttons /* Cacher les boutons d'export de supply à l'impression */
         {
         display: none !important;
     }
@@ -563,6 +564,16 @@ tbody tr:nth-child(even) {
     h1,
     h3 {
         text-align: center !important;
+        color: #000 !important;
+    }
+
+    /* Ensure report totals display correctly in print */
+     #report-table tfoot strong {
+        color: #000 !important;
+    }
+
+     /* Ensure expense rows in report are black for print */
+    .report-table .expense-row td {
         color: #000 !important;
     }
 }
@@ -648,4 +659,15 @@ tfoot td {
 }
 tfoot td:first-child {
      text-align: left; /* "Total" aligné à gauche */
+}
+
+/* Style for expense rows in the report table */
+.report-table .expense-row td {
+    color: red;
+}
+
+/* Style for the readonly user input */
+#current-user-display {
+    background-color: #e9ecef; /* Bootstrap's disabled input color */
+    opacity: 1; /* Ensure it's not faded */
 }

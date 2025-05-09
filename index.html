@@ -67,6 +67,12 @@
             <p>Enregistrez ici les ventes et autres types d'opérations.</p>
             <form id="sales-form">
                 <input type="hidden" id="sales-form-key"> <!-- Champ caché pour la clé lors de la modification -->
+                 <!-- Champ en lecture seule pour l'utilisateur connecté -->
+                 <div class="form-row">
+                    <label for="current-user-display">Utilisateur:</label>
+                    <input type="text" id="current-user-display" readonly>
+                </div>
+
                 <div class="form-row">
                     <label for="sale-date">Date:</label>
                     <input type="date" id="sale-date" required>
@@ -308,12 +314,22 @@
                     <tbody>
                     </tbody>
                     <tfoot>
+                        <!-- Row for total items count and total quantity -->
                         <tr>
-                            <td><strong>Total:</strong></td>
-                            <td id="total-report-designation-count"></td>
+                             <td colspan="2"><strong id="total-report-designation-count">Total:</strong></td>
                             <td id="total-report-quantity"></td>
-                            <td id="total-report-amount"></td>
+                            <td></td> <!-- Empty cell for amount column -->
                         </tr>
+                         <!-- Row for total expenses -->
+                        <tr>
+                            <td colspan="3"><strong>Total Dépenses:</strong></td>
+                             <td id="total-report-expenses"></td>
+                        </tr>
+                         <!-- Row for net balance -->
+                         <tr>
+                             <td colspan="3"><strong>Solde (Total - Dépenses):</strong></td>
+                             <td id="total-report-balance"></td>
+                         </tr>
                     </tfoot>
                 </table>
             </div>
@@ -345,16 +361,18 @@
                 <button id="show-supply-details">Afficher Détails Approvisionnements</button>
             </div>
 
-            <div class="button-group" style="display: none;">
+             <!-- Button group for Supply exports -->
+            <div id="supply-export-buttons" class="button-group" style="display: none;">
                 <button id="print-supply-table">Imprimer</button>
                 <button id="export-supply-excel">Exporter en Excel</button>
                 <button id="export-supply-pdf">Exporter en PDF</button>
             </div>
-             <div class="search-bar">
+
+             <div class="search-bar" style="display: none;"> <!-- Initially hidden -->
                 <label for="search-supply">Rechercher par désignation:</label>
                 <input type="text" id="search-supply" placeholder="Entrez une désignation...">
             </div>
-            <h3 id="supply-table-title">Détails des Approvisionnements et Stocks</h3>
+            <h3 id="supply-table-title" style="display: none;">Détails des Approvisionnements et Stocks</h3> <!-- Initially hidden -->
             <table id="supply-table" style="display: none;">
                 <thead>
                     <tr class="supply-header-row">
@@ -428,8 +446,7 @@
 
     <footer>
         <p>Tech Cohésion : Votre confiance renouveler nous inspire !</p>
-
-        <p>Renouvelé régulièrement votre abonnement, afin garantir l'utilisation sans interruption </p>
+        <p>Renouvelé régulièrement votre abonnement, afin garantir l'utilisation sans interruption de votre Programme.</p>
         <p>Le Concepteur GKLM : +229 019 175 5979</p>
     </footer>
     <!-- Ancre pour le retour en haut -->
