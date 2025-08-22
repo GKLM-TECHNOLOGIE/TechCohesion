@@ -64,6 +64,7 @@ input[type="number"],
 input[type="text"],
 input[type="month"],
 input[type="password"],
+input[type="week"],
 select {
     padding: 0.75rem;
     margin-bottom: 1rem;
@@ -80,6 +81,7 @@ input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="month"]:focus,
 input[type="password"]:focus,
+input[type="week"]:focus,
 select:focus {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
@@ -125,6 +127,34 @@ button {
 
 button:hover {
     background-color: #2980b9;
+}
+
+/* Style pour les liens qui ressemblent à des boutons */
+.button-like-link {
+    background-color: #f80c13;
+    color: #fefefe;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.button-like-link:hover {
+    background-color: #2980b9;
+    color: #fefefe;
 }
 
 /* --- Boutons d'Action --- */
@@ -179,12 +209,12 @@ button.delete-button::before {
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;  /* Important pour la disposition des colonnes */
+    table-layout: auto;
     margin-top: 1.5rem;
     border-spacing: 0;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden; /* Important pour les bords arrondis */
+    overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -230,7 +260,7 @@ tbody tr:nth-child(even) {
 #report-table th,
 #report-table td {
     word-break: break-word;
-    min-width: 100px; /* Augmentation de la largeur minimale */
+    min-width: 100px;
     border: 1px solid #000;
     padding: 0.4rem;
     font-size: 0.85rem;
@@ -284,7 +314,7 @@ tbody tr:nth-child(even) {
 
 /* --- Bouton Menu Hamburger --- */
 .menu-toggle {
-    display: none; /* Caché par défaut (visible sur petits écrans) */
+    display: none;
     background-color: #f80c13;
     color: white;
     border: none;
@@ -293,7 +323,7 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     position: absolute;
     top: 1rem;
-    right: 1rem;  /* Positionné à droite */
+    right: 1rem;
     z-index: 1001;
 }
 
@@ -320,7 +350,6 @@ tbody tr:nth-child(even) {
 
 /* --- Media Queries --- */
 
-/* Smartphones (Portrait) */
 @media (max-width: 480px) {
     .company-logo {
         height: 60px;
@@ -351,23 +380,21 @@ tbody tr:nth-child(even) {
         right: 10px;
     }
 
-    /* Afficher le bouton hamburger, masquer le menu */
     .menu-toggle {
         display: block;
     }
 
     .main-nav {
-        display: none; /* Caché par défaut sur mobile */
+        display: none;
         width: 100%;
         position: absolute;
-        top: 60px;  /* Ajustement pour le positionnement */
-        right: 0; /* Alignement à droite */
+        top: 60px;
+        right: 0;
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
      }
 
-      /* Afficher le menu quand la classe est présente */
     .main-nav.menu-open {
         display: block;
     }
@@ -378,21 +405,19 @@ tbody tr:nth-child(even) {
     .button-container button{
       margin: 0.5em;
     }
-     /* Tableaux:  Disposition standard */
     table {
-        display: table; /* Rétablissement de l'affichage normal */
-        overflow-x: visible; /* Pas de défilement horizontal */
+        display: table;
+        overflow-x: visible;
     }
     thead {
         display: table-header-group;
     }
     th, td {
-        display: table-cell; /* Cellules normales */
-        width: auto; /* Largeur automatique */
+        display: table-cell;
+        width: auto;
     }
 }
 
-/* Tablettes (Portrait) et Petits Écrans (Paysage) */
 @media (min-width: 481px) and (max-width: 768px) {
 
     .button-container {
@@ -424,52 +449,46 @@ tbody tr:nth-child(even) {
         font-size: 16px;
         line-height: 35px;
     }
-     /* Afficher le bouton hamburger, masquer le menu */
     .menu-toggle {
         display: block;
     }
     .main-nav {
-        display: none; /* Caché par défaut sur mobile */
+        display: none;
         width: 100%;
          position: absolute;
-        top: 60px;  /* Ajustement pour le positionnement */
-        right: 0; /* Alignement à droite */
+        top: 60px;
+        right: 0;
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
     }
 
-      /* Afficher le menu quand la classe est présente */
       .main-nav.menu-open {
         display: block;
     }
 
-  /* Tableaux:  Disposition standard */
     table {
-        display: table; /* Rétablissement de l'affichage normal */
-        overflow-x: visible; /* Pas de défilement horizontal */
+        display: table;
+        overflow-x: visible;
     }
     thead {
         display: table-header-group;
     }
     th, td {
-        display: table-cell; /* Cellules normales */
-        width: auto; /* Largeur automatique */
+        display: table-cell;
+        width: auto;
     }
 }
 
-/* Tablettes (Paysage) et Grands Écrans */
 @media (min-width: 769px) {
-    /* Masquer le bouton hamburger sur les grands écrans */
     .menu-toggle {
         display: none;
     }
      thead {
-        display: table-header-group; /* Rétablit l'affichage normal du thead */
+        display: table-header-group;
     }
-    /* Style du menu pour les grands écrans */
     .main-nav {
-        display: block !important; /* Assurez-vous que le menu est visible */
+        display: block !important;
     }
 }
 
@@ -541,7 +560,7 @@ tbody tr:nth-child(even) {
     }
 
     .button-group,
-    .button-container, /* Cibler aussi le conteneur principal des boutons */
+    .button-container,
     .form-container h2,
     .form-container p,
     #supply-form,
@@ -554,7 +573,7 @@ tbody tr:nth-child(even) {
     #user-form,
     #report-section,
     #back-to-top,
-    #menu-toggle /* Cacher le bouton de menu à l'impression */
+    #menu-toggle
         {
         display: none !important;
     }
@@ -565,6 +584,65 @@ tbody tr:nth-child(even) {
         text-align: center !important;
         color: #000 !important;
     }
+}
+
+/* --- Éléments d'Abonnement --- */
+#subscription-alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f39c12;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+#subscription-alert-banner button {
+    margin: 0;
+    width: auto;
+    padding: 0.5rem 1rem;
+    background-color: #e67e22;
+}
+
+#subscription-lockout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lockout-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#lockout-container h2 {
+    color: #e74c3c;
+}
+
+#lockout-container p {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* --- Pied de Page --- */
@@ -602,7 +680,6 @@ footer {
     text-align: center;
 }
 
-/* Media query pour la fenêtre de connexion (petits écrans) */
 @media (max-width: 480px) {
     #login-container {
         width: 95%;
@@ -611,16 +688,14 @@ footer {
 }
 
 /* --- Règles Générales pour la Responsivité --- */
-/* Images responsives */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Barre de recherche */
 .search-bar {
     margin-bottom: 1rem;
-    text-align: center; /* Centrer la barre de recherche */
+    text-align: center;
 }
 
 .search-bar label {
@@ -632,20 +707,19 @@ img {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 70%; /* Largeur de la barre de recherche */
-    max-width: 300px; /* Largeur maximale */
+    width: 70%;
+    max-width: 300px;
 }
 
-/* Totaux des tableaux */
 tfoot {
     font-weight: bold;
     background-color: #f0f0f0;
 }
 
 tfoot td {
-    border-top: 2px solid #aaa; /* Bordure plus épaisse pour séparer le total */
-    text-align: right;  /* Alignement à droite par défaut */
+    border-top: 2px solid #aaa;
+    text-align: right;
 }
 tfoot td:first-child {
-     text-align: left; /* "Total" aligné à gauche */
+     text-align: left;
 }

@@ -1,1 +1,917 @@
-function _0x2d7c(){const _0xe0cad8=['\x20supprimé\x20avec\x20succès\x20!','password','search-expenses','child','Éditeur','cells','total-others-amount','FORM','addEventListener','totalCost','value','username','Aucune\x20donnée\x20à\x20exporter.','Ce\x20nom\x20d\x27utilisateur\x20existe\x20déjà.','sale-unit-price','sales-section','weekly','Détails\x20des\x20Approvisionnements','Erreur\x20lors\x20de\x20la\x20création\x20du\x20PDF\x20:\x20Aucune\x20page\x20générée.','report-table','login-username','search-supply','click','monthly','total-sold-quantity','<option\x20value=\x22','Ajouter\x20Approvisionnement','report-month','supply-table','amount','Total\x20(','1840608JTZIQG','Utilisateur:\x20','insertCell','none','table_to_sheet','Administrateur','getDate','show-admin-section-button','classList','scrollTop','other-amount','orderByChild','book_append_sheet','jsPDF','equalTo','linebreak','supply-date','report-year','print','contains','total-report-designation-count','getElementsByClassName','Aucune\x20donnée\x20correspondant\x20à\x20votre\x20recherche.','sales-details','supply-designation','admin-section','user-info-username','length','getDay','Aucune\x20donnée\x20à\x20afficher\x20pour\x20ce\x20bilan.','error','section','toggle','G-9Z309FQ77E','user-info-status','Bilan.pdf','center','Détails\x20des\x20Dépenses','total-supply-quantity','show-report-section-button','once','Créer\x20Compte','export-supply-pdf','others-table','sales-table','from','login-error','yearly','sale-date','Vente','grid','menu-open','supply-quantity','expense-amount','show-sales-details','tbody','utils','5fyCmeM','depense-details','toFixed','add','values','join','expenses-details','total-others-quantity','colSpan','smooth','startsWith','type','unitPrice','Aucune\x20','style','daily','show-expenses-details','access-level','tHead','toLowerCase','querySelector','Mot\x20de\x20passe\x20incorrect.','fontStyle','split','jspdf','table','date','edit-button','push','Modifier\x20Compte','monthly-filter','Sheet1','setAttribute','includes','4568816uzBXQo','save','print-supply-table','tfoot','tbody\x20tr','cell','yearly-filter','login-overlay','search-others','AIzaSyBU6VVRgSCh5gcV7xXnnHr6rxIASTcBpLc','menu-toggle','total-others-designation-count','.submit-button','logout-button','Modifier\x20Dépense','.pdf','map','setDate','user-info-bar','createElement','print-others-table','Détails\x20des\x20Autres\x20Opérations','total-sales-amount','autoTable','tagName','Autre','scrollTo','total-expenses-quantity','total-remaining-quantity','Erreur\x20lors\x20de\x20la\x20modification\x20de\x20l\x27utilisateur.','login-password','accessLevel','Modifier\x20Opération','rows','block','2325432yiqFzt','display','input','update','back-to-top','delete-button','supply-form-key','supply','users','other-designation','tech-cohesion','expense-designation','Détails\x20des\x20Ventes','hasOwnProperty','ref','tech-cohesion.firebasestorage.app','getFullYear','1049223PeMwjJ','Erreur\x20lors\x20de\x20la\x20création\x20de\x20l\x27utilisateur.','ceil','total-net-amount','Une\x20erreur\x20s\x27est\x20produite.\x20Veuillez\x20vérifier\x20votre\x20connexion\x20et\x20réessayer.','5432332EZnpqw','Bilan.xlsx','querySelectorAll','insertRow','button','all','export-supply-excel','Dépense','6109266RUrLiQ','print-expenses-table','generate-report','actions-col','search-users','sales-form-key','remove','exists','operation-type','863736447145','other-quantity','expense-quantity','search-sales','sales','setHours','forEach','expenses','Connecté','weekly-filter','user-form-key','designation','search-report','report-table-section','submit','initializeApp','writeFile','form-container','others','Détails\x20des\x20Approvisionnements\x20et\x20Stocks','encode_cell','thead\x20th','Lecteur','main-nav','total-sales-unit-price','expenses-table','sale-designation','!ref','export-sales-pdf','disabled','sales-form','total-expenses-amount','Modifier\x20Approvisionnement','onscroll','documentElement','textContent','Nom\x20d\x27utilisateur\x20introuvable.','data-type','export-others-pdf','vente-details','change','catch','then','encode_range','val','Veuillez\x20remplir\x20tous\x20les\x20champs.','decode_range','book_new','appendChild','reset','textAlign','quantity','report-week','innerHTML','head','preventDefault','styles','tech-cohesion.firebaseapp.com','user-table','bold','Erreur\x20lors\x20de\x20la\x20suppression\x20de\x20','getElementById','81wwaBdH','export-report-excel','DOMContentLoaded','export-expenses-pdf','Bilan','supply-form','3514540JBbcuC','keys','Erreur\x20lors\x20de\x20la\x20création\x20de\x20l\x27utilisateur:','flex','Erreur\x20lors\x20de\x20l\x27opération:','getNumberOfPages','database'];_0x2d7c=function(){return _0xe0cad8;};return _0x2d7c();}const _0x3d4605=_0x1e19;function _0x1e19(_0x5d43ce,_0x44e3a3){const _0x2d7c47=_0x2d7c();return _0x1e19=function(_0x1e199f,_0x1e67a4){_0x1e199f=_0x1e199f-0x1e5;let _0x4ea374=_0x2d7c47[_0x1e199f];return _0x4ea374;},_0x1e19(_0x5d43ce,_0x44e3a3);}(function(_0x4d324a,_0x12337b){const _0x5192c0=_0x1e19,_0x23aea9=_0x4d324a();while(!![]){try{const _0x3476f3=parseInt(_0x5192c0(0x234))/0x1+parseInt(_0x5192c0(0x20e))/0x2+-parseInt(_0x5192c0(0x2c3))/0x3+-parseInt(_0x5192c0(0x2c8))/0x4+-parseInt(_0x5192c0(0x26d))/0x5*(-parseInt(_0x5192c0(0x2d0))/0x6)+parseInt(_0x5192c0(0x28f))/0x7+parseInt(_0x5192c0(0x2b2))/0x8*(-parseInt(_0x5192c0(0x208))/0x9);if(_0x3476f3===_0x12337b)break;else _0x23aea9['push'](_0x23aea9['shift']());}catch(_0x3f2781){_0x23aea9['push'](_0x23aea9['shift']());}}}(_0x2d7c,0xe6aca),document[_0x3d4605(0x21d)](_0x3d4605(0x20a),function(){const _0xf6b55a=_0x3d4605,_0x4e9ac1=document[_0xf6b55a(0x207)](_0xf6b55a(0x1e8)),_0x5961dd=document[_0xf6b55a(0x207)](_0xf6b55a(0x20d)),_0x43a116=document[_0xf6b55a(0x207)]('user-form'),_0x505175=document[_0xf6b55a(0x207)](_0xf6b55a(0x260))[_0xf6b55a(0x281)](_0xf6b55a(0x26b)),_0x20bd3d=document[_0xf6b55a(0x207)](_0xf6b55a(0x25f))[_0xf6b55a(0x281)]('tbody'),_0x147248=document['getElementById'](_0xf6b55a(0x2f2))[_0xf6b55a(0x281)](_0xf6b55a(0x26b)),_0x14a8f4=document[_0xf6b55a(0x207)](_0xf6b55a(0x231))[_0xf6b55a(0x281)](_0xf6b55a(0x26b)),_0x164d72=document[_0xf6b55a(0x207)](_0xf6b55a(0x228))[_0xf6b55a(0x281)](_0xf6b55a(0x26b)),_0x6f9de0=document[_0xf6b55a(0x207)](_0xf6b55a(0x204))[_0xf6b55a(0x281)](_0xf6b55a(0x26b)),_0x45b496=document['getElementById'](_0xf6b55a(0x224)),_0xc90002=document[_0xf6b55a(0x207)]('supply-section'),_0x19cdaa=document['getElementById']('report-section'),_0x2a3c23=document[_0xf6b55a(0x207)](_0xf6b55a(0x24d)),_0x2fe872=document[_0xf6b55a(0x207)](_0xf6b55a(0x24b)),_0x917369=document['getElementById']('others-details'),_0x33fea6=document[_0xf6b55a(0x207)](_0xf6b55a(0x273)),_0x3782e9=document[_0xf6b55a(0x207)](_0xf6b55a(0x1f1)),_0x58562e=document['getElementById']('autre-details'),_0x171c02=document[_0xf6b55a(0x207)](_0xf6b55a(0x26e)),_0x5970d4=document[_0xf6b55a(0x207)]('report-filters'),_0xdb2357=document[_0xf6b55a(0x207)](_0xf6b55a(0x2e6)),_0x3ba658=document[_0xf6b55a(0x207)](_0xf6b55a(0x231)),_0x4a671f=document['getElementById'](_0xf6b55a(0x2f3)),_0x52d2c4=document[_0xf6b55a(0x207)](_0xf6b55a(0x223)),_0x2ea7dc=document[_0xf6b55a(0x207)]('sale-quantity'),_0x17fc0b=document[_0xf6b55a(0x207)](_0xf6b55a(0x2bb)),_0x43d254=document[_0xf6b55a(0x207)](_0xf6b55a(0x2da)),_0x54bad7=document[_0xf6b55a(0x207)](_0xf6b55a(0x23e)),_0x4c0cdb=document['getElementById'](_0xf6b55a(0x2bd)),_0x52e79d=document['getElementById'](_0xf6b55a(0x2db)),_0x4a9ea2=document[_0xf6b55a(0x207)](_0xf6b55a(0x269)),_0x1bf5c9=document[_0xf6b55a(0x207)](_0xf6b55a(0x2d8)),_0x2705c7=document['getElementById']('report-date'),_0x23bcef=document[_0xf6b55a(0x207)](_0xf6b55a(0x230)),_0x3aab94=document['getElementById'](_0xf6b55a(0x245)),_0x44acbd=document[_0xf6b55a(0x207)](_0xf6b55a(0x1fe)),_0x319397=document['getElementById'](_0xf6b55a(0x2d5)),_0x27695e=document[_0xf6b55a(0x207)](_0xf6b55a(0x2b8)),_0x1e636f=document['getElementById'](_0xf6b55a(0x2e3)),_0x145f09=document[_0xf6b55a(0x207)]('daily-filter'),_0x2ec3b9=document[_0xf6b55a(0x207)](_0xf6b55a(0x28b)),_0x9d52f7=document['getElementById'](_0xf6b55a(0x295)),_0x537f18=document['getElementById'](_0xf6b55a(0x2e2)),_0x1c7e2c=document[_0xf6b55a(0x207)]('show-others-details'),_0x3d9525=document[_0xf6b55a(0x207)](_0xf6b55a(0x27d)),_0x566968=document[_0xf6b55a(0x207)]('show-supply-section-button'),_0xa3483b=document[_0xf6b55a(0x207)]('show-sales-section-button'),_0x317b2b=document['getElementById'](_0xf6b55a(0x25b)),_0x3a8a3c=document[_0xf6b55a(0x207)](_0xf6b55a(0x23b)),_0x591a3a=document[_0xf6b55a(0x207)](_0xf6b55a(0x2d2)),_0x43108d=document[_0xf6b55a(0x207)](_0xf6b55a(0x291)),_0x3f0643=document[_0xf6b55a(0x207)]('print-sales-table'),_0x1000cb=document[_0xf6b55a(0x207)](_0xf6b55a(0x2a3)),_0x163907=document[_0xf6b55a(0x207)](_0xf6b55a(0x2d1)),_0x8088d6=document[_0xf6b55a(0x207)]('export-sales-excel'),_0x69027e=document[_0xf6b55a(0x207)]('export-others-excel'),_0x33aab1=document[_0xf6b55a(0x207)]('export-expenses-excel'),_0x2256d5=document[_0xf6b55a(0x207)](_0xf6b55a(0x2ce)),_0x2b0390=document[_0xf6b55a(0x207)](_0xf6b55a(0x209)),_0x59b0e7=document[_0xf6b55a(0x207)](_0xf6b55a(0x1e6)),_0xc12a56=document[_0xf6b55a(0x207)](_0xf6b55a(0x1f0)),_0x22e1c6=document[_0xf6b55a(0x207)](_0xf6b55a(0x20b)),_0x4bdaff=document['getElementById'](_0xf6b55a(0x25e)),_0x345679=document[_0xf6b55a(0x207)]('export-report-pdf'),_0x59a092=document[_0xf6b55a(0x207)](_0xf6b55a(0x2b6)),_0x356c41=document[_0xf6b55a(0x207)]('show-supply-details'),_0x559149=document['getElementById'](_0xf6b55a(0x296)),_0x2ccc44=document['getElementById']('login-form'),_0x305d5e=document[_0xf6b55a(0x207)](_0xf6b55a(0x262)),_0x235be5=document['getElementById'](_0xf6b55a(0x2a1)),_0x178f01=document['getElementById'](_0xf6b55a(0x24e)),_0x25c018=document[_0xf6b55a(0x207)](_0xf6b55a(0x256)),_0x49e9d9=document[_0xf6b55a(0x207)](_0xf6b55a(0x29c));let _0x411064=null;const _0x36812b=document[_0xf6b55a(0x207)](_0xf6b55a(0x2dc)),_0x15dc55=document[_0xf6b55a(0x207)](_0xf6b55a(0x217)),_0x34f7c0=document[_0xf6b55a(0x207)](_0xf6b55a(0x297)),_0x5a274a=document[_0xf6b55a(0x207)](_0xf6b55a(0x22a)),_0x569337=document[_0xf6b55a(0x207)](_0xf6b55a(0x2d4)),_0x86115f=document[_0xf6b55a(0x207)](_0xf6b55a(0x2e5)),_0x20934b=document[_0xf6b55a(0x207)](_0xf6b55a(0x299)),_0x208e81=document[_0xf6b55a(0x207)](_0xf6b55a(0x2f0)),_0x187266={'apiKey':_0xf6b55a(0x298),'authDomain':_0xf6b55a(0x203),'databaseURL':'https://tech-cohesion-default-rtdb.firebaseio.com','projectId':_0xf6b55a(0x2bc),'storageBucket':_0xf6b55a(0x2c1),'messagingSenderId':_0xf6b55a(0x2d9),'appId':'1:863736447145:web:18ffa286704f8e081069b8','measurementId':_0xf6b55a(0x255)};firebase[_0xf6b55a(0x2e8)](_0x187266);const _0x4ec0c9=firebase[_0xf6b55a(0x214)](),_0x35c446=_0x4ec0c9[_0xf6b55a(0x2c0)](_0xf6b55a(0x2dd)),_0x3837be=_0x4ec0c9['ref'](_0xf6b55a(0x2eb)),_0x30e29b=_0x4ec0c9[_0xf6b55a(0x2c0)](_0xf6b55a(0x2e0)),_0xef93aa=_0x4ec0c9['ref'](_0xf6b55a(0x2b9)),_0x528d95=_0x4ec0c9[_0xf6b55a(0x2c0)](_0xf6b55a(0x2ba));function _0x239ca9(){const _0x38c280=_0xf6b55a;_0x559149[_0x38c280(0x27b)][_0x38c280(0x2b3)]='flex',_0x235be5[_0x38c280(0x27b)][_0x38c280(0x2b3)]=_0x38c280(0x237);}function _0x571491(){const _0x318e26=_0xf6b55a;_0x559149[_0x318e26(0x27b)][_0x318e26(0x2b3)]='none';}function _0x4c6446(_0x130c31,_0x31bc57){const _0x140c38=_0xf6b55a;_0x178f01[_0x140c38(0x1ed)]=_0x140c38(0x235)+_0x130c31,_0x25c018[_0x140c38(0x1ed)]=_0x140c38(0x2e1),_0x235be5[_0x140c38(0x27b)][_0x140c38(0x2b3)]=_0x140c38(0x2b1);}function _0x1d91cd(_0x17522b){const _0x292034=_0xf6b55a;_0x17522b[_0x292034(0x201)]();const _0x1323af=document[_0x292034(0x207)](_0x292034(0x229))[_0x292034(0x21f)],_0x542bb3=document['getElementById'](_0x292034(0x2ad))[_0x292034(0x21f)];_0x305d5e[_0x292034(0x27b)][_0x292034(0x2b3)]=_0x292034(0x237),_0x305d5e[_0x292034(0x1ed)]='',_0x528d95[_0x292034(0x23f)](_0x292034(0x220))['equalTo'](_0x1323af)['once'](_0x292034(0x21f),_0x15601f=>{const _0x5d4a6d=_0x292034;if(_0x15601f[_0x5d4a6d(0x2d7)]()){const _0x329d10=_0x15601f[_0x5d4a6d(0x1f6)](),_0x4cd55d=Object[_0x5d4a6d(0x20f)](_0x329d10)[0x0],_0x3b0ef2=_0x329d10[_0x4cd55d];_0x3b0ef2['password']===_0x542bb3?(_0x411064={'username':_0x3b0ef2[_0x5d4a6d(0x220)],'accessLevel':_0x3b0ef2[_0x5d4a6d(0x2ae)]},_0x571491(),_0x4c6446(_0x3b0ef2[_0x5d4a6d(0x220)],_0x3b0ef2[_0x5d4a6d(0x2ae)]),_0x260bbd(),_0x38c9f7()):(_0x305d5e['textContent']=_0x5d4a6d(0x282),_0x305d5e[_0x5d4a6d(0x27b)][_0x5d4a6d(0x2b3)]='block');}else _0x305d5e[_0x5d4a6d(0x1ed)]=_0x5d4a6d(0x1ee),_0x305d5e[_0x5d4a6d(0x27b)]['display']=_0x5d4a6d(0x2b1);});}function _0x2b1806(){const _0x3f7872=_0xf6b55a;_0x411064=null,_0x239ca9(),_0xab07b0(),_0x505175[_0x3f7872(0x1ff)]='',_0x20bd3d[_0x3f7872(0x1ff)]='',_0x147248[_0x3f7872(0x1ff)]='',_0x14a8f4['innerHTML']='',_0x6f9de0[_0x3f7872(0x1ff)]='',_0x164d72[_0x3f7872(0x1ff)]='',_0x235be5[_0x3f7872(0x27b)]['display']=_0x3f7872(0x237),_0x3b69fe();}function _0xab07b0(_0x5acda2){const _0x2a9779=_0xf6b55a;if(_0xc90002)_0xc90002[_0x2a9779(0x27b)]['display']=_0x2a9779(0x237);if(_0x45b496)_0x45b496[_0x2a9779(0x27b)][_0x2a9779(0x2b3)]=_0x2a9779(0x237);if(_0x19cdaa)_0x19cdaa[_0x2a9779(0x27b)][_0x2a9779(0x2b3)]=_0x2a9779(0x237);if(_0x2a3c23)_0x2a3c23[_0x2a9779(0x27b)][_0x2a9779(0x2b3)]=_0x2a9779(0x237);_0x5acda2&&(_0x5acda2[_0x2a9779(0x27b)]['display']=_0x2a9779(0x2b1));if(_0x2fe872)_0x2fe872['style'][_0x2a9779(0x2b3)]=_0x2a9779(0x237);if(_0x917369)_0x917369[_0x2a9779(0x27b)][_0x2a9779(0x2b3)]='none';if(_0x33fea6)_0x33fea6['style'][_0x2a9779(0x2b3)]='none';if(_0x5970d4)_0x5970d4[_0x2a9779(0x27b)]['display']=_0x2a9779(0x237);if(_0xdb2357)_0xdb2357[_0x2a9779(0x27b)][_0x2a9779(0x2b3)]='none';if(_0x3ba658)_0x3ba658['style'][_0x2a9779(0x2b3)]='none';}function _0x54e88a(){const _0x1c7946=_0xf6b55a;_0xef93aa[_0x1c7946(0x25c)](_0x1c7946(0x21f),_0x288275=>{const _0x32829c=_0x1c7946,_0x3dc676=_0x288275[_0x32829c(0x1f6)]()||{},_0x52b9c0=Object[_0x32829c(0x271)](_0x3dc676)[_0x32829c(0x29f)](_0x25ffbc=>_0x25ffbc[_0x32829c(0x2e4)]),_0x36dfac=Array[_0x32829c(0x261)](new Set(_0x52b9c0));_0x4a671f['innerHTML']=_0x36dfac['map'](_0x1aaa50=>_0x32829c(0x22e)+_0x1aaa50+'\x22>'+_0x1aaa50+'</option>')[_0x32829c(0x272)]('');});}function _0x102db0(){const _0x44e21c=_0xf6b55a,_0x442491=new Date()['toISOString']()['split']('T')[0x0];document[_0x44e21c(0x207)]('sale-date')[_0x44e21c(0x21f)]=_0x442491,document[_0x44e21c(0x207)]('supply-date')[_0x44e21c(0x21f)]=_0x442491;}function _0xbdd03b(_0x754afb){const _0x297b6e=_0xf6b55a;if(_0x754afb[_0x297b6e(0x27b)][_0x297b6e(0x2b3)]===_0x297b6e(0x237)){_0x754afb[_0x297b6e(0x27b)][_0x297b6e(0x2b3)]=_0x297b6e(0x2b1);if(_0x754afb!==_0x2fe872)_0x2fe872[_0x297b6e(0x27b)][_0x297b6e(0x2b3)]=_0x297b6e(0x237);if(_0x754afb!==_0x917369)_0x917369[_0x297b6e(0x27b)]['display']=_0x297b6e(0x237);if(_0x754afb!==_0x33fea6)_0x33fea6[_0x297b6e(0x27b)][_0x297b6e(0x2b3)]='none';}else _0x754afb[_0x297b6e(0x27b)][_0x297b6e(0x2b3)]=_0x297b6e(0x237);}function _0x364270(_0x467f1c,_0x5c1a4d){const _0x199d7e=_0xf6b55a;_0x5c1a4d['style'][_0x199d7e(0x2b3)]=_0x199d7e(0x237),_0x467f1c['style'][_0x199d7e(0x2b3)]=_0x467f1c[_0x199d7e(0x27b)][_0x199d7e(0x2b3)]===_0x199d7e(0x237)?_0x199d7e(0x2b1):_0x199d7e(0x237);}function _0x22f681(){const _0x4823a6=_0xf6b55a;_0x3ba658[_0x4823a6(0x27b)][_0x4823a6(0x2b3)]=_0x3ba658[_0x4823a6(0x27b)]['display']===_0x4823a6(0x237)?_0x4823a6(0x286):_0x4823a6(0x237);}function _0x260bbd(){_0x54e88a(),_0x23beb1(),_0x2218fd(),_0x1ab451(),_0x22217f(),_0x3c634d(),_0x102db0();}function _0x38c9f7(){const _0xec2794=_0xf6b55a;if(!_0x411064)return;_0xaf6350([_0x4e9ac1,_0x5961dd,_0x43a116,_0x591a3a]),_0x2eac59(_0xec2794(0x288)),_0x2eac59(_0xec2794(0x2b7));if(_0x411064[_0xec2794(0x2ae)]===_0xec2794(0x239))_0x91a8a6([_0x4e9ac1,_0x5961dd,_0x43a116,_0x591a3a]),_0x5dd954(_0xec2794(0x288)),_0x5dd954(_0xec2794(0x2b7)),_0x566968[_0xec2794(0x1e7)]=![],_0xa3483b[_0xec2794(0x1e7)]=![],_0x317b2b[_0xec2794(0x1e7)]=![],_0x3a8a3c[_0xec2794(0x1e7)]=![];else{if(_0x411064[_0xec2794(0x2ae)]===_0xec2794(0x219))_0x91a8a6([_0x4e9ac1,_0x5961dd]),_0x566968[_0xec2794(0x1e7)]=![],_0xa3483b[_0xec2794(0x1e7)]=![],_0x317b2b[_0xec2794(0x1e7)]=!![],_0x3a8a3c[_0xec2794(0x1e7)]=!![];else _0x411064['accessLevel']===_0xec2794(0x2ef)&&(_0x566968[_0xec2794(0x1e7)]=!![],_0xa3483b['disabled']=!![],_0x317b2b['disabled']=!![],_0x3a8a3c[_0xec2794(0x1e7)]=!![]);}}function _0x3b69fe(){const _0x5fb844=_0xf6b55a;_0x91a8a6([_0x4e9ac1,_0x5961dd,_0x43a116,_0x591a3a]),_0x5dd954(_0x5fb844(0x288)),_0x5dd954(_0x5fb844(0x2b7)),_0xa3483b[_0x5fb844(0x1e7)]=![],_0x317b2b[_0x5fb844(0x1e7)]=![],_0x3a8a3c[_0x5fb844(0x1e7)]=![];}function _0xaf6350(_0x3aa840){_0x3aa840['forEach'](_0x2bdfa7=>{const _0x271e61=_0x1e19;if(_0x2bdfa7)_0x2bdfa7['disabled']=!![];if(_0x2bdfa7&&(_0x2bdfa7[_0x271e61(0x2a7)]===_0x271e61(0x21c)||_0x2bdfa7[_0x271e61(0x23c)][_0x271e61(0x247)](_0x271e61(0x2ea)))){const _0x1b5381=_0x2bdfa7['querySelectorAll']('input,\x20select,\x20textarea,\x20button');_0x1b5381[_0x271e61(0x2df)](_0x526d5a=>_0x526d5a[_0x271e61(0x1e7)]=!![]);}});}function _0x91a8a6(_0x520e10){_0x520e10['forEach'](_0x4f6d8b=>{const _0x36e34c=_0x1e19;if(_0x4f6d8b)_0x4f6d8b['disabled']=![];if(_0x4f6d8b&&(_0x4f6d8b[_0x36e34c(0x2a7)]===_0x36e34c(0x21c)||_0x4f6d8b['classList']['contains']('form-container'))){const _0x3ef293=_0x4f6d8b['querySelectorAll']('input,\x20select,\x20textarea,\x20button');_0x3ef293[_0x36e34c(0x2df)](_0x1df7af=>_0x1df7af['disabled']=![]);}});}function _0x2eac59(_0x22fa10){const _0x2d21cd=_0xf6b55a,_0x3eb948=document[_0x2d21cd(0x249)](_0x22fa10);for(let _0x59ece8 of _0x3eb948){_0x59ece8[_0x2d21cd(0x1e7)]=!![];}}function _0x5dd954(_0x5f5185){const _0x3a83e5=_0xf6b55a,_0x1d8629=document['getElementsByClassName'](_0x5f5185);for(let _0x4ef534 of _0x1d8629){_0x4ef534[_0x3a83e5(0x1e7)]=![];}}function _0xff3ee9(_0x1c61bf,_0x31c61f){const _0x5b9364=_0xf6b55a,_0x11b13d=document[_0x5b9364(0x2a2)]('td');_0x11b13d[_0x5b9364(0x23c)][_0x5b9364(0x270)](_0x5b9364(0x2d3));const _0xd2d276=document[_0x5b9364(0x2a2)](_0x5b9364(0x2cc));_0xd2d276[_0x5b9364(0x23c)][_0x5b9364(0x270)](_0x5b9364(0x288)),_0xd2d276[_0x5b9364(0x28d)]('data-key',_0x1c61bf),_0xd2d276[_0x5b9364(0x28d)](_0x5b9364(0x1ef),_0x31c61f),_0xd2d276[_0x5b9364(0x21d)](_0x5b9364(0x22b),()=>_0x29d043(_0x1c61bf,_0x31c61f)),_0x11b13d[_0x5b9364(0x1fa)](_0xd2d276);const _0x19f010=document[_0x5b9364(0x2a2)](_0x5b9364(0x2cc));return _0x19f010[_0x5b9364(0x23c)][_0x5b9364(0x270)](_0x5b9364(0x2b7)),_0x19f010[_0x5b9364(0x28d)]('data-key',_0x1c61bf),_0x19f010[_0x5b9364(0x28d)](_0x5b9364(0x1ef),_0x31c61f),_0x19f010[_0x5b9364(0x21d)](_0x5b9364(0x22b),()=>_0x1b288e(_0x1c61bf,_0x31c61f)),_0x11b13d['appendChild'](_0x19f010),_0x411064&&_0x411064[_0x5b9364(0x2ae)]!==_0x5b9364(0x239)&&(_0xd2d276[_0x5b9364(0x1e7)]=!![],_0x19f010['disabled']=!![]),_0x11b13d;}function _0x16e3a2(){const _0x2a0cc5=_0xf6b55a;window[_0x2a0cc5(0x2a9)]({'top':0x0,'behavior':_0x2a0cc5(0x276)});}function _0x29d043(_0x3782a2,_0x31e352){const _0x1b33a8=_0xf6b55a;if(_0x31e352===_0x1b33a8(0x2dd))_0x319397['value']=_0x3782a2,_0x35c446[_0x1b33a8(0x218)](_0x3782a2)[_0x1b33a8(0x25c)](_0x1b33a8(0x21f),_0x2d6f5a=>{const _0x87be03=_0x1b33a8,_0x415bbb=_0x2d6f5a[_0x87be03(0x1f6)]();_0x415bbb&&(_0x5f44ed(_0x415bbb),_0x4e9ac1[_0x87be03(0x281)](_0x87be03(0x29b))[_0x87be03(0x1ed)]='Modifier\x20Opération',_0x16e3a2());});else{if(_0x31e352==='others')_0x319397[_0x1b33a8(0x21f)]=_0x3782a2,_0x3837be[_0x1b33a8(0x218)](_0x3782a2)[_0x1b33a8(0x25c)](_0x1b33a8(0x21f),_0x2ea8ad=>{const _0x2f3308=_0x1b33a8,_0x148dba=_0x2ea8ad[_0x2f3308(0x1f6)]();_0x148dba&&(_0x56c535(_0x148dba),_0x4e9ac1['querySelector'](_0x2f3308(0x29b))['textContent']=_0x2f3308(0x2af),_0x16e3a2());});else{if(_0x31e352===_0x1b33a8(0x2e0))_0x319397[_0x1b33a8(0x21f)]=_0x3782a2,_0x30e29b[_0x1b33a8(0x218)](_0x3782a2)[_0x1b33a8(0x25c)](_0x1b33a8(0x21f),_0xef55e3=>{const _0x1fcee0=_0x1b33a8,_0x387bf8=_0xef55e3[_0x1fcee0(0x1f6)]();_0x387bf8&&(_0x4527b0(_0x387bf8),_0x4e9ac1[_0x1fcee0(0x281)](_0x1fcee0(0x29b))[_0x1fcee0(0x1ed)]=_0x1fcee0(0x29d),_0x16e3a2());});else{if(_0x31e352===_0x1b33a8(0x2b9))_0x27695e[_0x1b33a8(0x21f)]=_0x3782a2,_0xef93aa[_0x1b33a8(0x218)](_0x3782a2)['once']('value',_0x26e14e=>{const _0x4fd2e9=_0x1b33a8,_0x28e42a=_0x26e14e[_0x4fd2e9(0x1f6)]();_0x28e42a&&(_0x5ac6c0(_0x28e42a),_0x5961dd[_0x4fd2e9(0x281)](_0x4fd2e9(0x29b))[_0x4fd2e9(0x1ed)]=_0x4fd2e9(0x1ea),_0x16e3a2());});else _0x31e352===_0x1b33a8(0x2ba)&&(_0x1e636f[_0x1b33a8(0x21f)]=_0x3782a2,_0x528d95[_0x1b33a8(0x218)](_0x3782a2)['once']('value',_0x3d91c8=>{const _0x495bb8=_0x1b33a8,_0x36947c=_0x3d91c8[_0x495bb8(0x1f6)]();_0x36947c&&(_0x46550e(_0x36947c),_0x43a116[_0x495bb8(0x281)](_0x495bb8(0x29b))['textContent']=_0x495bb8(0x28a),_0x16e3a2());}));}}}}function _0x5f44ed(_0x480dab){const _0x4d0b86=_0xf6b55a;document['getElementById'](_0x4d0b86(0x264))[_0x4d0b86(0x21f)]=_0x480dab[_0x4d0b86(0x287)],document[_0x4d0b86(0x207)](_0x4d0b86(0x2d8))[_0x4d0b86(0x21f)]='Vente',_0x3782e9[_0x4d0b86(0x27b)][_0x4d0b86(0x2b3)]='block',_0x58562e['style'][_0x4d0b86(0x2b3)]=_0x4d0b86(0x237),_0x171c02[_0x4d0b86(0x27b)][_0x4d0b86(0x2b3)]='none',_0x4a671f[_0x4d0b86(0x21f)]=_0x480dab[_0x4d0b86(0x2e4)],_0x2ea7dc[_0x4d0b86(0x21f)]=_0x480dab[_0x4d0b86(0x1fd)],_0x52d2c4[_0x4d0b86(0x21f)]=_0x480dab[_0x4d0b86(0x279)];}function _0x56c535(_0x47d9f1){const _0x56d8ec=_0xf6b55a;document[_0x56d8ec(0x207)](_0x56d8ec(0x264))[_0x56d8ec(0x21f)]=_0x47d9f1[_0x56d8ec(0x287)],document[_0x56d8ec(0x207)](_0x56d8ec(0x2d8))[_0x56d8ec(0x21f)]='Autre',_0x3782e9[_0x56d8ec(0x27b)]['display']=_0x56d8ec(0x237),_0x58562e[_0x56d8ec(0x27b)]['display']=_0x56d8ec(0x2b1),_0x171c02[_0x56d8ec(0x27b)][_0x56d8ec(0x2b3)]=_0x56d8ec(0x237),_0x17fc0b[_0x56d8ec(0x21f)]=_0x47d9f1[_0x56d8ec(0x2e4)],_0x43d254[_0x56d8ec(0x21f)]=_0x47d9f1['quantity'],_0x54bad7[_0x56d8ec(0x21f)]=_0x47d9f1[_0x56d8ec(0x232)];}function _0x4527b0(_0xa2c052){const _0x21d1eb=_0xf6b55a;document[_0x21d1eb(0x207)](_0x21d1eb(0x264))[_0x21d1eb(0x21f)]=_0xa2c052['date'],document['getElementById'](_0x21d1eb(0x2d8))[_0x21d1eb(0x21f)]=_0x21d1eb(0x2cf),_0x3782e9[_0x21d1eb(0x27b)]['display']=_0x21d1eb(0x237),_0x58562e[_0x21d1eb(0x27b)]['display']=_0x21d1eb(0x237),_0x171c02[_0x21d1eb(0x27b)]['display']=_0x21d1eb(0x2b1),_0x4c0cdb['value']=_0xa2c052[_0x21d1eb(0x2e4)],_0x52e79d[_0x21d1eb(0x21f)]=_0xa2c052[_0x21d1eb(0x1fd)],_0x4a9ea2[_0x21d1eb(0x21f)]=_0xa2c052['amount'];}function _0x5ac6c0(_0x3cc572){const _0xb0b0b2=_0xf6b55a;document[_0xb0b0b2(0x207)](_0xb0b0b2(0x244))['value']=_0x3cc572[_0xb0b0b2(0x287)],document[_0xb0b0b2(0x207)](_0xb0b0b2(0x24c))[_0xb0b0b2(0x21f)]=_0x3cc572[_0xb0b0b2(0x2e4)],document['getElementById'](_0xb0b0b2(0x268))[_0xb0b0b2(0x21f)]=_0x3cc572['quantity'];}function _0x46550e(_0x20ac54){const _0x4eee7c=_0xf6b55a;document[_0x4eee7c(0x207)](_0x4eee7c(0x220))[_0x4eee7c(0x21f)]=_0x20ac54['username'],document[_0x4eee7c(0x207)]('access-level')[_0x4eee7c(0x21f)]=_0x20ac54['accessLevel'];}function _0x1b288e(_0xc8f822,_0x3071ce){const _0xa8b35d=_0xf6b55a;let _0x5d0116;switch(_0x3071ce){case _0xa8b35d(0x2dd):_0x5d0116=_0x35c446;break;case _0xa8b35d(0x2eb):_0x5d0116=_0x3837be;break;case'expenses':_0x5d0116=_0x30e29b;break;case'supply':_0x5d0116=_0xef93aa;break;case'users':_0x5d0116=_0x528d95;break;default:console['error']('Type\x20de\x20données\x20inconnu:',_0x3071ce);return;}confirm('Êtes-vous\x20sûr\x20de\x20vouloir\x20supprimer\x20cette\x20entrée\x20de\x20'+_0x3071ce+'\x20?')&&_0x5d0116[_0xa8b35d(0x218)](_0xc8f822)[_0xa8b35d(0x2d6)]()[_0xa8b35d(0x1f4)](()=>{const _0x179a5f=_0xa8b35d;alert(_0x3071ce+_0x179a5f(0x215));})[_0xa8b35d(0x1f3)](_0x1e96dc=>{const _0x163be1=_0xa8b35d;console[_0x163be1(0x252)]('Erreur\x20lors\x20de\x20la\x20suppression\x20de\x20'+_0x3071ce+':',_0x1e96dc),alert(_0x163be1(0x206)+_0x3071ce+'.');});}function _0x535f2b(_0x1d7953,_0x3b0d14,_0x2d491e,_0x2f4249){_0x3b0d14['on']('value',_0x569680=>{const _0x1eccfe=_0x1e19;_0x1d7953[_0x1eccfe(0x1ff)]='';const _0x3cac44=_0x569680[_0x1eccfe(0x1f6)]()||{};let _0x40575d=0x0,_0x5ccc83=0x0,_0x2dce0d=0x0,_0x29cc1e=0x0,_0xd29e48={};const _0x1a36f2=_0x2f4249?_0x2f4249['value'][_0x1eccfe(0x280)]():'';for(const _0x1a2287 in _0x3cac44){const _0x252cf3=_0x3cac44[_0x1a2287];if(_0x2d491e===_0x1eccfe(0x2b9))_0x252cf3[_0x1eccfe(0x2e4)][_0x1eccfe(0x280)]()[_0x1eccfe(0x28e)](_0x1a36f2)&&(_0xd29e48[_0x1a2287]=_0x252cf3);else _0x2d491e===_0x1eccfe(0x2ba)?_0x252cf3['username'][_0x1eccfe(0x280)]()[_0x1eccfe(0x28e)](_0x1a36f2)&&(_0xd29e48[_0x1a2287]=_0x252cf3):_0x252cf3[_0x1eccfe(0x2e4)][_0x1eccfe(0x280)]()[_0x1eccfe(0x28e)](_0x1a36f2)&&(_0xd29e48[_0x1a2287]=_0x252cf3);}if(Object[_0x1eccfe(0x20f)](_0xd29e48)[_0x1eccfe(0x24f)]===0x0){let _0x29ab3c=0x5;if(_0x2d491e==='sales')_0x29ab3c=0x6;else{if(_0x2d491e===_0x1eccfe(0x2ba))_0x29ab3c=0x3;}_0x928260(_0x1d7953,_0x29ab3c,_0x1eccfe(0x27a)+_0x2d491e+'\x20enregistrée.');return;}for(const _0x5d1783 in _0xd29e48){const _0x4a0949=_0xd29e48[_0x5d1783],_0x5eb22b=_0x1d7953[_0x1eccfe(0x2cb)]();if(_0x2d491e===_0x1eccfe(0x2b9))_0x35c446[_0x1eccfe(0x25c)]('value',_0xdb91e1=>{const _0x4d582d=_0x1eccfe,_0x3f9796=_0xdb91e1['val']()||{};let _0xba368c=0x0;for(const _0x34102a in _0x3f9796){const _0x344193=_0x3f9796[_0x34102a];_0x344193[_0x4d582d(0x2e4)]===_0x4a0949[_0x4d582d(0x2e4)]&&(_0xba368c+=parseFloat(_0x344193[_0x4d582d(0x1fd)]));}const _0x259abe=parseFloat(_0x4a0949[_0x4d582d(0x1fd)])-_0xba368c;_0x5eb22b[_0x4d582d(0x236)]()[_0x4d582d(0x1ed)]=_0x4a0949[_0x4d582d(0x287)],_0x5eb22b[_0x4d582d(0x236)]()[_0x4d582d(0x1ed)]=_0x4a0949[_0x4d582d(0x2e4)],_0x5eb22b[_0x4d582d(0x236)]()[_0x4d582d(0x1ed)]=_0x4a0949[_0x4d582d(0x1fd)],_0x5eb22b['insertCell']()[_0x4d582d(0x1ed)]=_0xba368c,_0x5eb22b[_0x4d582d(0x236)]()['textContent']=_0x259abe,_0x5eb22b['appendChild'](_0xff3ee9(_0x5d1783,_0x2d491e)),_0x40575d+=parseFloat(_0x4a0949[_0x4d582d(0x1fd)]),_0x5ccc83+=_0xba368c,_0x2dce0d++,_0x32cd86(_0x40575d,_0x5ccc83,_0x259abe,_0x2dce0d);});else{if(_0x2d491e===_0x1eccfe(0x2dd))_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x287)],_0x5eb22b[_0x1eccfe(0x236)]()['textContent']=_0x4a0949[_0x1eccfe(0x2e4)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x1fd)],_0x5eb22b[_0x1eccfe(0x236)]()['textContent']=_0x4a0949[_0x1eccfe(0x279)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949['totalCost'],_0x40575d+=parseFloat(_0x4a0949[_0x1eccfe(0x1fd)]),_0x5ccc83+=parseFloat(_0x4a0949['totalCost']),_0x29cc1e+=parseFloat(_0x4a0949[_0x1eccfe(0x279)]),_0x2dce0d++;else{if(_0x2d491e===_0x1eccfe(0x2eb))_0x5eb22b['insertCell']()['textContent']=_0x4a0949[_0x1eccfe(0x287)],_0x5eb22b[_0x1eccfe(0x236)]()['textContent']=_0x4a0949[_0x1eccfe(0x2e4)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x1fd)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x232)],_0x40575d+=parseFloat(_0x4a0949[_0x1eccfe(0x1fd)]),_0x5ccc83+=parseFloat(_0x4a0949[_0x1eccfe(0x232)]),_0x2dce0d++;else{if(_0x2d491e===_0x1eccfe(0x2e0))_0x5eb22b['insertCell']()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x287)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x2e4)],_0x5eb22b['insertCell']()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x1fd)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x232)],_0x40575d+=parseFloat(_0x4a0949[_0x1eccfe(0x1fd)]),_0x5ccc83+=parseFloat(_0x4a0949[_0x1eccfe(0x232)]),_0x2dce0d++;else _0x2d491e===_0x1eccfe(0x2ba)&&(_0x5eb22b[_0x1eccfe(0x236)]()['textContent']=_0x4a0949[_0x1eccfe(0x220)],_0x5eb22b[_0x1eccfe(0x236)]()[_0x1eccfe(0x1ed)]=_0x4a0949[_0x1eccfe(0x2ae)]);}}_0x5eb22b[_0x1eccfe(0x1fa)](_0xff3ee9(_0x5d1783,_0x2d491e));}}if(_0x2d491e===_0x1eccfe(0x2dd))_0x112100(_0x40575d,_0x5ccc83,_0x2dce0d,_0x29cc1e);else{if(_0x2d491e==='others')_0x56f936(_0x40575d,_0x5ccc83,_0x2dce0d);else _0x2d491e===_0x1eccfe(0x2e0)&&_0x2994eb(_0x40575d,_0x5ccc83,_0x2dce0d);}_0x38c9f7();});}function _0x928260(_0xe1e79d,_0x396a17,_0x3401f5){const _0x352ad3=_0xf6b55a,_0x31a68c=_0xe1e79d['insertRow'](),_0x1267ad=_0x31a68c[_0x352ad3(0x236)]();_0x1267ad[_0x352ad3(0x275)]=_0x396a17,_0x1267ad[_0x352ad3(0x1ed)]=_0x3401f5,_0x1267ad[_0x352ad3(0x27b)][_0x352ad3(0x1fc)]=_0x352ad3(0x258);}function _0x112100(_0x30540d,_0x128015,_0x44e2b8,_0x146118){const _0x2a5f8e=_0xf6b55a;document[_0x2a5f8e(0x207)]('total-sales-quantity')[_0x2a5f8e(0x1ed)]=_0x30540d,document[_0x2a5f8e(0x207)](_0x2a5f8e(0x2a5))[_0x2a5f8e(0x1ed)]=_0x128015[_0x2a5f8e(0x26f)](0x2),document['getElementById']('total-sales-designation-count')[_0x2a5f8e(0x1ed)]=_0x2a5f8e(0x233)+_0x44e2b8+')',document['getElementById'](_0x2a5f8e(0x2f1))['textContent']=_0x146118[_0x2a5f8e(0x26f)](0x2);}function _0x56f936(_0x19092a,_0x543387,_0x540f7b){const _0x3f8b71=_0xf6b55a;document[_0x3f8b71(0x207)](_0x3f8b71(0x274))[_0x3f8b71(0x1ed)]=_0x19092a,document[_0x3f8b71(0x207)](_0x3f8b71(0x21b))[_0x3f8b71(0x1ed)]=_0x543387[_0x3f8b71(0x26f)](0x2),document['getElementById'](_0x3f8b71(0x29a))[_0x3f8b71(0x1ed)]=_0x3f8b71(0x233)+_0x540f7b+')';}function _0x2994eb(_0x2ebb68,_0x45f26a,_0x423a97){const _0x5460a3=_0xf6b55a;document['getElementById'](_0x5460a3(0x2aa))['textContent']=_0x2ebb68,document['getElementById'](_0x5460a3(0x1e9))[_0x5460a3(0x1ed)]=_0x45f26a['toFixed'](0x2),document[_0x5460a3(0x207)]('total-expenses-designation-count')['textContent']=_0x5460a3(0x233)+_0x423a97+')';}function _0x32cd86(_0x1bc02f,_0x32f8ee,_0x18d319,_0x2318f2){const _0x4d6d8f=_0xf6b55a;document[_0x4d6d8f(0x207)](_0x4d6d8f(0x25a))[_0x4d6d8f(0x1ed)]=_0x1bc02f,document['getElementById'](_0x4d6d8f(0x22d))[_0x4d6d8f(0x1ed)]=_0x32f8ee,document[_0x4d6d8f(0x207)](_0x4d6d8f(0x2ab))['textContent']=_0x1bc02f-_0x32f8ee,document['getElementById']('total-supply-designation-count')[_0x4d6d8f(0x1ed)]=_0x4d6d8f(0x233)+_0x2318f2+'):';}function _0x23beb1(){const _0x51afec=_0xf6b55a;_0x535f2b(_0x505175,_0x35c446,_0x51afec(0x2dd),_0x36812b);}function _0x2218fd(){const _0x28796e=_0xf6b55a;_0x535f2b(_0x20bd3d,_0x3837be,_0x28796e(0x2eb),_0x34f7c0);}function _0x1ab451(){const _0x213f54=_0xf6b55a;_0x535f2b(_0x147248,_0x30e29b,_0x213f54(0x2e0),_0x15dc55);}function _0x22217f(){const _0x4eb6e=_0xf6b55a;_0x535f2b(_0x14a8f4,_0xef93aa,_0x4eb6e(0x2b9),_0x5a274a);}function _0x3c634d(){const _0x11d52d=_0xf6b55a;_0x535f2b(_0x6f9de0,_0x528d95,_0x11d52d(0x2ba),_0x569337);}function _0x343698(){const _0x220743=_0xf6b55a,_0x39c0ea=parseFloat(_0x2ea7dc[_0x220743(0x21f)])||0x0,_0x10e226=parseFloat(_0x52d2c4[_0x220743(0x21f)])||0x0;return _0x39c0ea*_0x10e226;}function _0x28be26(_0x3fec6d,_0x1db491){const _0x2a015c=_0xf6b55a;_0x3fec6d['preventDefault']();const _0x6cb29b=_0x319397[_0x2a015c(0x21f)];let _0x5ab4a5,_0x5e922f;if(_0x1db491===_0x2a015c(0x265))_0x5ab4a5={'date':document[_0x2a015c(0x207)](_0x2a015c(0x264))[_0x2a015c(0x21f)],'designation':_0x4a671f[_0x2a015c(0x21f)],'quantity':parseFloat(_0x2ea7dc[_0x2a015c(0x21f)]),'unitPrice':parseFloat(_0x52d2c4[_0x2a015c(0x21f)]),'totalCost':_0x343698()},_0x5e922f=_0x35c446;else{if(_0x1db491===_0x2a015c(0x2a8))_0x5ab4a5={'date':document[_0x2a015c(0x207)](_0x2a015c(0x264))[_0x2a015c(0x21f)],'designation':_0x17fc0b[_0x2a015c(0x21f)],'quantity':parseFloat(_0x43d254[_0x2a015c(0x21f)]),'amount':parseFloat(_0x54bad7[_0x2a015c(0x21f)]),'motif':_0x17fc0b[_0x2a015c(0x21f)]},_0x5e922f=_0x3837be;else _0x1db491===_0x2a015c(0x2cf)&&(_0x5ab4a5={'date':document[_0x2a015c(0x207)]('sale-date')[_0x2a015c(0x21f)],'designation':_0x4c0cdb['value'],'quantity':parseFloat(_0x52e79d[_0x2a015c(0x21f)]),'amount':parseFloat(_0x4a9ea2['value']),'motif':_0x4c0cdb['value']},_0x5e922f=_0x30e29b);}const _0x38a857=!!_0x6cb29b,_0x34cf74=_0x38a857?_0x5e922f['child'](_0x6cb29b)[_0x2a015c(0x2b5)](_0x5ab4a5):_0x5e922f[_0x2a015c(0x289)](_0x5ab4a5);_0x34cf74['then'](()=>{const _0x3bc19e=_0x2a015c;_0x4e9ac1[_0x3bc19e(0x1fb)](),_0x102db0(),_0x319397[_0x3bc19e(0x21f)]='',_0x4e9ac1[_0x3bc19e(0x281)](_0x3bc19e(0x29b))['textContent']='Ajouter\x20Opération';})[_0x2a015c(0x1f3)](_0x2069d0=>{const _0x386067=_0x2a015c;console[_0x386067(0x252)](_0x386067(0x212),_0x2069d0),alert(_0x386067(0x2c7));});}function _0x31dfdc(_0x536be5){const _0xac8922=_0xf6b55a;_0x536be5[_0xac8922(0x201)]();const _0x3b0b18=_0x27695e[_0xac8922(0x21f)],_0x5eaf41=document[_0xac8922(0x207)](_0xac8922(0x24c))[_0xac8922(0x21f)],_0x5ad488=parseFloat(document['getElementById'](_0xac8922(0x268))[_0xac8922(0x21f)]);_0xef93aa[_0xac8922(0x23f)](_0xac8922(0x2e4))[_0xac8922(0x242)](_0x5eaf41)[_0xac8922(0x25c)]('value',_0x3d9a90=>{const _0xd47c11=_0xac8922,_0x30be3b=_0x3d9a90[_0xd47c11(0x1f6)]();if(_0x30be3b&&!_0x3b0b18){let _0x4821f7=_0x5ad488,_0x40f538=null;for(const _0xce73eb in _0x30be3b){_0x4821f7+=parseFloat(_0x30be3b[_0xce73eb][_0xd47c11(0x1fd)]),_0x40f538=_0xce73eb;}_0xef93aa[_0xd47c11(0x218)](_0x40f538)[_0xd47c11(0x2b5)]({'quantity':_0x4821f7,'date':document[_0xd47c11(0x207)](_0xd47c11(0x244))[_0xd47c11(0x21f)]})[_0xd47c11(0x1f4)](()=>{const _0x48f97c=_0xd47c11;_0x5961dd[_0x48f97c(0x1fb)](),_0x102db0();})[_0xd47c11(0x1f3)](_0x20ad89);}else{const _0x32cff2={'date':document[_0xd47c11(0x207)]('supply-date')[_0xd47c11(0x21f)],'designation':_0x5eaf41,'quantity':_0x5ad488},_0x9732bf=_0x3b0b18?_0xef93aa[_0xd47c11(0x218)](_0x3b0b18)[_0xd47c11(0x2b5)](_0x32cff2):_0xef93aa[_0xd47c11(0x289)](_0x32cff2);_0x9732bf[_0xd47c11(0x1f4)](()=>{const _0x40ee56=_0xd47c11;_0x5961dd['reset'](),_0x102db0(),_0x27695e[_0x40ee56(0x21f)]='',_0x5961dd[_0x40ee56(0x281)](_0x40ee56(0x29b))[_0x40ee56(0x1ed)]=_0x40ee56(0x22f),_0x54e88a();})[_0xd47c11(0x1f3)](_0x20ad89);}});function _0x20ad89(_0x3efcbe){const _0x2e2212=_0xac8922;console['error'](_0x2e2212(0x212),_0x3efcbe),alert(_0x2e2212(0x2c7));}}function _0x529f83(_0x28e5ec){const _0x171548=_0xf6b55a;_0x28e5ec[_0x171548(0x201)]();const _0x4a209c=_0x1e636f[_0x171548(0x21f)],_0x565546=document[_0x171548(0x207)]('username')[_0x171548(0x21f)],_0x1f2311=document['getElementById'](_0x171548(0x216))['value'],_0x1ddc81=document[_0x171548(0x207)](_0x171548(0x27e))[_0x171548(0x21f)];if(!_0x565546||!_0x1f2311||!_0x1ddc81){alert(_0x171548(0x1f7));return;}if(_0x4a209c){const _0x2313c0={'username':_0x565546,'password':_0x1f2311,'accessLevel':_0x1ddc81};_0x528d95['child'](_0x4a209c)[_0x171548(0x2b5)](_0x2313c0)[_0x171548(0x1f4)](()=>{const _0x4e0f04=_0x171548;_0x43a116[_0x4e0f04(0x1fb)](),_0x1e636f[_0x4e0f04(0x21f)]='',_0x43a116['querySelector'](_0x4e0f04(0x29b))[_0x4e0f04(0x1ed)]=_0x4e0f04(0x25d);})[_0x171548(0x1f3)](_0x3893e1=>{const _0xefea29=_0x171548;console[_0xefea29(0x252)]('Erreur\x20lors\x20de\x20la\x20modification\x20de\x20l\x27utilisateur:',_0x3893e1),alert(_0xefea29(0x2ac));});}else _0x528d95[_0x171548(0x23f)](_0x171548(0x220))['equalTo'](_0x565546)['once'](_0x171548(0x21f),_0x1443df=>{const _0x3d4786=_0x171548;if(_0x1443df[_0x3d4786(0x2d7)]()){alert(_0x3d4786(0x222));return;}_0x528d95[_0x3d4786(0x289)]({'username':_0x565546,'password':_0x1f2311,'accessLevel':_0x1ddc81})['then'](()=>{const _0x10dc72=_0x3d4786;_0x43a116[_0x10dc72(0x1fb)]();})[_0x3d4786(0x1f3)](_0x579406=>{const _0x706ea4=_0x3d4786;console['error'](_0x706ea4(0x210),_0x579406),alert(_0x706ea4(0x2c4));});});}_0x2ccc44[_0xf6b55a(0x21d)]('submit',_0x1d91cd),_0x49e9d9['addEventListener']('click',_0x2b1806),_0x4a671f['addEventListener']('change',_0x343698),_0x2ea7dc[_0xf6b55a(0x21d)](_0xf6b55a(0x2b4),_0x343698),_0x52d2c4[_0xf6b55a(0x21d)](_0xf6b55a(0x2b4),_0x343698),_0x1bf5c9['addEventListener'](_0xf6b55a(0x1f2),function(){const _0x250510=_0xf6b55a;_0x3782e9[_0x250510(0x27b)][_0x250510(0x2b3)]=this[_0x250510(0x21f)]===_0x250510(0x265)?_0x250510(0x2b1):_0x250510(0x237),_0x58562e['style'][_0x250510(0x2b3)]=this['value']===_0x250510(0x2a8)?_0x250510(0x2b1):_0x250510(0x237),_0x171c02[_0x250510(0x27b)]['display']=this['value']===_0x250510(0x2cf)?_0x250510(0x2b1):'none';}),_0x4e9ac1[_0xf6b55a(0x21d)](_0xf6b55a(0x2e7),_0xc664c8=>_0x28be26(_0xc664c8,_0x1bf5c9[_0xf6b55a(0x21f)])),_0x5961dd[_0xf6b55a(0x21d)](_0xf6b55a(0x2e7),_0x31dfdc),_0x43a116[_0xf6b55a(0x21d)]('submit',_0x529f83),document['getElementById'](_0xf6b55a(0x26a))['addEventListener'](_0xf6b55a(0x22b),()=>_0xbdd03b(_0x2fe872)),_0x1c7e2c[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xbdd03b(_0x917369)),_0x3d9525[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xbdd03b(_0x33fea6));function _0xa59cc(_0x59405f,_0x247491){const _0x14852e=_0xf6b55a,_0x109044=XLSX[_0x14852e(0x26c)][_0x14852e(0x1f9)](),_0x47483a=XLSX['utils']['table_to_sheet'](document['getElementById'](_0x59405f));XLSX['utils'][_0x14852e(0x240)](_0x109044,_0x47483a,_0x14852e(0x28c)),XLSX[_0x14852e(0x2e9)](_0x109044,_0x247491+'.xlsx');}function _0x31bb03(_0x4a2dc4,_0x6dc88e,_0x30989f){const _0x33eb5e=_0xf6b55a;window[_0x33eb5e(0x241)]=window[_0x33eb5e(0x285)][_0x33eb5e(0x241)];const _0xf8dd15=new jsPDF(),_0x3b8b02=Array[_0x33eb5e(0x261)](document[_0x33eb5e(0x207)](_0x4a2dc4)['querySelectorAll'](_0x33eb5e(0x2ee)))[_0x33eb5e(0x29f)](_0x5d97ce=>_0x5d97ce[_0x33eb5e(0x1ed)]),_0xcdd307=Array[_0x33eb5e(0x261)](document[_0x33eb5e(0x207)](_0x4a2dc4)['querySelectorAll'](_0x33eb5e(0x293)))['map'](_0x55f403=>Array[_0x33eb5e(0x261)](_0x55f403[_0x33eb5e(0x2ca)]('td'))['map'](_0x260284=>_0x260284[_0x33eb5e(0x1ed)]));if(_0xcdd307[_0x33eb5e(0x24f)]===0x0){alert(_0x33eb5e(0x221));return;}const _0x390298=[],_0x3031eb=document[_0x33eb5e(0x207)](_0x4a2dc4)[_0x33eb5e(0x281)](_0x33eb5e(0x292));_0x3031eb&&Array[_0x33eb5e(0x261)](_0x3031eb['rows'])[_0x33eb5e(0x2df)](_0xa4474=>{const _0x23e529=_0x33eb5e,_0x4e8c62=Array[_0x23e529(0x261)](_0xa4474[_0x23e529(0x21a)])[_0x23e529(0x29f)](_0x507d06=>_0x507d06[_0x23e529(0x1ed)]);_0x390298[_0x23e529(0x289)](_0x4e8c62);}),_0xf8dd15[_0x33eb5e(0x2a6)]({'head':[_0x3b8b02],'body':_0xcdd307,'foot':_0x390298,'didParseCell':_0x5223e6=>{const _0x41db4c=_0x33eb5e;if(_0x5223e6[_0x41db4c(0x253)]===_0x41db4c(0x200))_0x5223e6['cell'][_0x41db4c(0x202)][_0x41db4c(0x283)]='bold';},'footStyles':{'fontStyle':'bold','fillColor':[0xf0,0xf0,0xf0]},'title':_0x6dc88e,'filename':_0x30989f+_0x33eb5e(0x29e),'Lang':'fr'}),_0xf8dd15[_0x33eb5e(0x213)]()>0x0?_0xf8dd15[_0x33eb5e(0x290)](_0x30989f+'.pdf'):alert('Erreur\x20lors\x20de\x20la\x20création\x20du\x20PDF\x20:\x20Aucune\x20page\x20générée.');}_0x3f0643[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>window['print']()),_0x1000cb[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>window[_0xf6b55a(0x246)]()),_0x163907['addEventListener'](_0xf6b55a(0x22b),()=>window[_0xf6b55a(0x246)]()),_0x43108d[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>window['print']()),_0x8088d6['addEventListener']('click',()=>_0xa59cc(_0xf6b55a(0x260),'Détails\x20des\x20Ventes')),_0x69027e[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xa59cc('others-table',_0xf6b55a(0x2a4))),_0x33aab1[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xa59cc('expenses-table',_0xf6b55a(0x259))),_0x2256d5[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xa59cc(_0xf6b55a(0x231),_0xf6b55a(0x226))),_0x2b0390[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xa59cc(_0xf6b55a(0x228),_0xf6b55a(0x20c))),_0x59b0e7[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0x31bb03(_0xf6b55a(0x260),_0xf6b55a(0x2be),_0xf6b55a(0x2be))),_0xc12a56[_0xf6b55a(0x21d)]('click',()=>_0x31bb03(_0xf6b55a(0x25f),_0xf6b55a(0x2a4),_0xf6b55a(0x2a4))),_0x22e1c6[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0x31bb03(_0xf6b55a(0x2f2),'Détails\x20des\x20Dépenses',_0xf6b55a(0x259))),_0x4bdaff[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0x31bb03('supply-table',_0xf6b55a(0x2ec),_0xf6b55a(0x226))),_0x345679[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0x31bb03(_0xf6b55a(0x228),_0xf6b55a(0x20c),_0xf6b55a(0x20c))),_0x566968['addEventListener'](_0xf6b55a(0x22b),()=>_0xab07b0(_0xc90002)),_0xa3483b[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xab07b0(_0x45b496)),_0x317b2b[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),()=>_0xab07b0(_0x19cdaa)),_0x3a8a3c[_0xf6b55a(0x21d)]('click',()=>_0xab07b0(_0x2a3c23)),_0x356c41[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),_0x22f681);const _0x4f1f77={'daily-report':_0xf6b55a(0x27c),'weekly-report':'weekly','monthly-report':_0xf6b55a(0x22c),'yearly-report':'yearly'};for(const _0x44ed62 in _0x4f1f77){document[_0xf6b55a(0x207)](_0x44ed62)['addEventListener'](_0xf6b55a(0x22b),()=>_0x1cca0e(_0x4f1f77[_0x44ed62]));}function _0x1cca0e(_0x461bd1){const _0x1c0050=_0xf6b55a;_0x5970d4[_0x1c0050(0x27b)][_0x1c0050(0x2b3)]='block',_0x145f09[_0x1c0050(0x27b)][_0x1c0050(0x2b3)]=_0x461bd1===_0x1c0050(0x27c)?_0x1c0050(0x211):_0x1c0050(0x237),_0x537f18[_0x1c0050(0x27b)][_0x1c0050(0x2b3)]=_0x461bd1===_0x1c0050(0x225)?'flex':_0x1c0050(0x237),_0x2ec3b9[_0x1c0050(0x27b)][_0x1c0050(0x2b3)]=_0x461bd1===_0x1c0050(0x22c)?_0x1c0050(0x211):_0x1c0050(0x237),_0x9d52f7[_0x1c0050(0x27b)][_0x1c0050(0x2b3)]=_0x461bd1===_0x1c0050(0x263)?_0x1c0050(0x211):_0x1c0050(0x237),_0xdb2357['style']['display']=_0x1c0050(0x237);}_0x591a3a[_0xf6b55a(0x21d)]('click',function(){const _0x1e6bcf=_0xf6b55a,_0x32b48e=_0x2705c7[_0x1e6bcf(0x21f)],_0x3d7144=_0x44acbd['value'],_0x3b1deb=_0x23bcef[_0x1e6bcf(0x21f)],_0x220a49=_0x3aab94[_0x1e6bcf(0x21f)];let _0x442c1e=_0x1e6bcf(0x27c);if(_0x3d7144)_0x442c1e=_0x1e6bcf(0x225);else{if(_0x3b1deb)_0x442c1e='monthly';else _0x220a49&&(_0x442c1e=_0x1e6bcf(0x263));}Promise[_0x1e6bcf(0x2cd)]([_0x35c446[_0x1e6bcf(0x25c)](_0x1e6bcf(0x21f)),_0x3837be[_0x1e6bcf(0x25c)]('value'),_0x30e29b[_0x1e6bcf(0x25c)](_0x1e6bcf(0x21f)),_0xef93aa[_0x1e6bcf(0x25c)]('value')])[_0x1e6bcf(0x1f4)](_0x2dab3c=>{const _0x5b5fbf=_0x1e6bcf,_0x207363=_0x2dab3c[0x0]['val']()||{},_0x2da2cd=_0x2dab3c[0x1][_0x5b5fbf(0x1f6)]()||{},_0x43afab=_0x2dab3c[0x2][_0x5b5fbf(0x1f6)]()||{},_0x112be5=_0x2dab3c[0x3][_0x5b5fbf(0x1f6)]()||{};let _0x34c790,_0x4355dd,_0xb51ce5,_0x373703;_0x442c1e===_0x5b5fbf(0x225)?(_0x34c790=_0x228de1(_0x207363,_0x3d7144),_0x4355dd=_0x228de1(_0x2da2cd,_0x3d7144),_0xb51ce5=_0x228de1(_0x43afab,_0x3d7144),_0x373703=_0x228de1(_0x112be5,_0x3d7144)):(_0x34c790=_0x1098da(_0x207363,_0x32b48e,_0x3b1deb,_0x220a49),_0x4355dd=_0x1098da(_0x2da2cd,_0x32b48e,_0x3b1deb,_0x220a49),_0xb51ce5=_0x1098da(_0x43afab,_0x32b48e,_0x3b1deb,_0x220a49),_0x373703=_0x1098da(_0x112be5,_0x32b48e,_0x3b1deb,_0x220a49)),_0x5e503c(_0x34c790,_0x4355dd,_0xb51ce5,_0x373703),_0xdb2357[_0x5b5fbf(0x27b)][_0x5b5fbf(0x2b3)]=_0x5b5fbf(0x2b1);});});function _0x228de1(_0x15a3a4,_0x57f9d4){const _0xef4f32=_0xf6b55a;if(!_0x57f9d4)return{};const [_0x43d989,_0x323ebf]=_0x57f9d4[_0xef4f32(0x284)]('-W'),_0x4a1c8e={};for(const _0x50e38d in _0x15a3a4){const _0x230afd=_0x15a3a4[_0x50e38d];if(!_0x230afd[_0xef4f32(0x287)])continue;const _0x252cd0=new Date(_0x230afd[_0xef4f32(0x287)]),_0x1d48d4=_0x252cd0[_0xef4f32(0x2c2)](),_0x23f84a=_0xa51d4f(_0x252cd0);_0x1d48d4===parseInt(_0x43d989)&&_0x23f84a===parseInt(_0x323ebf)&&(_0x4a1c8e[_0x50e38d]=_0x230afd);}return _0x4a1c8e;}function _0xa51d4f(_0x43dc93){const _0xe00047=_0xf6b55a,_0x12d938=new Date(_0x43dc93);_0x12d938[_0xe00047(0x2de)](0x0,0x0,0x0,0x0),_0x12d938[_0xe00047(0x2a0)](_0x12d938[_0xe00047(0x23a)]()+0x4-(_0x12d938[_0xe00047(0x250)]()||0x7));const _0x2609de=new Date(_0x12d938[_0xe00047(0x2c2)](),0x0,0x1),_0x26e861=Math[_0xe00047(0x2c5)](((_0x12d938-_0x2609de)/0x5265c00+0x1)/0x7);return _0x26e861;}function _0x1098da(_0x12436e,_0x54dafa,_0x4907d1,_0x62eeb4){const _0x6dd113=_0xf6b55a,_0x2a91fa={};for(const _0x42c187 in _0x12436e){const _0x371f21=_0x12436e[_0x42c187],_0x575d01=_0x371f21[_0x6dd113(0x287)];if(!_0x575d01)continue;if(_0x54dafa&&_0x575d01===_0x54dafa)_0x2a91fa[_0x42c187]=_0x371f21;else{if(_0x4907d1&&_0x575d01[_0x6dd113(0x277)](_0x4907d1['substring'](0x0,0x7)))_0x2a91fa[_0x42c187]=_0x371f21;else _0x62eeb4&&_0x575d01[_0x6dd113(0x277)](_0x62eeb4)&&(_0x2a91fa[_0x42c187]=_0x371f21);}}return _0x2a91fa;}function _0x5e503c(_0x295b52,_0x31f385,_0x49c512,_0xcfe393){const _0x25c838=_0xf6b55a;_0x164d72[_0x25c838(0x1ff)]='',_0x517571={};let _0x513c31=0x0,_0x1b32a1=0x0,_0x1fc898=0x0,_0x5ef0cd=0x0,_0x5de02e=0x0;const _0x197ba3=(_0x17f451,_0x1ebbce)=>{const _0x58173b=_0x25c838,_0x3e4231=_0x17f451[_0x58173b(0x2e4)];!_0x517571[_0x3e4231]&&(_0x517571[_0x3e4231]={'type':_0x1ebbce,'designation':_0x17f451[_0x58173b(0x2e4)],'quantity':0x0,'amount':0x0});const _0x110b39=parseFloat(_0x17f451[_0x58173b(0x1fd)])||0x0,_0x328b0e=parseFloat(_0x17f451[_0x58173b(0x232)]||_0x17f451[_0x58173b(0x21e)])||0x0;_0x517571[_0x3e4231]['quantity']+=_0x110b39,_0x517571[_0x3e4231]['amount']+=_0x328b0e,_0x513c31+=_0x110b39;if(_0x1ebbce===_0x58173b(0x265)||_0x1ebbce===_0x58173b(0x2a8))_0x1fc898+=_0x328b0e;else _0x1ebbce===_0x58173b(0x2cf)&&(_0x5ef0cd+=_0x328b0e);};for(const _0xf004ce in _0x295b52)_0x197ba3(_0x295b52[_0xf004ce],_0x25c838(0x265));for(const _0x2d3e17 in _0x31f385)_0x197ba3(_0x31f385[_0x2d3e17],'Autre');for(const _0x59f08d in _0x49c512)_0x197ba3(_0x49c512[_0x59f08d],_0x25c838(0x2cf));for(const _0x30703d in _0xcfe393){}_0x5de02e=_0x1fc898-_0x5ef0cd;for(const _0x1172e9 in _0x517571){const _0x5ae21a=_0x517571[_0x1172e9],_0x4d788b=_0x164d72[_0x25c838(0x2cb)]();_0x4d788b['insertCell']()[_0x25c838(0x1ed)]=_0x5ae21a[_0x25c838(0x278)],_0x4d788b[_0x25c838(0x236)]()[_0x25c838(0x1ed)]=_0x5ae21a[_0x25c838(0x2e4)],_0x4d788b['insertCell']()[_0x25c838(0x1ed)]=_0x5ae21a[_0x25c838(0x1fd)],_0x4d788b[_0x25c838(0x236)]()[_0x25c838(0x1ed)]=_0x5ae21a[_0x25c838(0x232)]['toFixed'](0x2),_0x1b32a1++;}_0x174b96(_0x513c31,_0x1b32a1,_0x1fc898,_0x5ef0cd,_0x5de02e),Object['keys'](_0x517571)[_0x25c838(0x24f)]===0x0&&_0x928260(_0x164d72,0x4,_0x25c838(0x251));}function _0x174b96(_0x383e09,_0x1caeab,_0x22b470,_0x493649,_0x1c89e6){const _0x20ef47=_0xf6b55a;document[_0x20ef47(0x207)]('total-positive-amount')[_0x20ef47(0x1ed)]=_0x22b470[_0x20ef47(0x26f)](0x2),document[_0x20ef47(0x207)]('total-expense-amount')[_0x20ef47(0x1ed)]=_0x493649[_0x20ef47(0x26f)](0x2),document['getElementById'](_0x20ef47(0x248))['textContent']='('+_0x1caeab+')',document[_0x20ef47(0x207)]('total-report-quantity')['textContent']=_0x383e09,document[_0x20ef47(0x207)](_0x20ef47(0x2c6))['textContent']=_0x1c89e6[_0x20ef47(0x26f)](0x2);}_0x2b0390[_0xf6b55a(0x21d)]('click',function(){const _0x3acaba=_0xf6b55a,_0x1589a3=XLSX[_0x3acaba(0x26c)]['book_new'](),_0x5e7b51=XLSX[_0x3acaba(0x26c)][_0x3acaba(0x238)](document[_0x3acaba(0x207)]('report-table'));XLSX[_0x3acaba(0x26c)]['sheet_add_aoa'](_0x5e7b51,[[_0x3acaba(0x20c)]],{'origin':'A1'});if(_0x5e7b51['!ref']){const _0x18aa54=XLSX[_0x3acaba(0x26c)][_0x3acaba(0x1f8)](_0x5e7b51[_0x3acaba(0x1e5)]);for(let _0x44cebb=_0x18aa54['e']['r'];_0x44cebb>=_0x18aa54['s']['r'];--_0x44cebb){for(let _0x35ab4a=_0x18aa54['s']['c'];_0x35ab4a<=_0x18aa54['e']['c'];++_0x35ab4a){const _0x3d03b1=XLSX[_0x3acaba(0x26c)][_0x3acaba(0x2ed)]({'r':_0x44cebb,'c':_0x35ab4a}),_0x595ebd=XLSX[_0x3acaba(0x26c)][_0x3acaba(0x2ed)]({'r':_0x44cebb+0x1,'c':_0x35ab4a});_0x5e7b51[_0x3d03b1]&&(_0x5e7b51[_0x595ebd]=_0x5e7b51[_0x3d03b1],delete _0x5e7b51[_0x3d03b1]);}}_0x5e7b51[_0x3acaba(0x1e5)]=XLSX[_0x3acaba(0x26c)][_0x3acaba(0x1f5)]({'s':{'r':_0x18aa54['s']['r']+0x1,'c':_0x18aa54['s']['c']},'e':{'r':_0x18aa54['e']['r']+0x1,'c':_0x18aa54['e']['c']}});}const _0x4ce28f=_0x5e7b51['A1'];_0x4ce28f&&(_0x4ce28f['s']={'font':{'bold':!![],'sz':0xe}}),XLSX[_0x3acaba(0x26c)]['book_append_sheet'](_0x1589a3,_0x5e7b51,_0x3acaba(0x20c)),XLSX[_0x3acaba(0x2e9)](_0x1589a3,_0x3acaba(0x2c9));}),_0x345679['addEventListener']('click',function(){const _0x13cde9=_0xf6b55a;window[_0x13cde9(0x241)]=window[_0x13cde9(0x285)]['jsPDF'];const _0x2248b5=new jsPDF(),_0x4cc3bf=document[_0x13cde9(0x207)](_0x13cde9(0x228));let _0x431bce=[];if(_0x4cc3bf[_0x13cde9(0x27f)]&&_0x4cc3bf[_0x13cde9(0x27f)][_0x13cde9(0x2b0)][_0x13cde9(0x24f)]>0x0)_0x431bce=Array[_0x13cde9(0x261)](_0x4cc3bf[_0x13cde9(0x27f)][_0x13cde9(0x2b0)][0x0][_0x13cde9(0x21a)])[_0x13cde9(0x29f)](_0x5e1a98=>_0x5e1a98[_0x13cde9(0x1ed)]);else _0x4cc3bf[_0x13cde9(0x2b0)][_0x13cde9(0x24f)]>0x0&&(_0x431bce=Array[_0x13cde9(0x261)](_0x4cc3bf[_0x13cde9(0x2b0)][0x0][_0x13cde9(0x21a)])['map'](_0xa9830c=>_0xa9830c[_0x13cde9(0x1ed)]));const _0x33bebe=Array['from'](_0x4cc3bf[_0x13cde9(0x2ca)]('tbody\x20tr'))[_0x13cde9(0x29f)](_0x16dcc7=>Array[_0x13cde9(0x261)](_0x16dcc7[_0x13cde9(0x2ca)]('td'))[_0x13cde9(0x29f)](_0x367c94=>_0x367c94[_0x13cde9(0x1ed)])),_0x48a5c5=[],_0x1bce5b=_0x4cc3bf[_0x13cde9(0x281)](_0x13cde9(0x292));_0x1bce5b&&Array[_0x13cde9(0x261)](_0x1bce5b[_0x13cde9(0x2b0)])['forEach'](_0x31d9c4=>{const _0x4621da=_0x13cde9;_0x48a5c5[_0x4621da(0x289)](Array['from'](_0x31d9c4[_0x4621da(0x21a)])[_0x4621da(0x29f)](_0x41a794=>_0x41a794[_0x4621da(0x1ed)]));});if(_0x33bebe[_0x13cde9(0x24f)]===0x0&&_0x48a5c5[_0x13cde9(0x24f)]===0x0){alert('Aucune\x20donnée\x20à\x20exporter.');return;}_0x2248b5['autoTable']({'head':[_0x431bce],'body':_0x33bebe,'foot':_0x48a5c5,'didParseCell':function(_0x4e31c8){const _0x455547=_0x13cde9;_0x4e31c8['section']===_0x455547(0x200)&&(_0x4e31c8[_0x455547(0x294)][_0x455547(0x202)][_0x455547(0x283)]=_0x455547(0x205));},'footStyles':{'fontStyle':'bold','fillColor':[0xf0,0xf0,0xf0]},'theme':_0x13cde9(0x266),'styles':{'fontSize':0xa,'cellPadding':0x3,'overflow':_0x13cde9(0x243)},'headStyles':{'fillColor':[0x29,0x80,0xb9],'textColor':0xff,'fontSize':0xb,'fontStyle':'bold'},'title':'Bilan','filename':_0x13cde9(0x257),'lang':'fr'}),_0x2248b5['getNumberOfPages']()>0x0?_0x2248b5[_0x13cde9(0x290)]('Bilan.pdf'):alert(_0x13cde9(0x227));}),_0x36812b[_0xf6b55a(0x21d)](_0xf6b55a(0x2b4),_0x23beb1),_0x15dc55[_0xf6b55a(0x21d)](_0xf6b55a(0x2b4),_0x1ab451),_0x34f7c0['addEventListener']('input',_0x2218fd),_0x5a274a[_0xf6b55a(0x21d)]('input',_0x22217f),_0x569337[_0xf6b55a(0x21d)]('input',_0x3c634d),_0x86115f[_0xf6b55a(0x21d)](_0xf6b55a(0x2b4),()=>{const _0x1417fe=_0xf6b55a,_0x1f4dc4=_0x86115f[_0x1417fe(0x21f)][_0x1417fe(0x280)](),_0x1ebdbb={};for(const _0x3073e4 in _0x517571){if(_0x517571['hasOwnProperty'](_0x3073e4)){const _0x33cefd=_0x517571[_0x3073e4];_0x33cefd[_0x1417fe(0x2e4)]&&_0x33cefd[_0x1417fe(0x2e4)][_0x1417fe(0x280)]()['includes'](_0x1f4dc4)&&(_0x1ebdbb[_0x3073e4]=_0x33cefd);}}_0x164d72[_0x1417fe(0x1ff)]='';let _0x47996d=0x0,_0x479a77=0x0;for(const _0x5920cb in _0x1ebdbb){if(_0x1ebdbb[_0x1417fe(0x2bf)](_0x5920cb)){const _0x4205a2=_0x1ebdbb[_0x5920cb],_0x366a5f=_0x164d72[_0x1417fe(0x2cb)]();_0x366a5f[_0x1417fe(0x236)]()['textContent']=_0x4205a2[_0x1417fe(0x278)],_0x366a5f['insertCell']()[_0x1417fe(0x1ed)]=_0x4205a2[_0x1417fe(0x2e4)],_0x366a5f[_0x1417fe(0x236)]()[_0x1417fe(0x1ed)]=_0x4205a2['quantity'],_0x366a5f['insertCell']()['textContent']=_0x4205a2[_0x1417fe(0x232)][_0x1417fe(0x26f)](0x2),_0x47996d+=_0x4205a2[_0x1417fe(0x1fd)],_0x479a77++;}}Object['keys'](_0x1ebdbb)['length']===0x0&&_0x928260(_0x164d72,0x4,_0x1417fe(0x24a));}),_0x239ca9(),window[_0xf6b55a(0x1eb)]=function(){_0x3d0476();};function _0x3d0476(){const _0x596cb3=_0xf6b55a;document['body'][_0x596cb3(0x23d)]>0x14||document[_0x596cb3(0x1ec)]['scrollTop']>0x14?_0x59a092[_0x596cb3(0x27b)][_0x596cb3(0x2b3)]='block':_0x59a092[_0x596cb3(0x27b)][_0x596cb3(0x2b3)]=_0x596cb3(0x237);}_0x59a092['addEventListener'](_0xf6b55a(0x22b),function(_0x4d8bc6){const _0xee2f53=_0xf6b55a;_0x4d8bc6[_0xee2f53(0x201)](),window['scrollTo']({'top':0x0,'behavior':_0xee2f53(0x276)});}),_0x20934b[_0xf6b55a(0x21d)](_0xf6b55a(0x22b),function(){const _0x516362=_0xf6b55a;_0x208e81[_0x516362(0x23c)][_0x516362(0x254)](_0x516362(0x267));}),document[_0xf6b55a(0x2ca)]('.nav-button')['forEach'](_0x3a6b49=>{const _0x8487fb=_0xf6b55a;_0x3a6b49[_0x8487fb(0x21d)](_0x8487fb(0x22b),()=>{const _0x1c34be=_0x8487fb;window['innerWidth']<=0x300&&_0x208e81['classList'][_0x1c34be(0x2d6)](_0x1c34be(0x267));});});let _0x517571={};}));
+document.addEventListener('DOMContentLoaded', function () {
+    // --- Éléments du DOM ---
+    const salesForm = document.getElementById('sales-form');
+    const supplyForm = document.getElementById('supply-form');
+    const userForm = document.getElementById('user-form');
+    const salesTableBody = document.getElementById('sales-table').querySelector('tbody');
+    const othersTableBody = document.getElementById('others-table').querySelector('tbody');
+    const expensesTableBody = document.getElementById('expenses-table').querySelector('tbody');
+    const supplyTableBody = document.getElementById('supply-table').querySelector('tbody');
+    const reportTableBody = document.getElementById('report-table').querySelector('tbody');
+    const userTable = document.getElementById('user-table').querySelector('tbody');
+    const salesSection = document.getElementById('sales-section');
+    const supplySection = document.getElementById('supply-section');
+    const reportSection = document.getElementById('report-section');
+    const adminSection = document.getElementById('admin-section');
+    const salesDetails = document.getElementById('sales-details');
+    const othersDetails = document.getElementById('others-details');
+    const expensesDetails = document.getElementById('expenses-details');
+    const venteDetails = document.getElementById('vente-details');
+    const autreDetails = document.getElementById('autre-details');
+    const depenseDetails = document.getElementById('depense-details');
+    const reportFilters = document.getElementById('report-filters');
+    const reportTableSection = document.getElementById('report-table-section');
+    const supplyTableElement = document.getElementById('supply-table');
+    const saleDesignationSelect = document.getElementById('sale-designation');
+    const saleUnitPriceInput = document.getElementById('sale-unit-price');
+    const saleQuantityInput = document.getElementById('sale-quantity');
+    const otherDesignationInput = document.getElementById('other-designation');
+    const otherQuantityInput = document.getElementById('other-quantity');
+    const otherAmountInput = document.getElementById('other-amount');
+    const expenseDesignationInput = document.getElementById('expense-designation');
+    const expenseQuantityInput = document.getElementById('expense-quantity');
+    const expenseAmountInput = document.getElementById('expense-amount');
+    const operationTypeSelect = document.getElementById('operation-type');
+    const reportDateInput = document.getElementById('report-date');
+    const reportMonthInput = document.getElementById('report-month');
+    const reportYearInput = document.getElementById('report-year');
+    const reportWeekInput = document.getElementById('report-week');
+    const salesFormKeyInput = document.getElementById('sales-form-key');
+    const supplyFormKeyInput = document.getElementById('supply-form-key');
+    const userFormKeyInput = document.getElementById('user-form-key');
+    const dailyFilter = document.getElementById('daily-filter');
+    const monthlyFilter = document.getElementById('monthly-filter');
+    const yearlyFilter = document.getElementById('yearly-filter');
+    const weeklyFilter = document.getElementById('weekly-filter');
+    const showOthersDetailsButton = document.getElementById('show-others-details');
+    const showExpensesDetailsButton = document.getElementById('show-expenses-details');
+    const showSupplySectionButton = document.getElementById('show-supply-section-button');
+    const showSalesSectionButton = document.getElementById('show-sales-section-button');
+    const showReportSectionButton = document.getElementById('show-report-section-button');
+    const showAdminSectionButton = document.getElementById('show-admin-section-button');
+    const generateReportButton = document.getElementById('generate-report');
+    const printSupplyTableButton = document.getElementById('print-supply-table');
+    const printSalesTableButton = document.getElementById('print-sales-table');
+    const printOthersTableButton = document.getElementById('print-others-table');
+    const printExpensesTableButton = document.getElementById('print-expenses-table');
+    const exportSalesExcelButton = document.getElementById('export-sales-excel');
+    const exportOthersExcelButton = document.getElementById('export-others-excel');
+    const exportExpensesExcelButton = document.getElementById('export-expenses-excel');
+    const exportSupplyExcelButton = document.getElementById('export-supply-excel');
+    const exportReportExcelButton = document.getElementById('export-report-excel');
+    const exportSalesPdfButton = document.getElementById('export-sales-pdf');
+    const exportOthersPdfButton = document.getElementById('export-others-pdf');
+    const exportExpensesPdfButton = document.getElementById('export-expenses-pdf');
+    const exportSupplyPdfButton = document.getElementById('export-supply-pdf');
+    const exportReportPdfButton = document.getElementById('export-report-pdf');
+    const backToTopButton = document.getElementById('back-to-top');
+    const showSupplyDetailsButton = document.getElementById('show-supply-details');
+    const loginOverlay = document.getElementById('login-overlay');
+    const loginForm = document.getElementById('login-form');
+    const loginError = document.getElementById('login-error');
+    const userInfoBar = document.getElementById('user-info-bar');
+    const userInfoUsername = document.getElementById('user-info-username');
+    const userInfoStatus = document.getElementById('user-info-status');
+    const logoutButton = document.getElementById('logout-button');
+    let currentUser = null;
+
+    const searchSalesInput = document.getElementById('search-sales');
+    const searchExpensesInput = document.getElementById('search-expenses');
+    const searchOthersInput = document.getElementById('search-others');
+    const searchSupplyInput = document.getElementById('search-supply');
+    const searchUsersInput = document.getElementById('search-users');
+    const searchReportInput = document.getElementById('search-report');
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    // Nouveaux éléments pour l'abonnement
+    const subscriptionSection = document.getElementById('subscription-section');
+    const showSubscriptionSectionButton = document.getElementById('show-subscription-section-button');
+    const confirmPaymentButton = document.getElementById('confirm-payment-button');
+    const subscriptionStatusDiv = document.getElementById('subscription-status');
+    const subscriptionAlertBanner = document.getElementById('subscription-alert-banner');
+    const goToSubscriptionButton = document.getElementById('go-to-subscription-button');
+    const subscriptionLockoutOverlay = document.getElementById('subscription-lockout-overlay');
+    const lockoutConfirmPaymentButton = document.getElementById('lockout-confirm-payment-button');
+
+    // --- Configuration Firebase ---
+    const firebaseConfig = {
+        apiKey: "AIzaSyBU6VVRgSCh5gcV7xXnnHr6rxIASTcBpLc",
+        authDomain: "tech-cohesion.firebaseapp.com",
+        databaseURL: "https://tech-cohesion-default-rtdb.firebaseio.com",
+        projectId: "tech-cohesion",
+        storageBucket: "tech-cohesion.firebasestorage.app",
+        messagingSenderId: "863736447145",
+        appId: "1:863736447145:web:18ffa286704f8e081069b8",
+        measurementId: "G-9Z309FQ77E"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // --- Références de la base de données ---
+    const salesRef = database.ref('sales');
+    const othersRef = database.ref('others');
+    const expensesRef = database.ref('expenses');
+    const supplyRef = database.ref('supply');
+    const usersRef = database.ref('users');
+    const subscriptionRef = database.ref('subscription'); // Nouvelle référence
+    let combinedReportData = {};
+
+    // --- Fonctions d'Authentification et d'Abonnement ---
+    function showLoginForm() {
+        loginOverlay.style.display = 'flex';
+        userInfoBar.style.display = 'none';
+    }
+
+    function hideLoginForm() {
+        loginOverlay.style.display = 'none';
+    }
+
+    function showUserInfo(username, accessLevel) {
+        userInfoUsername.textContent = "Utilisateur: " + username;
+        userInfoStatus.textContent = "Connecté";
+        userInfoBar.style.display = 'block';
+    }
+
+    function handleLogin(event) {
+        event.preventDefault();
+        const username = document.getElementById('login-username').value;
+        const password = document.getElementById('login-password').value;
+
+        loginError.style.display = 'none';
+        loginError.textContent = '';
+
+        usersRef.orderByChild('username').equalTo(username).once('value', (snapshot) => {
+            if (!snapshot.exists()) {
+                loginError.textContent = "Nom d'utilisateur introuvable.";
+                loginError.style.display = 'block';
+                return;
+            }
+            const userData = snapshot.val();
+            const userKey = Object.keys(userData)[0];
+            const user = userData[userKey];
+
+            if (user.password !== password) {
+                loginError.textContent = 'Mot de passe incorrect.';
+                loginError.style.display = 'block';
+                return;
+            }
+            currentUser = { username: user.username, accessLevel: user.accessLevel };
+            checkSubscriptionOnLogin();
+        });
+    }
+
+    function proceedWithLogin() {
+        hideLoginForm();
+        showUserInfo(currentUser.username, currentUser.accessLevel);
+        initializeData();
+        applyUserRestrictions();
+    }
+
+    function checkSubscriptionOnLogin() {
+        subscriptionRef.once('value', (snapshot) => {
+            const subData = snapshot.val();
+            if (!subData || !subData.expiryDate) {
+                const now = new Date();
+                const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+                const initialExpiryDate = endOfMonth.toISOString().split('T')[0];
+                subscriptionRef.set({ expiryDate: initialExpiryDate }).then(proceedWithLogin);
+                return;
+            }
+            const expiryDate = new Date(subData.expiryDate);
+            const now = new Date();
+            now.setHours(0, 0, 0, 0);
+            expiryDate.setHours(23, 59, 59, 999);
+
+            if (now > expiryDate) {
+                if (currentUser.accessLevel === 'Administrateur') {
+                    subscriptionLockoutOverlay.style.display = 'flex';
+                    hideLoginForm();
+                } else {
+                    loginError.textContent = "Accès suspendu. Veuillez contacter l'administrateur.";
+                    loginError.style.display = 'block';
+                    currentUser = null;
+                }
+            } else {
+                proceedWithLogin();
+            }
+        });
+    }
+
+    function handleLogout() {
+        currentUser = null;
+        showLoginForm();
+        showSection();
+        salesTableBody.innerHTML = '';
+        othersTableBody.innerHTML = '';
+        expensesTableBody.innerHTML = '';
+        supplyTableBody.innerHTML = '';
+        userTable.innerHTML = '';
+        reportTableBody.innerHTML = '';
+        userInfoBar.style.display = 'none';
+        subscriptionAlertBanner.style.display = 'none';
+        subscriptionLockoutOverlay.style.display = 'none';
+        resetUserRestrictions();
+    }
+
+    // --- Fonctions Utilitaires ---
+    function showSection(sectionToShow) {
+        if (supplySection) supplySection.style.display = 'none';
+        if (salesSection) salesSection.style.display = 'none';
+        if (reportSection) reportSection.style.display = 'none';
+        if (adminSection) adminSection.style.display = 'none';
+        if (subscriptionSection) subscriptionSection.style.display = 'none';
+
+        if (sectionToShow) {
+            sectionToShow.style.display = 'block';
+        }
+
+        if (salesDetails) salesDetails.style.display = 'none';
+        if (othersDetails) othersDetails.style.display = 'none';
+        if (expensesDetails) expensesDetails.style.display = 'none';
+        if (reportFilters) reportFilters.style.display = 'none';
+        if (reportTableSection) reportTableSection.style.display = 'none';
+        if (supplyTableElement) supplyTableElement.style.display = 'none';
+    }
+
+    // ... Fonctions utilitaires existantes ...
+    function updateProductDesignations() {
+        supplyRef.once('value', snapshot => {
+            const supplyData = snapshot.val() || {};
+            const designations = Object.values(supplyData).map(item => item.designation);
+            const uniqueDesignations = Array.from(new Set(designations));
+            saleDesignationSelect.innerHTML = uniqueDesignations.map(designation => `<option value="${designation}">${designation}</option>`).join('');
+        });
+    }
+
+    function setTodaysDate() {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('sale-date').value = today;
+        document.getElementById('supply-date').value = today;
+    }
+
+    function toggleSection(section) {
+        if (section.style.display === 'none') {
+            section.style.display = 'block';
+            if (section !== salesDetails) salesDetails.style.display = 'none';
+            if (section !== othersDetails) othersDetails.style.display = 'none';
+            if (section !== expensesDetails) expensesDetails.style.display = 'none';
+        } else {
+            section.style.display = 'none';
+        }
+    }
+
+    function toggleSupplyTable() {
+        supplyTableElement.style.display = supplyTableElement.style.display === 'none' ? 'table' : 'none';
+    }
+
+    function initializeData() {
+        updateProductDesignations();
+        updateSalesTable();
+        updateOthersTable();
+        updateExpensesTable();
+        updateSupplyTable();
+        updateUserTable();
+        setTodaysDate();
+    }
+    
+    // --- Gestion des Restrictions et de l'Abonnement ---
+    function applyUserRestrictions() {
+        if (!currentUser) return;
+
+        showSubscriptionSectionButton.style.display = 'none';
+        subscriptionAlertBanner.style.display = 'none';
+        disableElements([salesForm, supplyForm, userForm, generateReportButton]);
+        disableButtonsByClass('edit-button');
+        disableButtonsByClass('delete-button');
+
+        if (currentUser.accessLevel === 'Administrateur') {
+            enableElements([salesForm, supplyForm, userForm, generateReportButton]);
+            enableButtonsByClass('edit-button');
+            enableButtonsByClass('delete-button');
+            showSupplySectionButton.disabled = false;
+            showSalesSectionButton.disabled = false;
+            showReportSectionButton.disabled = false;
+            showAdminSectionButton.disabled = false;
+            showSubscriptionSectionButton.style.display = 'block';
+            checkForSubscriptionWarning();
+        } else if (currentUser.accessLevel === 'Éditeur') {
+            enableElements([salesForm, supplyForm]);
+            showSupplySectionButton.disabled = false;
+            showSalesSectionButton.disabled = false;
+            showReportSectionButton.disabled = true;
+            showAdminSectionButton.disabled = true;
+        } else if (currentUser.accessLevel === 'Lecteur') {
+            showSupplySectionButton.disabled = true;
+            showSalesSectionButton.disabled = true;
+            showReportSectionButton.disabled = true;
+            showAdminSectionButton.disabled = true;
+        }
+    }
+
+    function resetUserRestrictions() {
+        enableElements([salesForm, supplyForm, userForm, generateReportButton]);
+        enableButtonsByClass('edit-button');
+        enableButtonsByClass('delete-button');
+        showSalesSectionButton.disabled = false;
+        showReportSectionButton.disabled = false;
+        showAdminSectionButton.disabled = false;
+        showSubscriptionSectionButton.style.display = 'none';
+    }
+
+    function checkForSubscriptionWarning() {
+        subscriptionRef.once('value', (snapshot) => {
+            if (!snapshot.exists() || !snapshot.val().expiryDate) return;
+            const expiryDate = new Date(snapshot.val().expiryDate);
+            const now = new Date();
+            const dayOfMonth = now.getDate();
+            const isSameMonthAndYear = now.getFullYear() === expiryDate.getFullYear() && now.getMonth() === expiryDate.getMonth();
+            if (dayOfMonth >= 25 && isSameMonthAndYear) {
+                subscriptionAlertBanner.style.display = 'flex';
+            }
+        });
+    }
+
+    function handleConfirmPayment() {
+        if (!confirm("Confirmez-vous avoir payé le renouvellement ? Cette action mettra à jour la date d'expiration de votre abonnement.")) return;
+        
+        subscriptionRef.once('value', (snapshot) => {
+            let currentExpiry = new Date();
+            if (snapshot.exists() && snapshot.val().expiryDate) {
+                currentExpiry = new Date(snapshot.val().expiryDate);
+            }
+            const newExpiryDate = new Date(currentExpiry.getFullYear(), currentExpiry.getMonth() + 2, 0);
+            const newExpiryDateString = newExpiryDate.toISOString().split('T')[0];
+
+            subscriptionRef.update({ expiryDate: newExpiryDateString }).then(() => {
+                alert(`Paiement confirmé ! Votre abonnement est valide jusqu'au ${newExpiryDate.toLocaleDateString('fr-FR')}.`);
+                subscriptionAlertBanner.style.display = 'none';
+                if (subscriptionLockoutOverlay.style.display === 'flex') {
+                    subscriptionLockoutOverlay.style.display = 'none';
+                    proceedWithLogin();
+                }
+            }).catch(error => console.error("Erreur:", error));
+        });
+    }
+
+    // ... Fonctions de manipulation du DOM (enable/disable, etc.)
+    function disableElements(elements) {
+        elements.forEach(element => {
+            if (element) {
+                element.disabled = true;
+                if (element.tagName === 'FORM' || element.classList.contains('form-container')) {
+                    element.querySelectorAll('input, select, textarea, button').forEach(input => input.disabled = true);
+                }
+            }
+        });
+    }
+
+    function enableElements(elements) {
+        elements.forEach(element => {
+            if (element) {
+                element.disabled = false;
+                if (element.tagName === 'FORM' || element.classList.contains('form-container')) {
+                    element.querySelectorAll('input, select, textarea, button').forEach(input => input.disabled = false);
+                }
+            }
+        });
+    }
+
+    function disableButtonsByClass(className) {
+        const buttons = document.getElementsByClassName(className);
+        for (let button of buttons) button.disabled = true;
+    }
+
+    function enableButtonsByClass(className) {
+        const buttons = document.getElementsByClassName(className);
+        for (let button of buttons) button.disabled = false;
+    }
+
+    function createActionButtons(key, dataType) {
+        const actionsCell = document.createElement('td');
+        actionsCell.classList.add('actions-col');
+        const editButton = document.createElement('button');
+        editButton.classList.add('edit-button');
+        editButton.setAttribute('data-key', key);
+        editButton.setAttribute('data-type', dataType);
+        editButton.addEventListener('click', () => handleEdit(key, dataType));
+        actionsCell.appendChild(editButton);
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-button');
+        deleteButton.setAttribute('data-key', key);
+        deleteButton.setAttribute('data-type', dataType);
+        deleteButton.addEventListener('click', () => handleDelete(key, dataType));
+        actionsCell.appendChild(deleteButton);
+        if (currentUser && currentUser.accessLevel !== 'Administrateur') {
+            editButton.disabled = true;
+            deleteButton.disabled = true;
+        }
+        return actionsCell;
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --- Fonctions CRUD (Create, Read, Update, Delete) ---
+    function handleEdit(key, dataType) {
+        let formKeyInput, dataRef, populateFunc;
+        switch (dataType) {
+            case 'sales': [formKeyInput, dataRef, populateFunc] = [salesFormKeyInput, salesRef, populateSalesForm]; break;
+            case 'others': [formKeyInput, dataRef, populateFunc] = [salesFormKeyInput, othersRef, populateOthersForm]; break;
+            case 'expenses': [formKeyInput, dataRef, populateFunc] = [salesFormKeyInput, expensesRef, populateExpensesForm]; break;
+            case 'supply': [formKeyInput, dataRef, populateFunc] = [supplyFormKeyInput, supplyRef, populateSupplyForm]; break;
+            case 'users': [formKeyInput, dataRef, populateFunc] = [userFormKeyInput, usersRef, populateUserForm]; break;
+            default: return;
+        }
+        formKeyInput.value = key;
+        dataRef.child(key).once('value', snapshot => {
+            const data = snapshot.val();
+            if (data) {
+                populateFunc(data);
+                const form = formKeyInput.closest('form');
+                form.querySelector('.submit-button').textContent = `Modifier ${dataType === 'users' ? 'Compte' : 'Opération'}`;
+                scrollToTop();
+            }
+        });
+    }
+    
+    // ... fonctions populate (populateSalesForm, etc.) ...
+    function populateSalesForm(data) {
+        document.getElementById('sale-date').value = data.date;
+        document.getElementById('operation-type').value = 'Vente';
+        venteDetails.style.display = 'block';
+        autreDetails.style.display = 'none';
+        depenseDetails.style.display = 'none';
+        saleDesignationSelect.value = data.designation;
+        saleQuantityInput.value = data.quantity;
+        saleUnitPriceInput.value = data.unitPrice;
+    }
+
+    function populateOthersForm(data) {
+        document.getElementById('sale-date').value = data.date;
+        document.getElementById('operation-type').value = 'Autre';
+        venteDetails.style.display = 'none';
+        autreDetails.style.display = 'block';
+        depenseDetails.style.display = 'none';
+        otherDesignationInput.value = data.designation;
+        otherQuantityInput.value = data.quantity;
+        otherAmountInput.value = data.amount;
+    }
+
+    function populateExpensesForm(data) {
+        document.getElementById('sale-date').value = data.date;
+        document.getElementById('operation-type').value = 'Dépense';
+        venteDetails.style.display = 'none';
+        autreDetails.style.display = 'none';
+        depenseDetails.style.display = 'block';
+        expenseDesignationInput.value = data.designation;
+        expenseQuantityInput.value = data.quantity;
+        expenseAmountInput.value = data.amount;
+    }
+
+    function populateSupplyForm(data) {
+        document.getElementById('supply-date').value = data.date;
+        document.getElementById('supply-designation').value = data.designation;
+        document.getElementById('supply-quantity').value = data.quantity;
+    }
+
+    function populateUserForm(data) {
+        document.getElementById('username').value = data.username;
+        document.getElementById('access-level').value = data.accessLevel;
+    }
+
+    function handleDelete(key, dataType) {
+        const refMap = { sales: salesRef, others: othersRef, expenses: expensesRef, supply: supplyRef, users: usersRef };
+        const ref = refMap[dataType];
+        if (ref && confirm(`Êtes-vous sûr de vouloir supprimer cette entrée ?`)) {
+            ref.child(key).remove()
+                .then(() => alert(`${dataType} supprimé avec succès !`))
+                .catch(error => alert(`Erreur lors de la suppression.`));
+        }
+    }
+
+    function updateTable(tableBody, ref, dataType, searchInput) {
+        ref.on('value', (snapshot) => {
+            tableBody.innerHTML = '';
+            const data = snapshot.val() || {};
+            let totalQuantity = 0, totalAmount = 0, designationCount = 0, totalUnitPrice = 0;
+            const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+
+            const filteredKeys = Object.keys(data).filter(key => {
+                const item = data[key];
+                const searchField = dataType === 'users' ? item.username : item.designation;
+                return searchField && searchField.toLowerCase().includes(searchTerm);
+            });
+
+            if (filteredKeys.length === 0) {
+                const colspan = tableBody.closest('table').querySelector('thead tr').cells.length;
+                displayEmptyTableMessage(tableBody, colspan, `Aucune donnée.`);
+                return;
+            }
+
+            filteredKeys.forEach(key => {
+                const item = data[key];
+                const row = tableBody.insertRow();
+                if (dataType === 'supply') {
+                    salesRef.once('value', salesSnapshot => {
+                        let soldQuantity = 0;
+                        const salesData = salesSnapshot.val() || {};
+                        for (const saleKey in salesData) {
+                            if (salesData[saleKey].designation === item.designation) {
+                                soldQuantity += parseFloat(salesData[saleKey].quantity);
+                            }
+                        }
+                        const remainingQuantity = parseFloat(item.quantity) - soldQuantity;
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = soldQuantity;
+                        row.insertCell().textContent = remainingQuantity;
+                        row.appendChild(createActionButtons(key, dataType));
+                        totalQuantity += parseFloat(item.quantity);
+                        totalAmount += soldQuantity;
+                        designationCount++;
+                    });
+                } else {
+                    if (dataType === 'sales') {
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.unitPrice;
+                        row.insertCell().textContent = item.totalCost;
+                        totalQuantity += parseFloat(item.quantity);
+                        totalAmount += parseFloat(item.totalCost);
+                        totalUnitPrice += parseFloat(item.unitPrice);
+                    } else if (dataType === 'others') {
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.amount;
+                        totalQuantity += parseFloat(item.quantity);
+                        totalAmount += parseFloat(item.amount);
+                    } else if (dataType === 'expenses') {
+                        row.insertCell().textContent = item.date;
+                        row.insertCell().textContent = item.designation;
+                        row.insertCell().textContent = item.quantity;
+                        row.insertCell().textContent = item.amount;
+                        totalQuantity += parseFloat(item.quantity);
+                        totalAmount += parseFloat(item.amount);
+                    } else if (dataType === 'users') {
+                        row.insertCell().textContent = item.username;
+                        row.insertCell().textContent = item.accessLevel;
+                    }
+                    designationCount++;
+                    row.appendChild(createActionButtons(key, dataType));
+                }
+            });
+            const totalRemaining = totalQuantity - totalAmount;
+            if (dataType === 'sales') updateSalesTotals(totalQuantity, totalAmount, designationCount, totalUnitPrice);
+            if (dataType === 'others') updateOthersTotals(totalQuantity, totalAmount, designationCount);
+            if (dataType === 'expenses') updateExpensesTotals(totalQuantity, totalAmount, designationCount);
+            if (dataType === 'supply') updateSupplyTotals(totalQuantity, totalAmount, totalRemaining, designationCount);
+
+            applyUserRestrictions();
+        });
+    }
+
+    function displayEmptyTableMessage(table, colspan, message) {
+        const row = table.insertRow();
+        const cell = row.insertCell();
+        cell.colSpan = colspan;
+        cell.textContent = message;
+        cell.style.textAlign = "center";
+    }
+
+    // ... Fonctions de mise à jour des totaux ...
+    function updateSalesTotals(qty, amount, count, price) {
+        document.getElementById('total-sales-quantity').textContent = qty;
+        document.getElementById('total-sales-amount').textContent = amount.toFixed(2);
+        document.getElementById('total-sales-designation-count').textContent = `Total (${count})`;
+        document.getElementById('total-sales-unit-price').textContent = price.toFixed(2);
+    }
+    function updateOthersTotals(qty, amount, count) {
+        document.getElementById('total-others-quantity').textContent = qty;
+        document.getElementById('total-others-amount').textContent = amount.toFixed(2);
+        document.getElementById('total-others-designation-count').textContent = `Total (${count})`;
+    }
+    function updateExpensesTotals(qty, amount, count) {
+        document.getElementById('total-expenses-quantity').textContent = qty;
+        document.getElementById('total-expenses-amount').textContent = amount.toFixed(2);
+        document.getElementById('total-expenses-designation-count').textContent = `Total (${count})`;
+    }
+    function updateSupplyTotals(supplied, sold, remaining, count) {
+        document.getElementById('total-supply-quantity').textContent = supplied;
+        document.getElementById('total-sold-quantity').textContent = sold;
+        document.getElementById('total-remaining-quantity').textContent = remaining;
+        document.getElementById('total-supply-designation-count').textContent = `Total (${count}):`;
+    }
+    
+    function updateSalesTable() { updateTable(salesTableBody, salesRef, 'sales', searchSalesInput); }
+    function updateOthersTable() { updateTable(othersTableBody, othersRef, 'others', searchOthersInput); }
+    function updateExpensesTable() { updateTable(expensesTableBody, expensesRef, 'expenses', searchExpensesInput); }
+    function updateSupplyTable() { updateTable(supplyTableBody, supplyRef, 'supply', searchSupplyInput); }
+    function updateUserTable() { updateTable(userTable, usersRef, 'users', searchUsersInput); }
+
+    function calculateTotalCost() {
+        const quantity = parseFloat(saleQuantityInput.value) || 0;
+        const unitPrice = parseFloat(saleUnitPriceInput.value) || 0;
+        return quantity * unitPrice;
+    }
+    
+    // ... Fonctions de soumission des formulaires ...
+    function handleFormSubmit(event, operationType) {
+        event.preventDefault();
+        const formKey = salesFormKeyInput.value;
+        let operationData, dbRef;
+        const date = document.getElementById('sale-date').value;
+
+        switch(operationType) {
+            case 'Vente':
+                operationData = { date, designation: saleDesignationSelect.value, quantity: parseFloat(saleQuantityInput.value), unitPrice: parseFloat(saleUnitPriceInput.value), totalCost: calculateTotalCost() };
+                dbRef = salesRef;
+                break;
+            case 'Autre':
+                operationData = { date, designation: otherDesignationInput.value, quantity: parseFloat(otherQuantityInput.value), amount: parseFloat(otherAmountInput.value) };
+                dbRef = othersRef;
+                break;
+            case 'Dépense':
+                operationData = { date, designation: expenseDesignationInput.value, quantity: parseFloat(expenseQuantityInput.value), amount: parseFloat(expenseAmountInput.value) };
+                dbRef = expensesRef;
+                break;
+        }
+
+        const promise = formKey ? dbRef.child(formKey).update(operationData) : dbRef.push(operationData);
+        promise.then(() => {
+            salesForm.reset();
+            setTodaysDate();
+            salesFormKeyInput.value = '';
+            salesForm.querySelector('.submit-button').textContent = 'Ajouter Opération';
+        }).catch(err => console.error(err));
+    }
+
+    function handleSupplyFormSubmit(event) {
+        event.preventDefault();
+        const formKey = supplyFormKeyInput.value;
+        const designation = document.getElementById('supply-designation').value;
+        const quantity = parseFloat(document.getElementById('supply-quantity').value);
+        const date = document.getElementById('supply-date').value;
+
+        if (formKey) {
+            supplyRef.child(formKey).update({ date, designation, quantity }).then(resetSupplyForm);
+        } else {
+            supplyRef.orderByChild('designation').equalTo(designation).once('value', snapshot => {
+                if (snapshot.exists()) {
+                    const key = Object.keys(snapshot.val())[0];
+                    const existing = snapshot.val()[key];
+                    const newQty = parseFloat(existing.quantity) + quantity;
+                    supplyRef.child(key).update({ quantity: newQty, date }).then(resetSupplyForm);
+                } else {
+                    supplyRef.push({ date, designation, quantity }).then(resetSupplyForm);
+                }
+            });
+        }
+    }
+    function resetSupplyForm() {
+        supplyForm.reset();
+        setTodaysDate();
+        supplyFormKeyInput.value = '';
+        supplyForm.querySelector('.submit-button').textContent = 'Ajouter Approvisionnement';
+        updateProductDesignations();
+    }
+    
+    function handleUserFormSubmit(event) {
+        event.preventDefault();
+        const formKey = userFormKeyInput.value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const accessLevel = document.getElementById('access-level').value;
+
+        if (!username || !password || !accessLevel) {
+            alert("Veuillez remplir tous les champs.");
+            return;
+        }
+        const userData = { username, password, accessLevel };
+        if (formKey) {
+            usersRef.child(formKey).update(userData).then(resetUserForm);
+        } else {
+            usersRef.orderByChild('username').equalTo(username).once('value', snapshot => {
+                if (snapshot.exists()) {
+                    alert("Ce nom d'utilisateur existe déjà.");
+                } else {
+                    usersRef.push(userData).then(resetUserForm);
+                }
+            });
+        }
+    }
+    function resetUserForm() {
+        userForm.reset();
+        userFormKeyInput.value = '';
+        userForm.querySelector('.submit-button').textContent = 'Créer Compte';
+    }
+
+    // --- Fonctions d'Export et d'Impression ---
+    function exportToExcel(tableId, filename) {
+        const table = document.getElementById(tableId);
+        const wb = XLSX.utils.table_to_book(table, {sheet: "Sheet1"});
+        XLSX.writeFile(wb, `${filename}.xlsx`);
+    }
+
+    function exportToPdf(tableId, title, filename) {
+        window.jsPDF = window.jspdf.jsPDF;
+        const doc = new jsPDF();
+        doc.autoTable({
+            html: `#${tableId}`,
+            headStyles: { fontStyle: 'bold', fillColor: [41, 128, 185], textColor: 255 },
+            footStyles: { fontStyle: 'bold', fillColor: [240, 240, 240] },
+            didDrawPage: (data) => { doc.text(title, data.settings.margin.left, 15); }
+        });
+        doc.save(`${filename}.pdf`);
+    }
+    
+    // --- Fonctions de Bilan (Rapport) ---
+    function showReportFilters(filterType) {
+        reportFilters.style.display = 'block';
+        dailyFilter.style.display = filterType === 'daily' ? 'flex' : 'none';
+        weeklyFilter.style.display = filterType === 'weekly' ? 'flex' : 'none';
+        monthlyFilter.style.display = filterType === 'monthly' ? 'flex' : 'none';
+        yearlyFilter.style.display = filterType === 'yearly' ? 'flex' : 'none';
+        reportTableSection.style.display = 'none';
+    }
+
+    function generateReport() {
+        const date = reportDateInput.value;
+        const week = reportWeekInput.value;
+        const month = reportMonthInput.value;
+        const year = reportYearInput.value;
+
+        Promise.all([salesRef.once('value'), othersRef.once('value'), expensesRef.once('value')])
+            .then(snapshots => {
+                const [salesData, othersData, expensesData] = snapshots.map(s => s.val() || {});
+                let filterFunc;
+                if (date) filterFunc = item => item.date === date;
+                else if (week) filterFunc = item => getWeekNumber(new Date(item.date)) === parseInt(week.split('-W')[1]) && new Date(item.date).getFullYear() === parseInt(week.split('-W')[0]);
+                else if (month) filterFunc = item => item.date.startsWith(month);
+                else if (year) filterFunc = item => item.date.startsWith(year);
+                
+                const filteredSales = filterData(salesData, filterFunc);
+                const filteredOthers = filterData(othersData, filterFunc);
+                const filteredExpenses = filterData(expensesData, filterFunc);
+
+                updateReportTable(filteredSales, filteredOthers, filteredExpenses);
+                reportTableSection.style.display = 'block';
+            });
+    }
+
+    function filterData(data, filterFunction) {
+        if (!filterFunction) return data;
+        const filtered = {};
+        for(const key in data) {
+            if (filterFunction(data[key])) {
+                filtered[key] = data[key];
+            }
+        }
+        return filtered;
+    }
+    
+    function getWeekNumber(d) {
+        d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
+        var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+        var weekNo = Math.ceil((((d - yearStart) / 86400000) + 1)/7);
+        return weekNo;
+    }
+
+    function updateReportTable(sales, others, expenses) {
+        reportTableBody.innerHTML = '';
+        combinedReportData = {};
+        let totalPositiveAmount = 0, totalExpensesOnlyAmount = 0, totalReportQuantity = 0, totalReportDesignationCount = 0;
+
+        const addToReport = (item, type) => {
+            const key = item.designation;
+            if (!combinedReportData[key]) {
+                combinedReportData[key] = { type, designation: key, quantity: 0, amount: 0 };
+            }
+            const quantity = parseFloat(item.quantity) || 0;
+            const amount = parseFloat(item.amount || item.totalCost) || 0;
+            combinedReportData[key].quantity += quantity;
+            combinedReportData[key].amount += amount;
+
+            totalReportQuantity += quantity;
+            if (type === 'Vente' || type === 'Autre') totalPositiveAmount += amount;
+            else if (type === 'Dépense') totalExpensesOnlyAmount += amount;
+        };
+
+        for (const key in sales) addToReport(sales[key], 'Vente');
+        for (const key in others) addToReport(others[key], 'Autre');
+        for (const key in expenses) addToReport(expenses[key], 'Dépense');
+
+        for (const key in combinedReportData) {
+            const data = combinedReportData[key];
+            const row = reportTableBody.insertRow();
+            row.insertCell().textContent = data.type;
+            row.insertCell().textContent = data.designation;
+            row.insertCell().textContent = data.quantity;
+            row.insertCell().textContent = data.amount.toFixed(2);
+            totalReportDesignationCount++;
+        }
+
+        updateReportTotals(totalReportQuantity, totalReportDesignationCount, totalPositiveAmount, totalExpensesOnlyAmount, totalPositiveAmount - totalExpensesOnlyAmount);
+        if (Object.keys(combinedReportData).length === 0) displayEmptyTableMessage(reportTableBody, 4, "Aucune donnée à afficher.");
+    }
+    
+    function updateReportTotals(qty, count, pos, exp, net) {
+        document.getElementById('total-positive-amount').textContent = pos.toFixed(2);
+        document.getElementById('total-expense-amount').textContent = exp.toFixed(2);
+        document.getElementById('total-report-designation-count').textContent = `(${count})`;
+        document.getElementById('total-report-quantity').textContent = qty;
+        document.getElementById('total-net-amount').textContent = net.toFixed(2);
+    }
+    
+    // --- Event Listeners ---
+    loginForm.addEventListener('submit', handleLogin);
+    logoutButton.addEventListener('click', handleLogout);
+    
+    showSubscriptionSectionButton.addEventListener('click', () => {
+        showSection(subscriptionSection);
+        subscriptionRef.once('value', snapshot => {
+            const expiryDate = snapshot.exists() ? new Date(snapshot.val().expiryDate).toLocaleDateString('fr-FR') : 'Non configuré';
+            subscriptionStatusDiv.innerHTML = `<p><strong>Statut :</strong> Actif<br><strong>Expire le :</strong> ${expiryDate}</p>`;
+        });
+    });
+    goToSubscriptionButton.addEventListener('click', () => showSubscriptionSectionButton.click());
+    confirmPaymentButton.addEventListener('click', handleConfirmPayment);
+    lockoutConfirmPaymentButton.addEventListener('click', handleConfirmPayment);
+
+    operationTypeSelect.addEventListener('change', function () {
+        venteDetails.style.display = this.value === 'Vente' ? 'block' : 'none';
+        autreDetails.style.display = this.value === 'Autre' ? 'block' : 'none';
+        depenseDetails.style.display = this.value === 'Dépense' ? 'block' : 'none';
+    });
+    salesForm.addEventListener('submit', (event) => handleFormSubmit(event, operationTypeSelect.value));
+    supplyForm.addEventListener('submit', handleSupplyFormSubmit);
+    userForm.addEventListener('submit', handleUserFormSubmit);
+    
+    document.getElementById('show-sales-details').addEventListener('click', () => toggleSection(salesDetails));
+    showOthersDetailsButton.addEventListener('click', () => toggleSection(othersDetails));
+    showExpensesDetailsButton.addEventListener('click', () => toggleSection(expensesDetails));
+    
+    printSalesTableButton.addEventListener('click', () => window.print());
+    printOthersTableButton.addEventListener('click', () => window.print());
+    printExpensesTableButton.addEventListener('click', () => window.print());
+    printSupplyTableButton.addEventListener('click', () => window.print());
+
+    exportSalesExcelButton.addEventListener('click', () => exportToExcel('sales-table', 'Détails_Ventes'));
+    exportOthersExcelButton.addEventListener('click', () => exportToExcel('others-table', 'Détails_Autres'));
+    exportExpensesExcelButton.addEventListener('click', () => exportToExcel('expenses-table', 'Détails_Dépenses'));
+    exportSupplyExcelButton.addEventListener('click', () => exportToExcel('supply-table', 'Détails_Approvisionnements'));
+    exportReportExcelButton.addEventListener('click', () => exportToExcel('report-table', 'Bilan'));
+
+    exportSalesPdfButton.addEventListener('click', () => exportToPdf('sales-table', 'Détails des Ventes', 'Ventes'));
+    exportOthersPdfButton.addEventListener('click', () => exportToPdf('others-table', 'Détails des Autres Opérations', 'Autres'));
+    exportExpensesPdfButton.addEventListener('click', () => exportToPdf('expenses-table', 'Détails des Dépenses', 'Dépenses'));
+    exportSupplyPdfButton.addEventListener('click', () => exportToPdf('supply-table', 'Détails des Approvisionnements', 'Approvisionnements'));
+    exportReportPdfButton.addEventListener('click', () => exportToPdf('report-table', 'Bilan', 'Bilan'));
+    
+    showSupplySectionButton.addEventListener('click', () => showSection(supplySection));
+    showSalesSectionButton.addEventListener('click', () => showSection(salesSection));
+    showReportSectionButton.addEventListener('click', () => showSection(reportSection));
+    showAdminSectionButton.addEventListener('click', () => showSection(adminSection));
+    showSupplyDetailsButton.addEventListener('click', toggleSupplyTable);
+
+    document.getElementById('daily-report').addEventListener('click', () => showReportFilters('daily'));
+    document.getElementById('weekly-report').addEventListener('click', () => showReportFilters('weekly'));
+    document.getElementById('monthly-report').addEventListener('click', () => showReportFilters('monthly'));
+    document.getElementById('yearly-report').addEventListener('click', () => showReportFilters('yearly'));
+    generateReportButton.addEventListener('click', generateReport);
+
+    searchSalesInput.addEventListener('input', updateSalesTable);
+    searchExpensesInput.addEventListener('input', updateExpensesTable);
+    searchOthersInput.addEventListener('input', updateOthersTable);
+    searchSupplyInput.addEventListener('input', updateSupplyTable);
+    searchUsersInput.addEventListener('input', updateUserTable);
+    searchReportInput.addEventListener('input', () => {
+        const searchTerm = searchReportInput.value.toLowerCase();
+        const filteredRows = Array.from(reportTableBody.rows).filter(row => 
+            row.cells[1].textContent.toLowerCase().includes(searchTerm)
+        );
+        reportTableBody.innerHTML = '';
+        filteredRows.forEach(row => reportTableBody.appendChild(row.cloneNode(true)));
+    });
+
+    backToTopButton.addEventListener('click', (e) => { e.preventDefault(); scrollToTop(); });
+    window.onscroll = () => {
+        backToTopButton.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
+
+    menuToggle.addEventListener('click', () => mainNav.classList.toggle('menu-open'));
+    document.querySelectorAll('.nav-button').forEach(button => {
+        button.addEventListener('click', () => {
+            if (window.innerWidth <= 768) mainNav.classList.remove('menu-open');
+        });
+    });
+
+    showLoginForm();
+});

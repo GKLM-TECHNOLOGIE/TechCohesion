@@ -13,6 +13,24 @@
 </head>
 
 <body>
+    <!-- Bannière d'alerte d'abonnement -->
+    <div id="subscription-alert-banner" style="display: none;">
+        <span>⚠️ Votre abonnement arrive à expiration. Veuillez le renouveler pour éviter toute interruption de service.</span>
+        <button id="go-to-subscription-button">Renouveler</button>
+    </div>
+
+    <!-- Écran de blocage pour abonnement expiré -->
+    <div id="subscription-lockout-overlay" style="display: none;">
+        <div id="lockout-container">
+            <h2>Abonnement Expiré</h2>
+            <p>L'accès à l'application a été suspendu. Pour réactiver votre compte, veuillez renouveler votre abonnement.</p>
+            <div class="button-container" style="flex-direction: column; gap: 15px;">
+                 <a href="https://me.fedapay.com/kqIVo891" target="_blank" class="button-like-link">Payer le renouvellement via FedaPay</a>
+                 <button id="lockout-confirm-payment-button">J'ai effectué le paiement</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Fenêtre de Connexion -->
     <div id="login-overlay">
         <div id="login-container">
@@ -29,7 +47,7 @@
                 <div class="form-row">
                     <button type="submit">Se connecter</button>
                 </div>
-                <div id="login-error" style="color: red; display: none;"></div> <!-- Ajout pour les messages d'erreur -->
+                <div id="login-error" style="color: red; display: none;"></div>
             </form>
         </div>
     </div>
@@ -38,7 +56,6 @@
         <span id="user-info-username"></span> | <span id="user-info-status"></span> | <button id="logout-button">Déconnexion</button>
     </div>
 
-    <!-- Ancre pour le retour en haut (ajout) -->
     <a id="top"></a>
     <div id="printable-area">
         <h1 class="title-center">
@@ -47,18 +64,17 @@
         </h1>
         <h1>Gestion de Stocks et Ventes</h1>
 
-        <!-- Bouton Menu Hamburger -->
         <button id="menu-toggle" class="menu-toggle">
             <i class="fas fa-bars"></i>
         </button>
 
-        <!-- Menu de Navigation -->
         <nav id="main-nav" class="main-nav">
             <div class="button-container">
                 <button id="show-supply-section-button" class="nav-button">Approvisionner</button>
                 <button id="show-sales-section-button" class="nav-button">Ventes</button>
                 <button id="show-report-section-button" class="nav-button">Bilan</button>
-                <button id="show-admin-section-button" class="nav-button">Administration</button> <!-- Bouton Administration -->
+                <button id="show-admin-section-button" class="nav-button">Administration</button>
+                <button id="show-subscription-section-button" class="nav-button" style="display: none;">Abonnement</button>
             </div>
         </nav>
 
@@ -66,7 +82,7 @@
             <h2>Ventes et Autres Opérations</h2>
             <p>Enregistrez ici les ventes et autres types d'opérations.</p>
             <form id="sales-form">
-                <input type="hidden" id="sales-form-key"> <!-- Champ caché pour la clé lors de la modification -->
+                <input type="hidden" id="sales-form-key">
                 <div class="form-row">
                     <label for="sale-date">Date:</label>
                     <input type="date" id="sale-date" required>
@@ -76,7 +92,7 @@
                     <label for="operation-type">Type d'Opération:</label>
                     <select id="operation-type">
                         <option value="Vente">Vente</option>
-                        <option value="Dépense">Dépense</option> <!-- Option Dépense ajoutée -->
+                        <option value="Dépense">Dépense</option>
                         <option value="Autre">Autre</option>
                     </select>
                 </div>
@@ -96,7 +112,6 @@
                     </div>
                 </div>
 
-                <!-- Les détails pour 'Autre' restent inchangés -->
                 <div id="autre-details" style="display: none;">
                     <div class="form-row">
                         <label for="other-designation">Motif Opération:</label>
@@ -112,14 +127,13 @@
                     </div>
                 </div>
 
-                <!-- Section Dépense (similaire à 'Autre', mais avec des labels spécifiques) -->
                 <div id="depense-details" style="display: none;">
                     <div class="form-row">
                         <label for="expense-designation">Motif Dépense:</label>
                         <input type="text" id="expense-designation">
                     </div>
                     <div class="form-row">
-                        <label for="expense-quantity">Quantité:</label> <!-- Champ Quantité ajouté -->
+                        <label for="expense-quantity">Quantité:</label>
                         <input type="number" id="expense-quantity" min="1">
                     </div>
                     <div class="form-row">
@@ -135,7 +149,7 @@
 
             <div class="button-container">
                 <button id="show-sales-details">Afficher Détails Ventes</button>
-                <button id="show-expenses-details">Afficher Détails Dépenses</button> <!-- Bouton Détails Dépenses -->
+                <button id="show-expenses-details">Afficher Détails Dépenses</button>
                 <button id="show-others-details">Afficher Détails Autres</button>
             </div>
 
@@ -166,7 +180,7 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <tfoot> <!-- Pied de tableau pour les totaux -->
+                    <tfoot>
                         <tr>
                             <td colspan="2"><strong id="total-sales-designation-count">Total:</strong></td>
                             <td id="total-sales-quantity"></td>
@@ -178,7 +192,6 @@
                 </table>
             </div>
 
-            <!-- Tableau des Dépenses -->
             <div id="expenses-details" style="display: none;">
                 <div class="button-group">
                     <button id="print-expenses-table">Imprimer</button>
@@ -197,7 +210,7 @@
                         <tr>
                             <th class="date-col">Date</th>
                             <th class="motif-col">Motif</th>
-                            <th class="quantity-col">Quantité</th> <!-- Colonne Quantité ajoutée -->
+                            <th class="quantity-col">Quantité</th>
                             <th class="amount-col">Montant</th>
                             <th class="actions-col">Actions</th>
                         </tr>
@@ -207,7 +220,7 @@
                      <tfoot>
                         <tr>
                              <td colspan="2"><strong id="total-expenses-designation-count">Total:</strong></td>
-                            <td id="total-expenses-quantity"></td>  <!-- Total Quantité -->
+                            <td id="total-expenses-quantity"></td>
                             <td id="total-expenses-amount"></td>
                             <td></td>
                         </tr>
@@ -258,13 +271,12 @@
 
             <div class="button-container">
                 <button id="daily-report">Bilan Journalier</button>
-                <button id="weekly-report">Bilan Hebdomadaire</button>  <!-- Bouton Bilan Hebdomadaire -->
+                <button id="weekly-report">Bilan Hebdomadaire</button>
                 <button id="monthly-report">Bilan Mensuel</button>
                 <button id="yearly-report">Bilan Annuel</button>
             </div>
            
             <div id="report-filters" style="display: none;">
-                <!-- Filtre pour le bilan hebdomadaire -->
                 <div class="form-row" id="weekly-filter" style="display: none;">
                     <label for="report-week">Semaine:</label>
                     <input type="week" id="report-week">
@@ -348,7 +360,6 @@
                     <button type="submit" class="submit-button">Ajouter Approvisionnement</button>
                 </div>
             </form>
-            <!-- Bouton pour afficher les détails des approvisionnements (ajout) -->
             <div class="button-container">
                 <button id="show-supply-details">Afficher Détails Approvisionnements</button>
             </div>
@@ -376,7 +387,7 @@
                 </thead>
                 <tbody>
                 </tbody>
-                <tfoot>  <!-- Ajout du tfoot pour le total -->
+                <tfoot>
                     <tr>
                         <td colspan="2"><strong id="total-supply-designation-count">Total:</strong></td>
                         <td id="total-supply-quantity"></td>
@@ -388,13 +399,12 @@
             </table>
         </section>
 
-        <!-- Section Administration -->
         <section id="admin-section" class="form-container" style="display: none;">
             <h2>Administration</h2>
             <p>Gérez les comptes utilisateur.</p>
 
             <form id="user-form">
-                <input type="hidden" id="user-form-key"> <!-- Ajout du champ caché -->
+                <input type="hidden" id="user-form-key">
                 <div class="form-row">
                     <label for="username">Nom d'utilisateur:</label>
                     <input type="text" id="username" required>
@@ -428,16 +438,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Les données des utilisateurs seront ajoutées ici -->
                 </tbody>
             </table>
+        </section>
+
+        <section id="subscription-section" class="form-container" style="display: none;">
+            <h2>Gestion de l'Abonnement</h2>
+            <p>Votre abonnement mensuel assure le bon fonctionnement et le support de l'application. Renouvelez-le pour continuer à bénéficier de tous les services.</p>
+            <div id="subscription-status" style="text-align: center; margin-bottom: 1.5rem;">
+                <!-- Le statut (date d'expiration) sera chargé ici par le script -->
+            </div>
+            <div class="button-container" style="flex-direction: column; gap: 15px;">
+                <a id="renew-subscription-link" href="https://me.fedapay.com/kqIVo891" target="_blank" class="button-like-link">Payer le renouvellement via FedaPay</a>
+                <button id="confirm-payment-button">J'ai effectué le paiement</button>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>Tech Cohésion : Votre confiance renouveler nous inspire</p>
+        <p>Tech Cohésion : Votre confiance renouveler nous inspire !</p>
     </footer>
-    <!-- Ancre pour le retour en haut -->
     <a id="back-to-top" href="#" style="display: none;">↑</a>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
