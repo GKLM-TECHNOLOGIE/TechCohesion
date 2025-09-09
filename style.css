@@ -64,7 +64,6 @@ input[type="number"],
 input[type="text"],
 input[type="month"],
 input[type="password"],
-input[type="week"],
 select {
     padding: 0.75rem;
     margin-bottom: 1rem;
@@ -81,7 +80,6 @@ input[type="number"]:focus,
 input[type="text"]:focus,
 input[type="month"]:focus,
 input[type="password"]:focus,
-input[type="week"]:focus,
 select:focus {
     border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
@@ -127,34 +125,6 @@ button {
 
 button:hover {
     background-color: #2980b9;
-}
-
-/* Style pour les liens qui ressemblent à des boutons */
-.button-like-link {
-    background-color: #f80c13;
-    color: #fefefe;
-    padding: 0.8rem 1.2rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-.button-like-link:hover {
-    background-color: #2980b9;
-    color: #fefefe;
 }
 
 /* --- Boutons d'Action --- */
@@ -209,12 +179,12 @@ button.delete-button::before {
 table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: auto;  /* Important pour la disposition des colonnes */
     margin-top: 1.5rem;
     border-spacing: 0;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* Important pour les bords arrondis */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -260,7 +230,7 @@ tbody tr:nth-child(even) {
 #report-table th,
 #report-table td {
     word-break: break-word;
-    min-width: 100px;
+    min-width: 100px; /* Augmentation de la largeur minimale */
     border: 1px solid #000;
     padding: 0.4rem;
     font-size: 0.85rem;
@@ -314,7 +284,7 @@ tbody tr:nth-child(even) {
 
 /* --- Bouton Menu Hamburger --- */
 .menu-toggle {
-    display: none;
+    display: none; /* Caché par défaut (visible sur petits écrans) */
     background-color: #f80c13;
     color: white;
     border: none;
@@ -323,7 +293,7 @@ tbody tr:nth-child(even) {
     cursor: pointer;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1rem;  /* Positionné à droite */
     z-index: 1001;
 }
 
@@ -350,6 +320,7 @@ tbody tr:nth-child(even) {
 
 /* --- Media Queries --- */
 
+/* Smartphones (Portrait) */
 @media (max-width: 480px) {
     .company-logo {
         height: 60px;
@@ -380,21 +351,23 @@ tbody tr:nth-child(even) {
         right: 10px;
     }
 
+    /* Afficher le bouton hamburger, masquer le menu */
     .menu-toggle {
         display: block;
     }
 
     .main-nav {
-        display: none;
+        display: none; /* Caché par défaut sur mobile */
         width: 100%;
         position: absolute;
-        top: 60px;
-        right: 0;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
      }
 
+      /* Afficher le menu quand la classe est présente */
     .main-nav.menu-open {
         display: block;
     }
@@ -405,19 +378,21 @@ tbody tr:nth-child(even) {
     .button-container button{
       margin: 0.5em;
     }
+     /* Tableaux:  Disposition standard */
     table {
-        display: table;
-        overflow-x: visible;
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
     }
     thead {
         display: table-header-group;
     }
     th, td {
-        display: table-cell;
-        width: auto;
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
     }
 }
 
+/* Tablettes (Portrait) et Petits Écrans (Paysage) */
 @media (min-width: 481px) and (max-width: 768px) {
 
     .button-container {
@@ -449,46 +424,52 @@ tbody tr:nth-child(even) {
         font-size: 16px;
         line-height: 35px;
     }
+     /* Afficher le bouton hamburger, masquer le menu */
     .menu-toggle {
         display: block;
     }
     .main-nav {
-        display: none;
+        display: none; /* Caché par défaut sur mobile */
         width: 100%;
          position: absolute;
-        top: 60px;
-        right: 0;
+        top: 60px;  /* Ajustement pour le positionnement */
+        right: 0; /* Alignement à droite */
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
     }
 
+      /* Afficher le menu quand la classe est présente */
       .main-nav.menu-open {
         display: block;
     }
 
+  /* Tableaux:  Disposition standard */
     table {
-        display: table;
-        overflow-x: visible;
+        display: table; /* Rétablissement de l'affichage normal */
+        overflow-x: visible; /* Pas de défilement horizontal */
     }
     thead {
         display: table-header-group;
     }
     th, td {
-        display: table-cell;
-        width: auto;
+        display: table-cell; /* Cellules normales */
+        width: auto; /* Largeur automatique */
     }
 }
 
+/* Tablettes (Paysage) et Grands Écrans */
 @media (min-width: 769px) {
+    /* Masquer le bouton hamburger sur les grands écrans */
     .menu-toggle {
         display: none;
     }
      thead {
-        display: table-header-group;
+        display: table-header-group; /* Rétablit l'affichage normal du thead */
     }
+    /* Style du menu pour les grands écrans */
     .main-nav {
-        display: block !important;
+        display: block !important; /* Assurez-vous que le menu est visible */
     }
 }
 
@@ -503,7 +484,8 @@ tbody tr:nth-child(even) {
     #sales-details,
     #others-details,
     #expenses-details,
-    #user-section {
+    #user-section,
+    #subscription-section { /* AJOUTÉ */
         box-shadow: none;
         border: none;
         background-color: #fff;
@@ -518,7 +500,11 @@ tbody tr:nth-child(even) {
     #others-details table,
     #expenses-details h3,
     #expenses-details table,
-    #user-table {
+    #user-table,
+    #subscription-section h2, /* AJOUTÉ */
+    #fedapay-payment-form, /* AJOUTÉ */
+    #fedapay-payment-status /* AJOUTÉ */
+    {
         color: #000 !important;
     }
 
@@ -562,7 +548,7 @@ tbody tr:nth-child(even) {
     .button-group,
     .button-container,
     .form-container h2,
-    .form-container p,
+    .form-container p, /* Ceci pourrait cacher aussi le P de la section abonnement si pas ciblé */
     #supply-form,
     .form-container>p,
     #sales-form,
@@ -573,7 +559,8 @@ tbody tr:nth-child(even) {
     #user-form,
     #report-section,
     #back-to-top,
-    #menu-toggle
+    #menu-toggle,
+    #fedapay-payment-form /* AJOUTÉ */
         {
         display: none !important;
     }
@@ -584,65 +571,6 @@ tbody tr:nth-child(even) {
         text-align: center !important;
         color: #000 !important;
     }
-}
-
-/* --- Éléments d'Abonnement --- */
-#subscription-alert-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f39c12;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    z-index: 1002;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-weight: bold;
-}
-
-#subscription-alert-banner button {
-    margin: 0;
-    width: auto;
-    padding: 0.5rem 1rem;
-    background-color: #e67e22;
-}
-
-#subscription-lockout-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#lockout-container {
-    background-color: white;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-}
-
-#lockout-container h2 {
-    color: #e74c3c;
-}
-
-#lockout-container p {
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.5;
 }
 
 /* --- Pied de Page --- */
@@ -680,6 +608,7 @@ footer {
     text-align: center;
 }
 
+/* Media query pour la fenêtre de connexion (petits écrans) */
 @media (max-width: 480px) {
     #login-container {
         width: 95%;
@@ -688,14 +617,16 @@ footer {
 }
 
 /* --- Règles Générales pour la Responsivité --- */
+/* Images responsives */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Barre de recherche */
 .search-bar {
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: center; /* Centrer la barre de recherche */
 }
 
 .search-bar label {
@@ -707,19 +638,120 @@ img {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 70%;
-    max-width: 300px;
+    width: 70%; /* Largeur de la barre de recherche */
+    max-width: 300px; /* Largeur maximale */
 }
 
+/* Totaux des tableaux */
 tfoot {
     font-weight: bold;
     background-color: #f0f0f0;
 }
 
 tfoot td {
-    border-top: 2px solid #aaa;
-    text-align: right;
+    border-top: 2px solid #aaa; /* Bordure plus épaisse pour séparer le total */
+    text-align: right;  /* Alignement à droite par défaut */
 }
 tfoot td:first-child {
-     text-align: left;
+     text-align: left; /* "Total" aligné à gauche */
+}
+
+/* --- FedaPay Payment Section Styles --- */
+#subscription-section {
+    display: flex; /* Utilise flex pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    padding: 20px; /* Ajuste le padding de la section elle-même */
+}
+
+/* Conteneur du formulaire FedaPay */
+.container-fedapay {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limite la largeur du formulaire de paiement */
+    text-align: center; /* Centre le texte et les éléments inline/inline-block */
+    box-sizing: border-box; /* Inclure padding et border dans la largeur/hauteur */
+}
+
+#subscription-section h2 { /* Ciblage spécifique du h2 dans la section d'abonnement */
+    color: #2a2fce; /* Adapte la couleur au thème Tech Cohesion */
+    margin-top: 0; /* Réinitialiser le margin-top par défaut */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db; /* Ajoute la bordure du thème */
+    padding-bottom: 0.5rem;
+}
+
+/* Centrer le formulaire lui-même */
+#fedapay-payment-form {
+    margin: 0 auto; /* Centre le bloc du formulaire */
+    /* Pas besoin de width ici si les enfants s'étendent */
+}
+
+.form-group-fedapay {
+    margin-bottom: 15px;
+    text-align: center; /* Centre le label et l'input à l'intérieur */
+}
+
+.form-group-fedapay label {
+    display: block; /* S'assure que le label prend toute la largeur pour être centré par text-align */
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.container-fedapay input[type="number"],
+.container-fedapay input[type="text"],
+.container-fedapay input[type="email"] {
+    width: calc(100% - 20px); /* Ajuste la largeur en tenant compte du padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333; /* S'assurer de la couleur du texte */
+    /* Si l'input doit être plus étroit et centré, utiliser max-width et margin: auto */
+    max-width: 250px; /* Exemple de largeur plus petite */
+    margin: 0 auto; /* Centre l'input lui-même si sa largeur est limitée */
+}
+
+/* Bouton de paiement FedaPay */
+#fedapay-pay-button {
+    background-color: #f80c13; /* Couleur adaptée aux autres boutons */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    box-sizing: border-box;
+    max-width: none; /* Annule la max-width générale des boutons pour ce bouton spécifique */
+    margin-left: unset; /* Annule les marges auto */
+    margin-right: unset;
+    display: block; /* S'assurer qu'il est un bloc */
+}
+
+#fedapay-pay-button:hover {
+    background-color: #2980b9; /* Couleur adaptée au survol des autres boutons */
+}
+
+#fedapay-payment-status {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
 }

@@ -13,24 +13,6 @@
 </head>
 
 <body>
-    <!-- Bannière d'alerte d'abonnement -->
-    <div id="subscription-alert-banner" style="display: none;">
-        <span>⚠️ Votre abonnement arrive à expiration. Veuillez le renouveler pour éviter toute interruption de service.</span>
-        <button id="go-to-subscription-button">Renouveler</button>
-    </div>
-
-    <!-- Écran de blocage pour abonnement expiré -->
-    <div id="subscription-lockout-overlay" style="display: none;">
-        <div id="lockout-container">
-            <h2>Abonnement Expiré</h2>
-            <p>L'accès à l'application a été suspendu. Pour réactiver votre compte, veuillez renouveler votre abonnement.</p>
-            <div class="button-container" style="flex-direction: column; gap: 15px;">
-                 <a href="https://me.fedapay.com/kqIVo891" target="_blank" class="button-like-link">Payer le renouvellement via FedaPay</a>
-                 <button id="lockout-confirm-payment-button">J'ai effectué le paiement</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Fenêtre de Connexion -->
     <div id="login-overlay">
         <div id="login-container">
@@ -47,15 +29,16 @@
                 <div class="form-row">
                     <button type="submit">Se connecter</button>
                 </div>
-                <div id="login-error" style="color: red; display: none;"></div>
+                <div id="login-error" style="color: red; display: none;"></div> <!-- Ajout pour les messages d'erreur -->
             </form>
         </div>
     </div>
     <div id="user-info-bar"
         style="display: none; background-color: #f0ec1b; padding: 10px; text-align: center; color: #2a2fce; font-weight:bold;">
-        <span id="user-info-username"></span> | <span id="user-info-status"></span> | <button id="logout-button">Déconnexion</button>
+        <span id="user-info-username"></span> | <span id="user-info-status"></span> | <span id="subscription-reminder" style="color: red; font-weight: bold; margin-left: 10px;"></span> | <button id="logout-button">Déconnexion</button>
     </div>
 
+    <!-- Ancre pour le retour en haut (ajout) -->
     <a id="top"></a>
     <div id="printable-area">
         <h1 class="title-center">
@@ -64,17 +47,19 @@
         </h1>
         <h1>Gestion de Stocks et Ventes</h1>
 
+        <!-- Bouton Menu Hamburger -->
         <button id="menu-toggle" class="menu-toggle">
             <i class="fas fa-bars"></i>
         </button>
 
+        <!-- Menu de Navigation -->
         <nav id="main-nav" class="main-nav">
             <div class="button-container">
                 <button id="show-supply-section-button" class="nav-button">Approvisionner</button>
                 <button id="show-sales-section-button" class="nav-button">Ventes</button>
                 <button id="show-report-section-button" class="nav-button">Bilan</button>
                 <button id="show-admin-section-button" class="nav-button">Administration</button>
-                <button id="show-subscription-section-button" class="nav-button" style="display: none;">Abonnement</button>
+                <button id="show-subscription-section-button" class="nav-button">Abonnement</button> <!-- NOUVEAU BOUTON -->
             </div>
         </nav>
 
@@ -82,7 +67,7 @@
             <h2>Ventes et Autres Opérations</h2>
             <p>Enregistrez ici les ventes et autres types d'opérations.</p>
             <form id="sales-form">
-                <input type="hidden" id="sales-form-key">
+                <input type="hidden" id="sales-form-key"> <!-- Champ caché pour la clé lors de la modification -->
                 <div class="form-row">
                     <label for="sale-date">Date:</label>
                     <input type="date" id="sale-date" required>
@@ -112,6 +97,7 @@
                     </div>
                 </div>
 
+                <!-- Les détails pour 'Autre' restent inchangés -->
                 <div id="autre-details" style="display: none;">
                     <div class="form-row">
                         <label for="other-designation">Motif Opération:</label>
@@ -127,6 +113,7 @@
                     </div>
                 </div>
 
+                <!-- Section Dépense (similaire à 'Autre', mais avec des labels spécifiques) -->
                 <div id="depense-details" style="display: none;">
                     <div class="form-row">
                         <label for="expense-designation">Motif Dépense:</label>
@@ -180,7 +167,7 @@
                     </thead>
                     <tbody>
                     </tbody>
-                    <tfoot>
+                    <tfoot> <!-- Pied de tableau pour les totaux -->
                         <tr>
                             <td colspan="2"><strong id="total-sales-designation-count">Total:</strong></td>
                             <td id="total-sales-quantity"></td>
@@ -192,6 +179,7 @@
                 </table>
             </div>
 
+            <!-- Tableau des Dépenses -->
             <div id="expenses-details" style="display: none;">
                 <div class="button-group">
                     <button id="print-expenses-table">Imprimer</button>
@@ -277,6 +265,7 @@
             </div>
            
             <div id="report-filters" style="display: none;">
+                <!-- Filtre pour le bilan hebdomadaire -->
                 <div class="form-row" id="weekly-filter" style="display: none;">
                     <label for="report-week">Semaine:</label>
                     <input type="week" id="report-week">
@@ -360,6 +349,7 @@
                     <button type="submit" class="submit-button">Ajouter Approvisionnement</button>
                 </div>
             </form>
+            <!-- Bouton pour afficher les détails des approvisionnements (ajout) -->
             <div class="button-container">
                 <button id="show-supply-details">Afficher Détails Approvisionnements</button>
             </div>
@@ -387,7 +377,7 @@
                 </thead>
                 <tbody>
                 </tbody>
-                <tfoot>
+                <tfoot>  <!-- Ajout du tfoot pour le total -->
                     <tr>
                         <td colspan="2"><strong id="total-supply-designation-count">Total:</strong></td>
                         <td id="total-supply-quantity"></td>
@@ -399,12 +389,13 @@
             </table>
         </section>
 
+        <!-- Section Administration -->
         <section id="admin-section" class="form-container" style="display: none;">
             <h2>Administration</h2>
             <p>Gérez les comptes utilisateur.</p>
 
             <form id="user-form">
-                <input type="hidden" id="user-form-key">
+                <input type="hidden" id="user-form-key"> <!-- Ajout du champ caché -->
                 <div class="form-row">
                     <label for="username">Nom d'utilisateur:</label>
                     <input type="text" id="username" required>
@@ -438,30 +429,40 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Les données des utilisateurs seront ajoutées ici -->
                 </tbody>
             </table>
         </section>
 
+        <!-- Nouvelle Section Abonnement (FedaPay) -->
         <section id="subscription-section" class="form-container" style="display: none;">
-            <h2>Gestion de l'Abonnement</h2>
-            <p>Votre abonnement mensuel assure le bon fonctionnement et le support de l'application. Renouvelez-le pour continuer à bénéficier de tous les services.</p>
-            <div id="subscription-status" style="text-align: center; margin-bottom: 1.5rem;">
-                <!-- Le statut (date d'expiration) sera chargé ici par le script -->
-            </div>
-            <div class="button-container" style="flex-direction: column; gap: 15px;">
-                <a id="renew-subscription-link" href="https://me.fedapay.com/kqIVo891" target="_blank" class="button-like-link">Payer le renouvellement via FedaPay</a>
-                <button id="confirm-payment-button">J'ai effectué le paiement</button>
+            <div class="container-fedapay">
+                <h2>Paiement Sécurisé FedaPay</h2>
+                <form id="fedapay-payment-form">
+                    <div class="form-group-fedapay">
+                        <label for="fedapay-amount">Frais d'abonnement à payer (XOF) :</label>
+                        <!-- AJOUT DE L'ATTRIBUT readonly ICI -->
+                        <input type="number" id="fedapay-amount" value="2500" min="100" readonly required>
+                    </div>
+                    <!-- Les champs description et email ont été retirés -->
+                    <button type="submit" id="fedapay-pay-button">Payer</button>
+                </form>
+                <p id="fedapay-payment-status"></p>
             </div>
         </section>
+
     </div>
 
     <footer>
-        <p>Tech Cohésion : Votre confiance renouveler nous inspire !</p>
+        <p>Tech Cohésion : Votre confiance renouveler nous inspire</p>
     </footer>
+    <!-- Ancre pour le retour en haut -->
     <a id="back-to-top" href="#" style="display: none;">↑</a>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.6/firebase-database-compat.js"></script>
+    <!-- Inclure le SDK FedaPay JS depuis leur CDN avant votre script.js -->
+    <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
